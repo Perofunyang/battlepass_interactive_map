@@ -1,395 +1,497 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Map Service</title>
-  
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map Service</title>
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; height: 100vh; background-color: #1a1a1a; color: #fff; }
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-    /* 사이드바 */
-    #sidebar {
-      width: 300px;
-      background-color: #242424;
-      border-right: 1px solid #333;
-      display: flex;
-      flex-direction: column;
-      z-index: 1000;
-    }
-    .sidebar-header { padding: 20px; border-bottom: 1px solid #333; }
-    .sidebar-header h2 { font-size: 1.2rem; margin-bottom: 10px; color: #e5b35c; }
-    
-    .map-select-box {
-      width: 100%;
-      padding: 10px;
-      background-color: #1a1a1a;
-      color: #fff;
-      border: 1px solid #444;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    .filter-section { padding: 20px; flex: 1; overflow-y: auto; }
-    .filter-section h3 { font-size: 0.9rem; margin-bottom: 15px; color: #aaa; text-transform: uppercase; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
 
-    /* 카테고리 필터 항목 및 호버 팝업 스타일 */
-    .category-item {
-      position: relative;
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      padding: 6px 8px;
-      border-radius: 4px;
-      cursor: pointer;
-      user-select: none;
-      transition: background-color 0.2s;
-    }
-    .category-item:hover { background-color: #333; }
-    .category-item input[type="checkbox"] { margin-right: 10px; width: 18px; height: 18px; cursor: pointer; }
-    
-    /* 사이드바 아이콘 이미지 스타일 */
-    .filter-icon-img {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-    .category-name { font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; }
+        /* 사이드바 */
+        #sidebar {
+            width: 300px;
+            background-color: #242424;
+            border-right: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
 
-    /* 카테고리 호버 시 우측에 뜨는 샘플 사진 팝업 */
-    .category-hover-preview {
-      display: none;
-      position: absolute;
-      left: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      margin-left: 12px;
-      z-index: 2000;
-      border: 2px solid #e5b35c;
-      border-radius: 6px;
-      overflow: hidden;
-      background-color: #000;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
-      pointer-events: none;
-    }
-    .category-hover-preview img {
-      width: 200px;
-      height: 130px;
-      object-fit: cover;
-      display: block;
-    }
-    .category-item:hover .category-hover-preview { display: block; }
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
 
-    /* 메인 맵 영역 */
-    #map-container { flex: 1; height: 100%; position: relative; background-color: #111; }
-    #map { width: 100%; height: 100%; background: transparent; }
+            .sidebar-header h2 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                color: #e5b35c;
+            }
 
-    /* [수정] 지도 위 커스텀 마커 이미지 크기 (20px) */
-    .map-marker-img {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9));
-      cursor: pointer;
-    }
+        .map-select-box {
+            width: 100%;
+            padding: 10px;
+            background-color: #1a1a1a;
+            color: #fff;
+            border: 1px solid #444;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
 
-    /* 좌하단 좌표 표시 오버레이 */
-    #coord-overlay {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      background-color: rgba(0, 0, 0, 0.85);
-      border: 1px solid #e5b35c;
-      color: #e5b35c;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-family: monospace;
-      font-size: 0.95rem;
-      font-weight: bold;
-      z-index: 1000;
-      pointer-events: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
+        .filter-section {
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+        }
 
-    /* 호버 툴팁: 마커 사진 노출 스타일 */
-    .custom-tooltip-photo {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-      padding: 0 !important;
-    }
-    .custom-tooltip-photo .leaflet-tooltip-pane { color: transparent; }
-    .hover-photo-frame {
-      border: 2px solid #e5b35c;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
-      background-color: #000;
-      line-height: 0;
-    }
-    .hover-photo-frame img {
-      width: 240px;
-      height: 150px;
-      object-fit: cover;
-      display: block;
-    }
+            .filter-section h3 {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+                color: #aaa;
+                text-transform: uppercase;
+            }
 
-    /* 클릭 상세 팝업 스타일 */
-    .leaflet-popup-content-wrapper {
-      background-color: #242424 !important;
-      color: #fff !important;
-      border: 1px solid #444;
-      border-radius: 8px !important;
-    }
-    .leaflet-popup-tip { background-color: #242424 !important; }
-    .popup-detail { width: 280px; }
-    .popup-detail img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 10px; }
-    .popup-detail h3 { font-size: 1.1rem; color: #e5b35c; margin-bottom: 6px; }
-    .popup-detail p { font-size: 0.85rem; color: #ccc; line-height: 1.4; }
-  </style>
+        /* 카테고리 필터 항목 */
+        .category-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 6px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+
+            .category-item:hover {
+                background-color: #333;
+            }
+
+            .category-item input[type="checkbox"] {
+                margin-right: 10px;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+            }
+
+        .filter-icon-img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .category-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 최상위 카테고리 팝업 박스 */
+        #global-category-preview {
+            display: none;
+            position: fixed; /* 최상위 레이어로 고정 */
+            z-index: 9999; /* 지도 및 모든 요소보다 위에 배치 */
+            border: 2px solid #e5b35c;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+            pointer-events: none;
+            max-width: 300px;
+        }
+
+            #global-category-preview img {
+                max-width: 300px;
+                max-height: 200px;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                display: block;
+                margin: 0 auto;
+            }
+
+        /* 메인 맵 영역 */
+        #map-container {
+            flex: 1;
+            height: 100%;
+            position: relative;
+            background-color: #111;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+
+        /* 지도 위 커스텀 마커 이미지 크기 (20px) */
+        .map-marker-img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9));
+            cursor: pointer;
+        }
+
+        /* 좌하단 좌표 표시 오버레이 */
+        #coord-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 1px solid #e5b35c;
+            color: #e5b35c;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.95rem;
+            font-weight: bold;
+            z-index: 1000;
+            pointer-events: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        /* 호버 툴팁: 마커 사진 노출 스타일 */
+        .custom-tooltip-photo {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+            .custom-tooltip-photo .leaflet-tooltip-pane {
+                color: transparent;
+            }
+
+        .hover-photo-frame {
+            border: 2px solid #e5b35c;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+            background-color: #000;
+            line-height: 0;
+        }
+
+            /* [수정] 마커 호버 이미지 크기 대폭 확대 (360px x 225px) */
+            .hover-photo-frame img {
+                width: 360px;
+                height: 225px;
+                object-fit: cover;
+                display: block;
+            }
+
+        /* 클릭 상세 팝업 스타일 */
+        .leaflet-popup-content-wrapper {
+            background-color: #242424 !important;
+            color: #fff !important;
+            border: 1px solid #444;
+            border-radius: 8px !important;
+        }
+
+        .leaflet-popup-tip {
+            background-color: #242424 !important;
+        }
+
+        .popup-detail {
+            width: 320px;
+        }
+
+            .popup-detail img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 6px;
+                margin-bottom: 10px;
+            }
+
+            .popup-detail h3 {
+                font-size: 1.1rem;
+                color: #e5b35c;
+                margin-bottom: 6px;
+            }
+
+            .popup-detail p {
+                font-size: 0.85rem;
+                color: #ccc;
+                line-height: 1.4;
+            }
+    </style>
 </head>
 <body>
 
-  <!-- 좌측 메인 컨트롤 사이드바 -->
-  <div id="sidebar">
-    <div class="sidebar-header">
-      <h2>Interactive Map</h2>
-      <select id="map-select" class="map-select-box" onchange="switchMap(this.value)">
-        <option value="customs" selected>Customs (세관)</option>
-        <option value="ground_zero">Ground Zero (그라운드 제로)</option>
-        <option value="factory">Factory (공장)</option>
-        <option value="woods">Woods (삼림)</option>
-        <option value="reserve">Reserve (리저브)</option>
-        <option value="shoreline">Shoreline (해안선)</option>
-        <option value="interchange">Interchange (인터체인지)</option>
-        <option value="lighthouse">Lighthouse (등대)</option>
-        <option value="streets_of_tarkov">Streets of Tarkov (스오타)</option>
-        <option value="lab">The Lab (연구실)</option>
-      </select>
+    <!-- 좌측 메인 컨트롤 사이드바 -->
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <h2>Interactive Map</h2>
+            <select id="map-select" class="map-select-box" onchange="switchMap(this.value)">
+                <option value="customs" selected>Customs (세관)</option>
+                <option value="ground_zero">Ground Zero (그라운드 제로)</option>
+                <option value="factory">Factory (공장)</option>
+                <option value="woods">Woods (삼림)</option>
+                <option value="reserve">Reserve (리저브)</option>
+                <option value="shoreline">Shoreline (해안선)</option>
+                <option value="interchange">Interchange (인터체인지)</option>
+                <option value="lighthouse">Lighthouse (등대)</option>
+                <option value="streets_of_tarkov">Streets of Tarkov (스오타)</option>
+                <option value="lab">The Lab (연구실)</option>
+            </select>
+        </div>
+
+        <div class="filter-section">
+            <h3>Filters</h3>
+            <div id="category-filters"></div>
+        </div>
     </div>
 
-    <div class="filter-section">
-      <h3>Filters</h3>
-      <div id="category-filters"></div>
+    <!-- 메인 맵 영역 -->
+    <div id="map-container">
+        <div id="map"></div>
+        <div id="coord-overlay">Y: 0, X: 0 (클릭시 좌표 복사)</div>
     </div>
-  </div>
 
-  <!-- 메인 맵 영역 -->
-  <div id="map-container">
-    <div id="map"></div>
-    <div id="coord-overlay">Y: 0, X: 0 (클릭시 좌표 복사)</div>
-  </div>
+    <!-- 최상위 레이어로 동작할 단일 카테고리 팝업 박스 -->
+    <div id="global-category-preview">
+        <img id="global-preview-img" src="" alt="preview" />
+    </div>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <script>
-    const MAPS = {
-      customs: { name: "Customs", imageUrl: "./assets/maps/customs.jpg", width: 2553, height: 1328 },
-      ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 850, height: 850 },
-      factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850 },
-      woods: { name: "Woods", imageUrl: "./assets/maps/woods.jpg", width: 3000, height: 3000 },
-      reserve: { name: "Reserve", imageUrl: "./assets/maps/reserve.jpg", width: 2048, height: 2048 },
-      shoreline: { name: "Shoreline", imageUrl: "./assets/maps/shoreline.jpg", width: 3000, height: 2048 },
-      interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.jpg", width: 2000, height: 1106 },
-      lighthouse: { name: "Lighthouse", imageUrl: "./assets/maps/lighthouse.jpg", width: 3000, height: 2048 },
-      streets_of_tarkov: { name: "Streets of Tarkov", imageUrl: "./assets/maps/streets_of_tarkov.jpg", width: 4096, height: 4096 },
-      lab: { name: "Lab", imageUrl: "./assets/maps/lab.webp", width: 3820, height: 2189 }
-    };
+    <script>
+        const MAPS = {
+            customs: { name: "Customs", imageUrl: "./assets/maps/customs.jpg", width: 2553, height: 1328 },
+            ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 850, height: 850 },
+            factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850 },
+            woods: { name: "Woods", imageUrl: "./assets/maps/woods.jpg", width: 3000, height: 3000 },
+            reserve: { name: "Reserve", imageUrl: "./assets/maps/reserve.jpg", width: 2048, height: 2048 },
+            shoreline: { name: "Shoreline", imageUrl: "./assets/maps/shoreline.jpg", width: 3000, height: 2048 },
+            interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.jpg", width: 2000, height: 1106 },
+            lighthouse: { name: "Lighthouse", imageUrl: "./assets/maps/lighthouse.jpg", width: 3000, height: 2048 },
+            streets_of_tarkov: { name: "Streets of Tarkov", imageUrl: "./assets/maps/streets_of_tarkov.jpg", width: 4096, height: 4096 },
+            lab: { name: "Lab", imageUrl: "./assets/maps/lab.webp", width: 3820, height: 2189 }
+        };
 
-    const CATEGORIES = {
-      technical: { name: "Technical", icon: "./assets/icons/technical.png", image: "./assets/category/technical.jpg" },
-      pmc: { name: "PMC", icon: "./assets/icons/pmc.png", image: "./assets/category/pmc.jpg" },
-      project: { name: "Project", icon: "./assets/icons/project.png", image: "./assets/category/project.jpg" },
-      blueprints: { name: "Blueprints", icon: "./assets/icons/blueprints.png", image: "./assets/category/blueprints.jpg" },
-      test: { name: "Test", icon: "./assets/icons/test.png", image: "./assets/category/test.jpg" },
-      user: { name: "User", icon: "./assets/icons/user.png", image: "./assets/category/user.jpg" },
-      medical: { name: "Medical", icon: "./assets/icons/medical.png", image: "./assets/category/medical.jpg" },
-      financial: { name: "Financial", icon: "./assets/icons/financial.png", image: "./assets/category/financial.jpg" }
-    };
+        const CATEGORIES = {
+            technical: { name: "Technical", icon: "./assets/icons/technical.png", image: "./assets/category/technical.jpg" },
+            pmc: { name: "PMC", icon: "./assets/icons/pmc.png", image: "./assets/category/pmc.jpg" },
+            project: { name: "Project", icon: "./assets/icons/project.png", image: "./assets/category/project.jpg" },
+            blueprints: { name: "Blueprints", icon: "./assets/icons/blueprints.png", image: "./assets/category/blueprints.jpg" },
+            test: { name: "Test", icon: "./assets/icons/test.png", image: "./assets/category/test.jpg" },
+            user: { name: "User", icon: "./assets/icons/user.png", image: "./assets/category/user.jpg" },
+            medical: { name: "Medical", icon: "./assets/icons/medical.png", image: "./assets/category/medical.jpg" },
+            financial: { name: "Financial", icon: "./assets/icons/financial.png", image: "./assets/category/financial.jpg" }
+        };
 
-    let map = null;
-    let currentMapId = 'customs';
-    let currentImageOverlay = null;
-    const layerGroups = {};
-    const activeFilters = new Set(Object.keys(CATEGORIES));
+        let map = null;
+        let currentMapId = 'factory';
+        let currentImageOverlay = null;
+        const layerGroups = {};
+        const activeFilters = new Set(Object.keys(CATEGORIES));
 
-    function initMap() {
-      map = L.map('map', {
-        crs: L.CRS.Simple,
-        minZoom: -2,
-        maxZoom: 2,
-        zoomSnap: 0.25,
-        attributionControl: false
-      });
+        function initMap() {
+            map = L.map('map', {
+                crs: L.CRS.Simple,
+                minZoom: -2,
+                maxZoom: 2,
+                zoomSnap: 0.25,
+                attributionControl: false
+            });
 
-      renderFilterUI();
-      setupCoordinateTracker();
-      loadMap(currentMapId);
-    }
-
-    function setupCoordinateTracker() {
-      const coordDiv = document.getElementById('coord-overlay');
-
-      map.on('mousemove', function(e) {
-        const y = Math.round(e.latlng.lat);
-        const x = Math.round(e.latlng.lng);
-        coordDiv.innerText = `Y: ${y}, X: ${x}`;
-      });
-
-      map.on('click', function(e) {
-        const y = Math.round(e.latlng.lat);
-        const x = Math.round(e.latlng.lng);
-        const coordString = `[${y}, ${x}]`;
-        
-        navigator.clipboard.writeText(coordString).then(() => {
-          coordDiv.innerText = `복사됨! -> ${coordString}`;
-          setTimeout(() => {
-            coordDiv.innerText = `Y: ${y}, X: ${x}`;
-          }, 1500);
-        });
-      });
-    }
-
-    function loadMap(mapId) {
-      currentMapId = mapId;
-      const mapConfig = MAPS[mapId];
-
-      map.setMaxBounds(null);
-      if (currentImageOverlay) map.removeLayer(currentImageOverlay);
-      clearAllMarkers();
-
-      const bounds = [[0, 0], [mapConfig.height, mapConfig.width]];
-      currentImageOverlay = L.imageOverlay(mapConfig.imageUrl, bounds).addTo(map);
-
-      map.fitBounds(bounds, { animate: false });
-      map.setMaxBounds(bounds);
-
-      if (window[`MAP_DATA_${mapId}`]) {
-        renderMarkers(window[`MAP_DATA_${mapId}`]);
-        return;
-      }
-
-      const script = document.createElement('script');
-      script.src = `./data/${mapId}.js`;
-      
-      script.onload = () => {
-        const markersData = window[`MAP_DATA_${mapId}`] || [];
-        renderMarkers(markersData);
-      };
-      
-      script.onerror = () => {
-        console.warn(`[알림] ./data/${mapId}.js 파일이 없거나 데이터가 빈 상태입니다.`);
-        renderMarkers([]);
-      };
-
-      document.body.appendChild(script);
-    }
-
-    function switchMap(mapId) {
-      loadMap(mapId);
-    }
-
-    // [수정] 지도 위 마커 아이콘 크기 (20px 설정)
-    function renderMarkers(markersData) {
-      Object.keys(CATEGORIES).forEach(catKey => {
-        layerGroups[catKey] = L.layerGroup();
-        if (activeFilters.has(catKey)) {
-          layerGroups[catKey].addTo(map);
-        }
-      });
-
-      markersData.forEach(data => {
-        const catInfo = CATEGORIES[data.category];
-        const iconSrc = catInfo ? catInfo.icon : '';
-
-        // iconSize: [20, 20], iconAnchor: [10, 10] (20px 크기에 맞춤)
-        const customIcon = L.divIcon({
-          html: `<img src="${iconSrc}" class="map-marker-img" onError="this.onerror=null; this.src='https://via.placeholder.com/20?text=📍';" />`,
-          className: 'custom-map-icon',
-          iconSize: [20, 20],
-          iconAnchor: [10, 10]
-        });
-
-        const marker = L.marker(data.coords, { icon: customIcon });
-
-        if (data.previewImg) {
-          const tooltipHTML = `
-            <div class="hover-photo-frame">
-              <img src="${data.previewImg}" alt="preview" />
-            </div>
-          `;
-          marker.bindTooltip(tooltipHTML, {
-            className: 'custom-tooltip-photo',
-            direction: 'top',
-            offset: [0, -8],
-            opacity: 1
-          });
+            renderFilterUI();
+            setupCoordinateTracker();
+            loadMap(currentMapId);
         }
 
-        if (data.detailImg || data.detailTitle) {
-          const popupHTML = `
-            <div class="popup-detail">
-              ${data.detailImg ? `<img src="${data.detailImg}" />` : ''}
-              ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
-              ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
-            </div>
-          `;
-          marker.bindPopup(popupHTML);
+        function setupCoordinateTracker() {
+            const coordDiv = document.getElementById('coord-overlay');
+
+            map.on('mousemove', function (e) {
+                const y = Math.round(e.latlng.lat);
+                const x = Math.round(e.latlng.lng);
+                coordDiv.innerText = `Y: ${y}, X: ${x}`;
+            });
+
+            map.on('click', function (e) {
+                const y = Math.round(e.latlng.lat);
+                const x = Math.round(e.latlng.lng);
+                const coordString = `[${y}, ${x}]`;
+
+                navigator.clipboard.writeText(coordString).then(() => {
+                    coordDiv.innerText = `복사됨! -> ${coordString}`;
+                    setTimeout(() => {
+                        coordDiv.innerText = `Y: ${y}, X: ${x}`;
+                    }, 1500);
+                });
+            });
         }
 
-        if (layerGroups[data.category]) {
-          layerGroups[data.category].addLayer(marker);
+        function loadMap(mapId) {
+            currentMapId = mapId;
+            const mapConfig = MAPS[mapId];
+
+            map.setMaxBounds(null);
+            if (currentImageOverlay) map.removeLayer(currentImageOverlay);
+            clearAllMarkers();
+
+            const bounds = [[0, 0], [mapConfig.height, mapConfig.width]];
+            currentImageOverlay = L.imageOverlay(mapConfig.imageUrl, bounds).addTo(map);
+
+            map.fitBounds(bounds, { animate: false });
+            map.setMaxBounds(bounds);
+
+            if (window[`MAP_DATA_${mapId}`]) {
+                renderMarkers(window[`MAP_DATA_${mapId}`]);
+                return;
+            }
+
+            const script = document.createElement('script');
+            script.src = `./data/${mapId}.js`;
+
+            script.onload = () => {
+                const markersData = window[`MAP_DATA_${mapId}`] || [];
+                renderMarkers(markersData);
+            };
+
+            script.onerror = () => {
+                console.warn(`[알림] ./data/${mapId}.js 파일이 없거나 데이터가 빈 상태입니다.`);
+                renderMarkers([]);
+            };
+
+            document.body.appendChild(script);
         }
-      });
-    }
 
-    function clearAllMarkers() {
-      Object.keys(layerGroups).forEach(catKey => {
-        map.removeLayer(layerGroups[catKey]);
-      });
-    }
+        function switchMap(mapId) {
+            loadMap(mapId);
+        }
 
-    function renderFilterUI() {
-      const container = document.getElementById('category-filters');
-      container.innerHTML = '';
+        function renderMarkers(markersData) {
+            Object.keys(CATEGORIES).forEach(catKey => {
+                layerGroups[catKey] = L.layerGroup();
+                if (activeFilters.has(catKey)) {
+                    layerGroups[catKey].addTo(map);
+                }
+            });
 
-      Object.entries(CATEGORIES).forEach(([key, cat]) => {
-        const item = document.createElement('label');
-        item.className = 'category-item';
-        item.innerHTML = `
-          <input type="checkbox" value="${key}" checked onchange="toggleCategory('${key}', this.checked)">
-          <span class="category-name">
-            <img src="${cat.icon}" class="filter-icon-img" onError="this.style.display='none';" />
-            ${cat.name}
-          </span>
-          
-          <div class="category-hover-preview">
-            <img src="${cat.image}" alt="${cat.name}" onError="this.src='https://via.placeholder.com/200x130/222/e5b35c?text=${cat.name}';" />
-          </div>
-        `;
-        container.appendChild(item);
-      });
-    }
+            markersData.forEach(data => {
+                const catInfo = CATEGORIES[data.category];
+                const iconSrc = catInfo ? catInfo.icon : '';
 
-    function toggleCategory(categoryKey, isChecked) {
-      if (isChecked) {
-        activeFilters.add(categoryKey);
-        if (layerGroups[categoryKey]) map.addLayer(layerGroups[categoryKey]);
-      } else {
-        activeFilters.delete(categoryKey);
-        if (layerGroups[categoryKey]) map.removeLayer(layerGroups[categoryKey]);
-      }
-    }
+                const customIcon = L.divIcon({
+                    html: `<img src="${iconSrc}" class="map-marker-img" onError="this.onerror=null; this.src='https://via.placeholder.com/20?text=📍';" />`,
+                    className: 'custom-map-icon',
+                    iconSize: [20, 20],
+                    iconAnchor: [10, 10]
+                });
 
-    window.onload = initMap;
-  </script>
+                const marker = L.marker(data.coords, { icon: customIcon });
+
+                if (data.previewImg) {
+                    const tooltipHTML = `
+                <div class="hover-photo-frame">
+                  <img src="${data.previewImg}" alt="preview" />
+                </div>
+              `;
+
+                    // [수정] direction: 'auto' 로 설정하여 맵 상단 마커는 자동으로 팝업이 아래로 내려감
+                    marker.bindTooltip(tooltipHTML, {
+                        className: 'custom-tooltip-photo',
+                        direction: 'auto',
+                        opacity: 1
+                    });
+                }
+
+                if (data.detailImg || data.detailTitle) {
+                    const popupHTML = `
+                <div class="popup-detail">
+                  ${data.detailImg ? `<img src="${data.detailImg}" />` : ''}
+                  ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
+                  ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
+                </div>
+              `;
+                    marker.bindPopup(popupHTML);
+                }
+
+                if (layerGroups[data.category]) {
+                    layerGroups[data.category].addLayer(marker);
+                }
+            });
+        }
+
+        function clearAllMarkers() {
+            Object.keys(layerGroups).forEach(catKey => {
+                map.removeLayer(layerGroups[catKey]);
+            });
+        }
+
+        function renderFilterUI() {
+            const container = document.getElementById('category-filters');
+            container.innerHTML = '';
+
+            const previewBox = document.getElementById('global-category-preview');
+            const previewImg = document.getElementById('global-preview-img');
+
+            Object.entries(CATEGORIES).forEach(([key, cat]) => {
+                const item = document.createElement('label');
+                item.className = 'category-item';
+                item.innerHTML = `
+              <input type="checkbox" value="${key}" checked onchange="toggleCategory('${key}', this.checked)">
+              <span class="category-name">
+                <img src="${cat.icon}" class="filter-icon-img" onError="this.style.display='none';" />
+                ${cat.name}
+              </span>
+            `;
+
+                item.addEventListener('mouseenter', () => {
+                    const rect = item.getBoundingClientRect();
+                    previewImg.src = cat.image;
+                    previewImg.onerror = () => {
+                        previewImg.src = `https://via.placeholder.com/220x140/222/e5b35c?text=${cat.name}`;
+                    };
+
+                    previewBox.style.top = `${rect.top}px`;
+                    previewBox.style.left = `${rect.right + 10}px`;
+                    previewBox.style.display = 'block';
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    previewBox.style.display = 'none';
+                });
+
+                container.appendChild(item);
+            });
+        }
+
+        function toggleCategory(categoryKey, isChecked) {
+            if (isChecked) {
+                activeFilters.add(categoryKey);
+                if (layerGroups[categoryKey]) map.addLayer(layerGroups[categoryKey]);
+            } else {
+                activeFilters.delete(categoryKey);
+                if (layerGroups[categoryKey]) map.removeLayer(layerGroups[categoryKey]);
+            }
+        }
+
+        window.onload = initMap;
+    </script>
 </body>
 </html>

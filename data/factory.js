@@ -160,7 +160,7 @@ window.MAP_DATA_factory = [
         "coords": [570, 154],
         "previewImg": "assets/previews/factory/project/1-1.png",
         "detailTitle": "project",
-        "detailDesc": "",
+        "detailDesc": "1-1",
         "detailImg": "assets/previews/factory/project/1-1.png"
     },
     {
@@ -169,7 +169,7 @@ window.MAP_DATA_factory = [
         "coords": [488, 150],
         "previewImg": "assets/previews/factory/project/1-2.png",
         "detailTitle": "project",
-        "detailDesc": "책 사이에 파묻혀 있음",
+        "detailDesc": "1-2 책 사이에 파묻혀 있음",
         "detailImg": "assets/previews/factory/project/1-2.png"
     },
     {
@@ -178,7 +178,7 @@ window.MAP_DATA_factory = [
         "coords": [740, 255],
         "previewImg": "assets/previews/factory/project/1-3.png",
         "detailTitle": "project",
-        "detailDesc": "",
+        "detailDesc": "1-3",
         "detailImg": "assets/previews/factory/project/1-3.png"
     },
     {
@@ -187,8 +187,26 @@ window.MAP_DATA_factory = [
         "coords": [654, 486],
         "previewImg": "assets/previews/factory/project/1-4.png",
         "detailTitle": "project",
-        "detailDesc": "락커 사이",
+        "detailDesc": "1-4 락커 사이",
         "detailImg": "assets/previews/factory/project/1-4.png"
+    },
+    {
+        "id": "project-1-5",
+        "category": "project",
+        "coords": [590, 599],
+        "previewImg": "assets/previews/factory/project/1-5.png",
+        "detailTitle": "project",
+        "detailDesc": "1-5",
+        "detailImg": "assets/previews/factory/project/1-5.png"
+    },
+    {
+        "id": "project-1-6",
+        "category": "project",
+        "coords": [844, 612],
+        "previewImg": "assets/previews/factory/project/1-6.png",
+        "detailTitle": "project",
+        "detailDesc": "1-6",
+        "detailImg": "assets/previews/factory/project/1-6.png"
     },
     {
         "id": "project-2-1",
@@ -196,7 +214,7 @@ window.MAP_DATA_factory = [
         "coords": [285, 222],
         "previewImg": "assets/previews/factory/project/2-1.png",
         "detailTitle": "project",
-        "detailDesc": "",
+        "detailDesc": "2-1",
         "detailImg": "assets/previews/factory/project/2-1.png"
     }
 

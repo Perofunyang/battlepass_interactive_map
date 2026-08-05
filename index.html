@@ -109,8 +109,8 @@
         /* 최상위 카테고리 팝업 박스 */
         #global-category-preview {
             display: none;
-            position: fixed; /* 최상위 레이어로 고정 */
-            z-index: 9999; /* 지도 및 모든 요소보다 위에 배치 */
+            position: fixed;
+            z-index: 9999;
             border: 2px solid #e5b35c;
             border-radius: 8px;
             overflow: hidden;
@@ -192,11 +192,12 @@
             line-height: 0;
         }
 
-            /* [수정] 마커 호버 이미지 크기 대폭 확대 (360px x 225px) */
             .hover-photo-frame img {
-                width: 360px;
-                height: 225px;
-                object-fit: cover;
+                max-width: 320px;
+                max-height: 200px;
+                width: auto;
+                height: auto;
+                object-fit: contain;
                 display: block;
             }
 
@@ -213,12 +214,12 @@
         }
 
         .popup-detail {
-            width: 320px;
+            width: 300px;
         }
 
             .popup-detail img {
                 width: 100%;
-                height: 180px;
+                height: 170px;
                 object-fit: cover;
                 border-radius: 6px;
                 margin-bottom: 10px;
@@ -254,6 +255,7 @@
                 <option value="lighthouse">Lighthouse (등대)</option>
                 <option value="streets_of_tarkov">Streets of Tarkov (스오타)</option>
                 <option value="lab">The Lab (연구실)</option>
+                <option value="labyrinth">The Labyrinth (미궁)</option>
             </select>
         </div>
 
@@ -278,42 +280,46 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <script>
+        // [수정된 맵 현황 데이터 반영]
         const MAPS = {
-            customs: { name: "Customs", imageUrl: "./assets/maps/customs.jpg", width: 2553, height: 1328 },
-            ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 850, height: 850 },
+            customs: { name: "Customs", imageUrl: "./assets/maps/customs.webp", width: 4097, height: 2142 },
             factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850 },
-            woods: { name: "Woods", imageUrl: "./assets/maps/woods.jpg", width: 3000, height: 3000 },
-            reserve: { name: "Reserve", imageUrl: "./assets/maps/reserve.jpg", width: 2048, height: 2048 },
-            shoreline: { name: "Shoreline", imageUrl: "./assets/maps/shoreline.jpg", width: 3000, height: 2048 },
+            ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 6920, height: 6920 },
             interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.jpg", width: 2000, height: 1106 },
-            lighthouse: { name: "Lighthouse", imageUrl: "./assets/maps/lighthouse.jpg", width: 3000, height: 2048 },
-            streets_of_tarkov: { name: "Streets of Tarkov", imageUrl: "./assets/maps/streets_of_tarkov.jpg", width: 4096, height: 4096 },
-            lab: { name: "Lab", imageUrl: "./assets/maps/lab.webp", width: 3820, height: 2189 }
+            lab: { name: "Lab", imageUrl: "./assets/maps/lab.webp", width: 3820, height: 2189 },
+            labyrinth: { name: "Labyrinth", imageUrl: "./assets/maps/labyrinth.webp", width: 4145, height: 3840 },
+            lighthouse: { name: "Lighthouse", imageUrl: "./assets/maps/lighthouse.webp", width: 2242, height: 3892 },
+            reserve: { name: "Reserve", imageUrl: "./assets/maps/reserve.webp", width: 4701, height: 2785 },
+            shoreline: { name: "Shoreline", imageUrl: "./assets/maps/shoreline.webp", width: 6668, height: 4567 },
+            streets_of_tarkov: { name: "Streets of Tarkov", imageUrl: "./assets/maps/streets_of_tarkov.webp", width: 7620, height: 5877 },
+            woods: { name: "Woods", imageUrl: "./assets/maps/woods.webp", width: 6994, height: 6843 }
         };
 
         const CATEGORIES = {
-            technical: { name: "Technical", icon: "./assets/icons/technical.png", image: "./assets/category/technical.jpg" },
-            pmc: { name: "PMC", icon: "./assets/icons/pmc.png", image: "./assets/category/pmc.jpg" },
-            project: { name: "Project", icon: "./assets/icons/project.png", image: "./assets/category/project.jpg" },
-            blueprints: { name: "Blueprints", icon: "./assets/icons/blueprints.png", image: "./assets/category/blueprints.jpg" },
-            test: { name: "Test", icon: "./assets/icons/test.png", image: "./assets/category/test.jpg" },
-            user: { name: "User", icon: "./assets/icons/user.png", image: "./assets/category/user.jpg" },
-            medical: { name: "Medical", icon: "./assets/icons/medical.png", image: "./assets/category/medical.jpg" },
-            financial: { name: "Financial", icon: "./assets/icons/financial.png", image: "./assets/category/financial.jpg" }
+            technical: { name: "Technical", icon: "./assets/icons/technical.png", image: "./assets/category/technical.png" },
+            pmc: { name: "PMC", icon: "./assets/icons/pmc.png", image: "./assets/category/pmc.png" },
+            project: { name: "Project", icon: "./assets/icons/project.png", image: "./assets/category/project.png" },
+            blueprints: { name: "Blueprints", icon: "./assets/icons/blueprints.png", image: "./assets/category/blueprints.png" },
+            test: { name: "Test", icon: "./assets/icons/test.png", image: "./assets/category/test.png" },
+            user: { name: "User", icon: "./assets/icons/user.png", image: "./assets/category/user.png" },
+            medical: { name: "Medical", icon: "./assets/icons/medical.png", image: "./assets/category/medical.png" },
+            financial: { name: "Financial", icon: "./assets/icons/financial.png", image: "./assets/category/financial.png" }
         };
 
+
         let map = null;
-        let currentMapId = 'factory';
+        let currentMapId = 'customs';
         let currentImageOverlay = null;
         const layerGroups = {};
         const activeFilters = new Set(Object.keys(CATEGORIES));
 
         function initMap() {
+            // [수정] minZoom을 -5로 크게 낮춰서 7000px급 거대한 지도도 한눈에 들어가도록 설정
             map = L.map('map', {
                 crs: L.CRS.Simple,
-                minZoom: -2,
-                maxZoom: 2,
-                zoomSnap: 0.25,
+                minZoom: -5,     /* 초고해상도 지도를 한눈에 축소해 볼 수 있도록 -5로 확장 */
+                maxZoom: 3,      /* 고해상도 지도의 구석구석을 확대해 볼 수 있도록 3으로 확장 */
+                zoomSnap: 0.1,   /* 줌 단계를 부드럽게 조절 */
                 attributionControl: false
             });
 
@@ -356,6 +362,7 @@
             const bounds = [[0, 0], [mapConfig.height, mapConfig.width]];
             currentImageOverlay = L.imageOverlay(mapConfig.imageUrl, bounds).addTo(map);
 
+            // fitBounds가 화면 크기에 딱 맞춰 줌 수준을 자동 계산합니다 (-5까지 축소 허용됨)
             map.fitBounds(bounds, { animate: false });
             map.setMaxBounds(bounds);
 
@@ -385,6 +392,8 @@
         }
 
         function renderMarkers(markersData) {
+            const mapConfig = MAPS[currentMapId];
+
             Object.keys(CATEGORIES).forEach(catKey => {
                 layerGroups[catKey] = L.layerGroup();
                 if (activeFilters.has(catKey)) {
@@ -395,6 +404,18 @@
             markersData.forEach(data => {
                 const catInfo = CATEGORIES[data.category];
                 const iconSrc = catInfo ? catInfo.icon : '';
+
+                // 마커의 상대적 위치 계산 (중앙 기준 상단/하단, 좌측/우측 판단)
+                const markerY = data.coords[0];
+                const markerX = data.coords[1];
+                const isTop = markerY > (mapConfig.height * 0.5);
+                const isRight = markerX > (mapConfig.width * 0.5);
+
+                // 호버 및 클릭 팝업 방향/위치 자동 결정
+                const tooltipDirection = isTop ? 'bottom' : 'top';
+                const tooltipOffset = isTop ? [0, 15] : [0, -15];
+                const popupY = isTop ? 230 : -10;
+                const popupX = isRight ? -80 : 80;
 
                 const customIcon = L.divIcon({
                     html: `<img src="${iconSrc}" class="map-marker-img" onError="this.onerror=null; this.src='https://via.placeholder.com/20?text=📍';" />`,
@@ -412,10 +433,10 @@
                 </div>
               `;
 
-                    // [수정] direction: 'auto' 로 설정하여 맵 상단 마커는 자동으로 팝업이 아래로 내려감
                     marker.bindTooltip(tooltipHTML, {
                         className: 'custom-tooltip-photo',
-                        direction: 'auto',
+                        direction: tooltipDirection,
+                        offset: tooltipOffset,
                         opacity: 1
                     });
                 }
@@ -428,7 +449,12 @@
                   ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
                 </div>
               `;
-                    marker.bindPopup(popupHTML);
+
+                    marker.bindPopup(popupHTML, {
+                        offset: L.point(popupX, popupY),
+                        autoPan: true,
+                        autoPanPadding: [20, 20]
+                    });
                 }
 
                 if (layerGroups[data.category]) {

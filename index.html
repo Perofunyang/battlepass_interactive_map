@@ -342,7 +342,7 @@
             map.on('click', function (e) {
                 const y = Math.round(e.latlng.lat);
                 const x = Math.round(e.latlng.lng);
-                const coordString = `[${y}, ${x}]`;
+                const coordString = `[${y}, ${x}],`;
 
                 navigator.clipboard.writeText(coordString).then(() => {
                     coordDiv.innerText = `복사됨! -> ${coordString}`;

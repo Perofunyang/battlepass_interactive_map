@@ -38,7 +38,7 @@ window.MAP_DATA_customs = [
     {
         "id": "financial-5",
         "category": "financial",
-        "coords": [774, 3670],
+        "coords": [838, 3710],
         "previewImg": "assets/previews/customs/financial/5.png",
         "detailTitle": "financial-5",
         "detailDesc": "빨창 컴터방",
@@ -116,6 +116,24 @@ window.MAP_DATA_customs = [
         "detailDesc": "가동 304호",
         "detailImg": "assets/previews/customs/financial/13.png"
     },
+    {
+        "id": "financial-14",
+        "category": "financial",
+        "coords": [407, 3313],
+        "previewImg": "assets/previews/customs/financial/14.png",
+        "detailTitle": "financial-14",
+        "detailDesc": "웨어하우스 5번(비타민 퀘 공장) 컴터 옆 선반",
+        "detailImg": "assets/previews/customs/financial/14.png"
+    },
+    {
+        "id": "financial-15",
+        "category": "financial",
+        "coords": [108, 2640],
+        "previewImg": "assets/previews/customs/financial/15.png",
+        "detailTitle": "financial-15",
+        "detailDesc": "나동 212호 침대 밑",
+        "detailImg": "assets/previews/customs/financial/15.png"
+    },
 
 
     {
@@ -153,5 +171,14 @@ window.MAP_DATA_customs = [
         "detailTitle": "project-4",
         "detailDesc": "올드가스 안에 책장 옆 구석탱이",
         "detailImg": "assets/previews/customs/project/4.png"
-    }
+    },
+    {
+        "id": "project-5",
+        "category": "project",
+        "coords": [772, 3676],
+        "previewImg": "assets/previews/customs/project/5.png",
+        "detailTitle": "project-5",
+        "detailDesc": "빨창 컴터방",
+        "detailImg": "assets/previews/customs/project/5.png"
+    },
 ];

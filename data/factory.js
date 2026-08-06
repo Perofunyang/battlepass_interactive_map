@@ -3,37 +3,37 @@ window.MAP_DATA_factory = [
         "id": "blueprint-3-1",
         "category": "blueprints",
         "coords": [580, 64],
-        "previewImg": "assets/previews/factory/blueprints/3.png",
+        "previewImg": "assets/previews/factory/blueprints/3-1.png",
         "detailTitle": "blueprint-3-1",
         "detailDesc": "",
-        "detailImg": "assets/previews/factory/blueprints/3.png"
+        "detailImg": "assets/previews/factory/blueprints/3-1.png"
     },
     {
         "id": "blueprint-3-2",
         "category": "blueprints",
         "coords": [572, 97],
-        "previewImg": "assets/previews/factory/blueprints/3.png",
+        "previewImg": "assets/previews/factory/blueprints/3-2.png",
         "detailTitle": "blueprint-3-2",
         "detailDesc": "",
-        "detailImg": "assets/previews/factory/blueprints/3.png"
+        "detailImg": "assets/previews/factory/blueprints/3-2.png"
     },
     {
         "id": "blueprint-3-3",
         "category": "blueprints",
         "coords": [537, 66],
-        "previewImg": "assets/previews/factory/blueprints/3.png",
+        "previewImg": "assets/previews/factory/blueprints/3-3.png",
         "detailTitle": "blueprint-3-3",
         "detailDesc": "",
-        "detailImg": "assets/previews/factory/blueprints/3.png"
+        "detailImg": "assets/previews/factory/blueprints/3-3.png"
     },
     {
         "id": "blueprint-3-4",
         "category": "blueprints",
         "coords": [484, 77],
-        "previewImg": "assets/previews/factory/blueprints/3.png",
+        "previewImg": "assets/previews/factory/blueprints/3-4.png",
         "detailTitle": "blueprint-3-4",
         "detailDesc": "",
-        "detailImg": "assets/previews/factory/blueprints/3.png"
+        "detailImg": "assets/previews/factory/blueprints/3-4.png"
     },
     {
         "id": "blueprint-1-1",

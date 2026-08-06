@@ -39,10 +39,10 @@ window.MAP_DATA_woods = [
         "id": "test-5",
         "category": "test",
         "coords": [4178, 5697],
-        "previewImg": "assets/previews/woods/test/5.png",
+        "previewImg": "assets/previews/woods/test/5.jpg",
         "detailTitle": "test-5",
         "detailDesc": "강변 마을 동쪽 가운데 집 2층",
-        "detailImg": "assets/previews/woods/test/5.png"
+        "detailImg": "assets/previews/woods/test/5.jpg"
     },
 
 
@@ -55,6 +55,24 @@ window.MAP_DATA_woods = [
         "detailTitle": "technical-1",
         "detailDesc": "기술 문서",
         "detailImg": "assets/previews/woods/technical/1.png"
+    },
+    {
+        "id": "technical-2",
+        "category": "technical",
+        "coords": [5267, 5320],
+        "previewImg": "assets/previews/woods/technical/2.png",
+        "detailTitle": "technical-2",
+        "detailDesc": "벙커 화장실 입구 너머",
+        "detailImg": "assets/previews/woods/technical/2.png"
+    },
+    {
+        "id": "technical-3",
+        "category": "technical",
+        "coords": [4053, 5448],
+        "previewImg": "assets/previews/woods/technical/3.png",
+        "detailTitle": "technical-3",
+        "detailDesc": "책장 밑에 널부러진 책 옆",
+        "detailImg": "assets/previews/woods/technical/3.png"
     },
 
 ];

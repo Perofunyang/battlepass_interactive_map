@@ -8,5 +8,27 @@ window.MAP_DATA_lighthouse = [
         "detailDesc": "기차역 옆 창고건물 책상 옆 캐비넷 맨 밑칸",
         "detailImg": "assets/previews/lighthouse/technical/1.png"
     },
+    {
+        "id": "technical-2",
+        "category": "technical",
+        "coords": [1610, 1258],
+        "previewImg": "assets/previews/lighthouse/technical/2.png",
+        "detailTitle": "technical-2",
+        "detailDesc": "큰 별장 안 거실 옆에",
+        "detailImg": "assets/previews/lighthouse/technical/2.png"
+    },
+
+
+
+    {
+        "id": "pmc-1",
+        "category": "pmc",
+        "coords": [1203, 1229],
+        "previewImg": "assets/previews/lighthouse/pmc/1.png",
+        "detailTitle": "pmc-1",
+        "detailDesc": "샬레 테니스장 텐트 안 책상 위",
+        "detailImg": "assets/previews/lighthouse/pmc/1.png"
+    },
+
 
 ];

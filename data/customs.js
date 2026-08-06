@@ -11,10 +11,10 @@ window.MAP_DATA_customs = [
     {
         "id": "financial-2",
         "category": "financial",
-        "coords": [1280, 1364],
+        "coords": [1324, 2423],
         "previewImg": "assets/previews/customs/financial/2.png",
         "detailTitle": "financial-2",
-        "detailDesc": "구골조 공장 3층 - 정확한 위치는 파악 못했음",
+        "detailDesc": "구골조 공장 3층",
         "detailImg": "assets/previews/customs/financial/2.png"
     },
     {
@@ -92,19 +92,19 @@ window.MAP_DATA_customs = [
     {
         "id": "financial-11",
         "category": "financial",
-        "coords": [1280, 1377],
+        "coords": [1090, 1608],
         "previewImg": "assets/previews/customs/financial/11.png",
         "detailTitle": "financial-11",
-        "detailDesc": "판다공장 3층(레프 카메라 붙이고 킬퀘하는 곳) - 정확한 위치는 파악 못했음",
+        "detailDesc": "판다공장 최상층(레프 카메라 붙이고 킬퀘하는 곳) 안쪽 문 열고 들어가는 방",
         "detailImg": "assets/previews/customs/financial/11.png"
     },
     {
         "id": "financial-12",
         "category": "financial",
-        "coords": [1282, 2267],
+        "coords": [1296, 2320],
         "previewImg": "assets/previews/customs/financial/12.png",
         "detailTitle": "financial-12",
-        "detailDesc": "보일러 빌딩 방 안, 컴패니 룸 키 사용처 안 - 상세 지도가 없어서 좌표로만 대강 나타냄",
+        "detailDesc": "보일러 빌딩 위 층, 컴패니 룸 키 사용처 안",
         "detailImg": "assets/previews/customs/financial/12.png"
     },
     {
@@ -198,5 +198,14 @@ window.MAP_DATA_customs = [
         "detailTitle": "project-7",
         "detailDesc": "크로마키방 건너편 2층 구석",
         "detailImg": "assets/previews/customs/project/7.png"
+    },
+    {
+        "id": "project-8",
+        "category": "project",
+        "coords": [1287, 2564],
+        "previewImg": "assets/previews/customs/project/8.png",
+        "detailTitle": "project-8",
+        "detailDesc": "2층 동쪽 구석 방안",
+        "detailImg": "assets/previews/customs/project/8.png"
     },
 ];

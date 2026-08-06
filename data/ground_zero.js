@@ -36,6 +36,15 @@ window.MAP_DATA_ground_zero = [
         "detailImg": "assets/previews/ground_zero/user/2-4.webp"
     },
     {
+        "id": "user-2-5",
+        "category": "user",
+        "coords": [4231, 4487],
+        "previewImg": "assets/previews/ground_zero/user/2-5.png",
+        "detailTitle": "user-2-5",
+        "detailDesc": "3번 방 안쪽",
+        "detailImg": "assets/previews/ground_zero/user/2-5.png"
+    },
+    {
         "id": "user-1-1",
         "category": "user",
         "coords": [5605, 3360],
@@ -44,9 +53,26 @@ window.MAP_DATA_ground_zero = [
         "detailDesc": "검은색 차 조수석 문 아래",
         "detailImg": "assets/previews/ground_zero/user/1-1.png"
     },
+    {
+        "id": "user-1-2",
+        "category": "user",
+        "coords": [3446, 2928],
+        "previewImg": "assets/previews/ground_zero/user/1-2.png",
+        "detailTitle": "user-1-2",
+        "detailDesc": "",
+        "detailImg": "assets/previews/ground_zero/user/1-2.png"
+    },
 
-    
 
+    {
+        "id": "medical-1-1",
+        "category": "medical",
+        "coords": [5956, 2275],
+        "previewImg": "assets/previews/ground_zero/medical/1-1.png",
+        "detailTitle": "medical-1-1",
+        "detailDesc": "이머컴 탈출구 옆",
+        "detailImg": "assets/previews/ground_zero/medical/1-1.png"
+    },
     {
         "id": "medical-3-1",
         "category": "medical",
@@ -64,6 +90,15 @@ window.MAP_DATA_ground_zero = [
         "detailTitle": "medical-3-2",
         "detailDesc": "4번 방 컴퓨터 책상 위",
         "detailImg": "assets/previews/ground_zero/medical/3-2.png"
+    },
+    {
+        "id": "medical-3-3",
+        "category": "medical",
+        "coords": [4631, 4457],
+        "previewImg": "assets/previews/ground_zero/medical/3-3.jpg",
+        "detailTitle": "medical-3-3",
+        "detailDesc": "4번 방",
+        "detailImg": "assets/previews/ground_zero/medical/3-3.jpg"
     },
 
 ];

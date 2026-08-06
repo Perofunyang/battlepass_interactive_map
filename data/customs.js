@@ -208,4 +208,13 @@ window.MAP_DATA_customs = [
         "detailDesc": "2층 동쪽 구석 방안",
         "detailImg": "assets/previews/customs/project/8.png"
     },
+    {
+        "id": "project-9",
+        "category": "project",
+        "coords": [114, 2531],
+        "previewImg": "assets/previews/customs/project/9.webp",
+        "detailTitle": "project-9",
+        "detailDesc": "나동 216호",
+        "detailImg": "assets/previews/customs/project/9.webp"
+    },
 ];

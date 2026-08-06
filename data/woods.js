@@ -44,6 +44,15 @@ window.MAP_DATA_woods = [
         "detailDesc": "강변 마을 동쪽 가운데 집 2층",
         "detailImg": "assets/previews/woods/test/5.jpg"
     },
+    {
+        "id": "test-6",
+        "category": "test",
+        "coords": [4760, 1959],
+        "previewImg": "assets/previews/woods/test/6.png",
+        "detailTitle": "test-6",
+        "detailDesc": "",
+        "detailImg": "assets/previews/woods/test/6.png"
+    },
 
 
 

@@ -3,136 +3,136 @@ window.MAP_DATA_customs = [
         "id": "financial-1",
         "category": "financial",
         "coords": [1781, 1439],
-        "previewImg": "assets/previews/customs/financial/1.png",
+        "previewImg": "assets/previews/customs/financial/1.webp",
         "detailTitle": "financial-1",
         "detailDesc": "올가",
-        "detailImg": "assets/previews/customs/financial/1.png"
+        "detailImg": "assets/previews/customs/financial/1.webp"
     },
     {
         "id": "financial-2",
         "category": "financial",
         "coords": [1324, 2423],
-        "previewImg": "assets/previews/customs/financial/2.png",
+        "previewImg": "assets/previews/customs/financial/2.webp",
         "detailTitle": "financial-2",
         "detailDesc": "구골조 공장 3층",
-        "detailImg": "assets/previews/customs/financial/2.png"
+        "detailImg": "assets/previews/customs/financial/2.webp"
     },
     {
         "id": "financial-3",
         "category": "financial",
         "coords": [346, 2864],
-        "previewImg": "assets/previews/customs/financial/3.png",
+        "previewImg": "assets/previews/customs/financial/3.webp",
         "detailTitle": "financial-3",
         "detailDesc": "나동 가드 데스크",
-        "detailImg": "assets/previews/customs/financial/3.png"
+        "detailImg": "assets/previews/customs/financial/3.webp"
     },
     {
         "id": "financial-4",
         "category": "financial",
         "coords": [94, 3665],
-        "previewImg": "assets/previews/customs/financial/4.png",
+        "previewImg": "assets/previews/customs/financial/4.webp",
         "detailTitle": "financial-4",
         "detailDesc": "가동 212호",
-        "detailImg": "assets/previews/customs/financial/4.png"
+        "detailImg": "assets/previews/customs/financial/4.webp"
     },
     {
         "id": "financial-5",
         "category": "financial",
         "coords": [838, 3710],
-        "previewImg": "assets/previews/customs/financial/5.png",
+        "previewImg": "assets/previews/customs/financial/5.webp",
         "detailTitle": "financial-5",
         "detailDesc": "빨창 컴터방",
-        "detailImg": "assets/previews/customs/financial/5.png"
+        "detailImg": "assets/previews/customs/financial/5.webp"
     },
     {
         "id": "financial-6",
         "category": "financial",
         "coords": [1942, 2359],
-        "previewImg": "assets/previews/customs/financial/6.png",
+        "previewImg": "assets/previews/customs/financial/6.webp",
         "detailTitle": "financial-6",
         "detailDesc": "신골조 1층 소파 팔걸이 위에",
-        "detailImg": "assets/previews/customs/financial/6.png"
+        "detailImg": "assets/previews/customs/financial/6.webp"
     },
     {
         "id": "financial-7",
         "category": "financial",
         "coords": [1492, 2444],
-        "previewImg": "assets/previews/customs/financial/7.png",
+        "previewImg": "assets/previews/customs/financial/7.webp",
         "detailTitle": "financial-7",
         "detailDesc": "인텔방 밖에 있는 컨테이너 안 선반",
-        "detailImg": "assets/previews/customs/financial/7.png"
+        "detailImg": "assets/previews/customs/financial/7.webp"
     },
     {
         "id": "financial-8",
         "category": "financial",
         "coords": [1970, 2671],
-        "previewImg": "assets/previews/customs/financial/8.png",
+        "previewImg": "assets/previews/customs/financial/8.webp",
         "detailTitle": "financial-8",
         "detailDesc": "인텔방 2번째 칸 오른쪽 구석 바닥",
-        "detailImg": "assets/previews/customs/financial/8.png"
+        "detailImg": "assets/previews/customs/financial/8.webp"
     },
     {
         "id": "financial-9",
         "category": "financial",
         "coords": [1947, 2670],
-        "previewImg": "assets/previews/customs/financial/9.png",
+        "previewImg": "assets/previews/customs/financial/9.webp",
         "detailTitle": "financial-9",
         "detailDesc": "인텔방 책장 책들 사이 (좌표 부정확)",
-        "detailImg": "assets/previews/customs/financial/9.png"
+        "detailImg": "assets/previews/customs/financial/9.webp"
     },
     {
         "id": "financial-10",
         "category": "financial",
         "coords": [1176, 3483],
-        "previewImg": "assets/previews/customs/financial/10.png",
+        "previewImg": "assets/previews/customs/financial/10.webp",
         "detailTitle": "financial-10",
         "detailDesc": "빨창 밖에 작은 사무실 안",
-        "detailImg": "assets/previews/customs/financial/10.png"
+        "detailImg": "assets/previews/customs/financial/10.webp"
     },
     {
         "id": "financial-11",
         "category": "financial",
         "coords": [1090, 1608],
-        "previewImg": "assets/previews/customs/financial/11.png",
+        "previewImg": "assets/previews/customs/financial/11.webp",
         "detailTitle": "financial-11",
         "detailDesc": "판다공장 최상층(레프 카메라 붙이고 킬퀘하는 곳) 안쪽 문 열고 들어가는 방",
-        "detailImg": "assets/previews/customs/financial/11.png"
+        "detailImg": "assets/previews/customs/financial/11.webp"
     },
     {
         "id": "financial-12",
         "category": "financial",
         "coords": [1296, 2320],
-        "previewImg": "assets/previews/customs/financial/12.png",
+        "previewImg": "assets/previews/customs/financial/12.webp",
         "detailTitle": "financial-12",
         "detailDesc": "보일러 빌딩 위 층, 컴패니 룸 키 사용처 안",
-        "detailImg": "assets/previews/customs/financial/12.png"
+        "detailImg": "assets/previews/customs/financial/12.webp"
     },
     {
         "id": "financial-13",
         "category": "financial",
         "coords": [407, 3313],
-        "previewImg": "assets/previews/customs/financial/13.png",
+        "previewImg": "assets/previews/customs/financial/13.webp",
         "detailTitle": "financial-13",
         "detailDesc": "가동 304호",
-        "detailImg": "assets/previews/customs/financial/13.png"
+        "detailImg": "assets/previews/customs/financial/13.webp"
     },
     {
         "id": "financial-14",
         "category": "financial",
         "coords": [1281, 844],
-        "previewImg": "assets/previews/customs/financial/14.png",
+        "previewImg": "assets/previews/customs/financial/14.webp",
         "detailTitle": "financial-14",
         "detailDesc": "웨어하우스 5번(비타민 퀘 공장) 컴터 옆 선반",
-        "detailImg": "assets/previews/customs/financial/14.png"
+        "detailImg": "assets/previews/customs/financial/14.webp"
     },
     {
         "id": "financial-15",
         "category": "financial",
         "coords": [108, 2640],
-        "previewImg": "assets/previews/customs/financial/15.png",
+        "previewImg": "assets/previews/customs/financial/15.webp",
         "detailTitle": "financial-15",
         "detailDesc": "나동 212호 침대 밑",
-        "detailImg": "assets/previews/customs/financial/15.png"
+        "detailImg": "assets/previews/customs/financial/15.webp"
     },
 
 
@@ -140,46 +140,46 @@ window.MAP_DATA_customs = [
         "id": "project-1",
         "category": "project",
         "coords": [1840, 2369],
-        "previewImg": "assets/previews/customs/project/1.png",
+        "previewImg": "assets/previews/customs/project/1.webp",
         "detailTitle": "project-1",
         "detailDesc": "",
-        "detailImg": "assets/previews/customs/project/1.png"
+        "detailImg": "assets/previews/customs/project/1.webp"
     },
     {
         "id": "project-2",
         "category": "project",
         "coords": [1963, 2663],
-        "previewImg": "assets/previews/customs/project/2.png",
+        "previewImg": "assets/previews/customs/project/2.webp",
         "detailTitle": "project-2",
         "detailDesc": "인텔방 2층 2번째 책장 위",
-        "detailImg": "assets/previews/customs/project/2.png"
+        "detailImg": "assets/previews/customs/project/2.webp"
     },
     {
         "id": "project-3",
         "category": "project",
         "coords": [2001, 2671],
-        "previewImg": "assets/previews/customs/project/3.png",
+        "previewImg": "assets/previews/customs/project/3.webp",
         "detailTitle": "project-3",
         "detailDesc": "인텔방 들어가자마자",
-        "detailImg": "assets/previews/customs/project/3.png"
+        "detailImg": "assets/previews/customs/project/3.webp"
     },
     {
         "id": "project-4",
         "category": "project",
         "coords": [1756, 1442],
-        "previewImg": "assets/previews/customs/project/4.png",
+        "previewImg": "assets/previews/customs/project/4.webp",
         "detailTitle": "project-4",
         "detailDesc": "올드가스 안에 책장 옆 구석탱이",
-        "detailImg": "assets/previews/customs/project/4.png"
+        "detailImg": "assets/previews/customs/project/4.webp"
     },
     {
         "id": "project-5",
         "category": "project",
         "coords": [772, 3676],
-        "previewImg": "assets/previews/customs/project/5.png",
+        "previewImg": "assets/previews/customs/project/5.webp",
         "detailTitle": "project-5",
         "detailDesc": "빨창 컴터방",
-        "detailImg": "assets/previews/customs/project/5.png"
+        "detailImg": "assets/previews/customs/project/5.webp"
     },
     {
         "id": "project-6",
@@ -194,19 +194,19 @@ window.MAP_DATA_customs = [
         "id": "project-7",
         "category": "project",
         "coords": [1670, 891],
-        "previewImg": "assets/previews/customs/project/7.png",
+        "previewImg": "assets/previews/customs/project/7.webp",
         "detailTitle": "project-7",
         "detailDesc": "크로마키방 건너편 2층 구석",
-        "detailImg": "assets/previews/customs/project/7.png"
+        "detailImg": "assets/previews/customs/project/7.webp"
     },
     {
         "id": "project-8",
         "category": "project",
         "coords": [1287, 2564],
-        "previewImg": "assets/previews/customs/project/8.png",
+        "previewImg": "assets/previews/customs/project/8.webp",
         "detailTitle": "project-8",
         "detailDesc": "2층 동쪽 구석 방안",
-        "detailImg": "assets/previews/customs/project/8.png"
+        "detailImg": "assets/previews/customs/project/8.webp"
     },
     {
         "id": "project-9",

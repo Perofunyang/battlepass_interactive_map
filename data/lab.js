@@ -3,55 +3,55 @@ window.MAP_DATA_lab = [
         "id": "medical-1-1",
         "category": "medical",
         "coords": [464, 1482],
-        "previewImg": "assets/previews/lab/medical/1-1.png",
+        "previewImg": "assets/previews/lab/medical/1-1.webp",
         "detailTitle": "medical-1-1",
         "detailDesc": "블루 옆방 정면 젤 안쪽 책상",
-        "detailImg": "assets/previews/lab/medical/1-1.png"
+        "detailImg": "assets/previews/lab/medical/1-1.webp"
     },
     {
         "id": "medical-1-2",
         "category": "medical",
         "coords": [414, 1480],
-        "previewImg": "assets/previews/lab/medical/1-2.png",
+        "previewImg": "assets/previews/lab/medical/1-2.webp",
         "detailTitle": "medical-1-2",
         "detailDesc": "블루 옆방 입구 기준 왼쪽 데스크 문서",
-        "detailImg": "assets/previews/lab/medical/1-2.png"
+        "detailImg": "assets/previews/lab/medical/1-2.webp"
     },
     {
         "id": "medical-1-3",
         "category": "medical",
         "coords": [138, 1235],
-        "previewImg": "assets/previews/lab/medical/1-3.png",
+        "previewImg": "assets/previews/lab/medical/1-3.webp",
         "detailTitle": "medical-1-3",
         "detailDesc": "좀비방 안쪽",
-        "detailImg": "assets/previews/lab/medical/1-3.png"
+        "detailImg": "assets/previews/lab/medical/1-3.webp"
     },
     {
         "id": "medical-1-4",
         "category": "medical",
         "coords": [282, 1133],
-        "previewImg": "assets/previews/lab/medical/1-4.jpg",
+        "previewImg": "assets/previews/lab/medical/1-4.webp",
         "detailTitle": "medical-1-4",
         "detailDesc": "좀비방 레버 당기고 들어가서 오른쪽방",
-        "detailImg": "assets/previews/lab/medical/1-4.jpg"
+        "detailImg": "assets/previews/lab/medical/1-4.webp"
     },
     {
         "id": "medical-2-1",
         "category": "medical",
         "coords": [1241, 2855],
-        "previewImg": "assets/previews/lab/medical/2-1.png",
+        "previewImg": "assets/previews/lab/medical/2-1.webp",
         "detailTitle": "medical-2-1",
         "detailDesc": "그린방 내부 컴퓨터 옆",
-        "detailImg": "assets/previews/lab/medical/2-1.png"
+        "detailImg": "assets/previews/lab/medical/2-1.webp"
     },
     {
         "id": "medical-2-2",
         "category": "medical",
         "coords": [1191, 2667],
-        "previewImg": "assets/previews/lab/medical/2-2.png",
+        "previewImg": "assets/previews/lab/medical/2-2.webp",
         "detailTitle": "medical-2-2",
         "detailDesc": "연구소 카고 앞 격리병동",
-        "detailImg": "assets/previews/lab/medical/2-2.png"
+        "detailImg": "assets/previews/lab/medical/2-2.webp"
     },
 
 
@@ -68,19 +68,19 @@ window.MAP_DATA_lab = [
         "id": "user-2-1",
         "category": "user",
         "coords": [2069, 2921],
-        "previewImg": "assets/previews/lab/user/2-1.png",
+        "previewImg": "assets/previews/lab/user/2-1.webp",
         "detailTitle": "user-2-1",
         "detailDesc": "블블방 입구 옆",
-        "detailImg": "assets/previews/lab/user/2-1.png"
+        "detailImg": "assets/previews/lab/user/2-1.webp"
     },
     {
         "id": "user-2-2",
         "category": "user",
         "coords": [352, 1124],
-        "previewImg": "assets/previews/lab/user/2-2.jpg",
+        "previewImg": "assets/previews/lab/user/2-2.webp",
         "detailTitle": "user-2-2",
         "detailDesc": "오렌지방 안",
-        "detailImg": "assets/previews/lab/user/2-2.jpg"
+        "detailImg": "assets/previews/lab/user/2-2.webp"
     },
     {
         "id": "user-2-3",

@@ -119,7 +119,7 @@ window.MAP_DATA_customs = [
     {
         "id": "financial-14",
         "category": "financial",
-        "coords": [407, 3313],
+        "coords": [1281, 844],
         "previewImg": "assets/previews/customs/financial/14.png",
         "detailTitle": "financial-14",
         "detailDesc": "웨어하우스 5번(비타민 퀘 공장) 컴터 옆 선반",

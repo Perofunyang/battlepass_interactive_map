@@ -35,8 +35,17 @@ window.MAP_DATA_ground_zero = [
         "detailDesc": "4번 방 안쪽 끝",
         "detailImg": "assets/previews/ground_zero/user/2-4.webp"
     },
+    {
+        "id": "user-1-1",
+        "category": "user",
+        "coords": [5605, 3360],
+        "previewImg": "assets/previews/ground_zero/user/1-1.png",
+        "detailTitle": "user-1-1",
+        "detailDesc": "검은색 차 조수석 문 아래",
+        "detailImg": "assets/previews/ground_zero/user/1-1.png"
+    },
 
-
+    
 
     {
         "id": "medical-3-1",

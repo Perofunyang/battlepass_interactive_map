@@ -40,4 +40,23 @@ window.MAP_DATA_lighthouse = [
     },
 
 
+
+    {
+        "id": "transit-woods",
+        "category": "transit",
+        "coords": [3410, 866],
+        "title": "Woods (삼림)"
+    },
+    {
+        "id": "transit-reserve",
+        "category": "transit",
+        "coords": [3048, 1692],
+        "title": "Reserve (리저브)"
+    },
+    {
+        "id": "transit-shoreline",
+        "category": "transit",
+        "coords": [1724, 1689],
+        "title": "Shoreline (해안가)"
+    }
 ];

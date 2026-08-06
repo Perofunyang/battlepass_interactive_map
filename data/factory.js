@@ -99,6 +99,15 @@ window.MAP_DATA_factory = [
         "detailImg": "assets/previews/factory/blueprints/1-7.webp"
     },
     {
+        "id": "blueprint-1-8",
+        "category": "blueprints",
+        "coords": [691, 665],
+        "previewImg": "assets/previews/factory/blueprints/1-8.webp",
+        "detailTitle": "blueprint-1-8",
+        "detailDesc": "",
+        "detailImg": "assets/previews/factory/blueprints/1-8.webp"
+    },
+    {
         "id": "blueprint-2-1",
         "category": "blueprints",
         "coords": [574, 771],
@@ -234,6 +243,23 @@ window.MAP_DATA_factory = [
         "detailTitle": "project-0-1",
         "detailDesc": "0-1",
         "detailImg": "assets/previews/factory/project/0-1.webp"
+    },
+
+
+
+
+
+
+    {
+        "id": "transit-woods",
+        "category": "transit",
+        "coords": [576, 6],
+        "title": "Woods (삼림)"
+    },
+    {
+        "id": "transit-customs",
+        "category": "transit",
+        "coords": [496, 689],
+        "title": "Customs (세관)"
     }
-    
 ];

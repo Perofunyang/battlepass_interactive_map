@@ -74,4 +74,16 @@ window.MAP_DATA_interchange = [
         "detailImg": "assets/previews/interchange/test/1-3-1.webp"
     },
 
+    {
+        "id": "transit-streetsoftarkov",
+        "category": "transit",
+        "coords": [4635, 1627],
+        "title": "Streets of Tarkov (스오타)"
+    },
+    {
+        "id": "transit-customs",
+        "category": "transit",
+        "coords": [54, 1566],
+        "title": "Customs (세관)"
+    }
 ];

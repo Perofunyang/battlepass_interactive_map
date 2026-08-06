@@ -155,4 +155,11 @@ window.MAP_DATA_lab = [
         "detailImg": "assets/previews/lab/user/2-9.webp"
     },
 
+
+    {
+        "id": "transit-streetsoftarkov",
+        "category": "transit",
+        "coords": [650, 1294],
+        "title": "Streets of Tarkov (스오타) - 지금 비활성화 되어있음"
+    }
 ];

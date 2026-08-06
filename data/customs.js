@@ -217,4 +217,30 @@ window.MAP_DATA_customs = [
         "detailDesc": "나동 216호",
         "detailImg": "assets/previews/customs/project/9.webp"
     },
+    
+
+    {
+        "id": "transit-reserve",
+        "category": "transit",
+        "coords": [423, 131],
+        "title": "Reserve (리저브)"
+    },
+    {
+        "id": "transit-factory",
+        "category": "transit",
+        "coords": [1803, 1305],
+        "title": "Factory (공장)"
+    },
+    {
+        "id": "transit-shoreline",
+        "category": "transit",
+        "coords": [538, 2607],
+        "title": "Shoreline (해안가)"
+    },
+    {
+        "id": "transit-interchange",
+        "category": "transit",
+        "coords": [1867, 3999],
+        "title": "Interchange (인터체인지)"
+    }
 ];

@@ -84,4 +84,29 @@ window.MAP_DATA_woods = [
         "detailImg": "assets/previews/woods/technical/3.webp"
     },
 
+
+    {
+        "id": "transit-lighthouse",
+        "category": "transit",
+        "coords": [643, 878],
+        "title": "Lighthouse (등대)"
+    },
+    {
+        "id": "transit-reserve",
+        "category": "transit",
+        "coords": [627, 2116],
+        "title": "Reserve (리저브)"
+    },
+    {
+        "id": "transit-customs",
+        "category": "transit",
+        "coords": [400, 3999],
+        "title": "Customs (세관)"
+    },
+    {
+        "id": "transit-factory",
+        "category": "transit",
+        "coords": [593, 4989],
+        "title": "Factory (공장)"
+    }
 ];

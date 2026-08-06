@@ -101,4 +101,11 @@ window.MAP_DATA_ground_zero = [
         "detailImg": "assets/previews/ground_zero/medical/3-3.webp"
     },
 
+
+    {
+        "id": "transit-streetsoftarkov",
+        "category": "transit",
+        "coords": [4402, 985],
+        "title": "Streets of Tarkov (스오타)"
+    }
 ];

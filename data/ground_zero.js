@@ -1,22 +1,42 @@
 window.MAP_DATA_ground_zero = [
     {
-        "id": "user-3-1",
+        "id": "user-2-1",
         "category": "user",
         "coords": [4530, 4348],
-        "previewImg": "assets/previews/ground_zero/user/3-1.jpg",
-        "detailTitle": "user-3-1",
+        "previewImg": "assets/previews/ground_zero/user/2-1.webp",
+        "detailTitle": "user-2-1",
         "detailDesc": "테라그룹 과학자 키 먹고 오는 4번 방 문열자마자 왼쪽 컴퓨터 책상 밑 ",
-        "detailImg": "assets/previews/ground_zero/user/3-1.jpg"
+        "detailImg": "assets/previews/ground_zero/user/2-1.webp"
     },
     {
-        "id": "user-3-2",
+        "id": "user-2-2",
         "category": "user",
         "coords": [4394, 4455],
-        "previewImg": "assets/previews/ground_zero/user/3-2.jpg",
-        "detailTitle": "user-3-2",
+        "previewImg": "assets/previews/ground_zero/user/2-2.png",
+        "detailTitle": "user-2-2",
         "detailDesc": "3번 방 옆 복도 의자 위",
-        "detailImg": "assets/previews/ground_zero/user/3-2.jpg"
+        "detailImg": "assets/previews/ground_zero/user/2-2.png"
     },
+    {
+        "id": "user-2-3",
+        "category": "user",
+        "coords": [4413, 4646],
+        "previewImg": "assets/previews/ground_zero/user/2-3.webp",
+        "detailTitle": "user-2-3",
+        "detailDesc": "",
+        "detailImg": "assets/previews/ground_zero/user/2-3.webp"
+    },
+    {
+        "id": "user-2-4",
+        "category": "user",
+        "coords": [4688, 4392],
+        "previewImg": "assets/previews/ground_zero/user/2-4.webp",
+        "detailTitle": "user-2-4",
+        "detailDesc": "4번 방 안쪽 끝",
+        "detailImg": "assets/previews/ground_zero/user/2-4.webp"
+    },
+
+
 
     {
         "id": "medical-3-1",

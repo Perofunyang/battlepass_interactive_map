@@ -122,10 +122,10 @@ window.MAP_DATA_factory = [
         "id": "project-3-1",
         "category": "project",
         "coords": [581, 78],
-        "previewImg": "assets/previews/factory/project/3-1.png",
+        "previewImg": "assets/previews/factory/project/3-1.webp",
         "detailTitle": "project-3-1",
         "detailDesc": "",
-        "detailImg": "assets/previews/factory/project/3-1.png"
+        "detailImg": "assets/previews/factory/project/3-1.webp"
     },
     {
         "id": "project-3-2",
@@ -212,10 +212,10 @@ window.MAP_DATA_factory = [
         "id": "project-2-1",
         "category": "project",
         "coords": [285, 222],
-        "previewImg": "assets/previews/factory/project/2-1.png",
+        "previewImg": "assets/previews/factory/project/2-1.webp",
         "detailTitle": "project-2-1",
         "detailDesc": "2-1",
-        "detailImg": "assets/previews/factory/project/2-1.png"
+        "detailImg": "assets/previews/factory/project/2-1.webp"
     },
     {
         "id": "project-0-1",

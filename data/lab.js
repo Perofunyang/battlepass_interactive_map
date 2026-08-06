@@ -44,16 +44,34 @@ window.MAP_DATA_lab = [
         "detailDesc": "그린방 내부 컴퓨터 옆",
         "detailImg": "assets/previews/lab/medical/2-1.png"
     },
+    {
+        "id": "medical-2-2",
+        "category": "medical",
+        "coords": [1191, 2667],
+        "previewImg": "assets/previews/lab/medical/2-2.png",
+        "detailTitle": "medical-2-2",
+        "detailDesc": "연구소 카고 앞 격리병동",
+        "detailImg": "assets/previews/lab/medical/2-2.png"
+    },
 
 
+    {
+        "id": "user-1-1",
+        "category": "user",
+        "coords": [1225, 1810],
+        "previewImg": "assets/previews/lab/user/1-1.webp",
+        "detailTitle": "user-1-1",
+        "detailDesc": "1층 리셉션 데스크",
+        "detailImg": "assets/previews/lab/user/1-1.webp"
+    },
     {
         "id": "user-2-1",
         "category": "user",
         "coords": [2069, 2921],
-        "previewImg": "assets/previews/lab/user/2-1.jpg",
+        "previewImg": "assets/previews/lab/user/2-1.png",
         "detailTitle": "user-2-1",
         "detailDesc": "블블방 입구 옆",
-        "detailImg": "assets/previews/lab/user/2-1.jpg"
+        "detailImg": "assets/previews/lab/user/2-1.png"
     },
     {
         "id": "user-2-2",
@@ -67,11 +85,56 @@ window.MAP_DATA_lab = [
     {
         "id": "user-2-3",
         "category": "user",
-        "coords": [352, 1124],
-        "previewImg": "assets/previews/lab/user/2-3.jpg",
+        "coords": [1565, 2648],
+        "previewImg": "assets/previews/lab/user/2-3.webp",
         "detailTitle": "user-2-3",
         "detailDesc": "북쪽 사무실 금고 옆방",
-        "detailImg": "assets/previews/lab/user/2-3.jpg"
+        "detailImg": "assets/previews/lab/user/2-3.webp"
+    },
+    {
+        "id": "user-2-4",
+        "category": "user",
+        "coords": [1336, 2742],
+        "previewImg": "assets/previews/lab/user/2-4.webp",
+        "detailTitle": "user-2-4",
+        "detailDesc": "남쪽 사무실",
+        "detailImg": "assets/previews/lab/user/2-4.webp"
+    },
+    {
+        "id": "user-2-5",
+        "category": "user",
+        "coords": [2080, 3219],
+        "previewImg": "assets/previews/lab/user/2-5.webp",
+        "detailTitle": "user-2-5",
+        "detailDesc": "바이올렛 안 (좌표 부정확)",
+        "detailImg": "assets/previews/lab/user/2-5.webp"
+    },
+    {
+        "id": "user-2-6",
+        "category": "user",
+        "coords": [1426, 3051],
+        "previewImg": "assets/previews/lab/user/2-6.webp",
+        "detailTitle": "user-2-6",
+        "detailDesc": "매니저 키 방",
+        "detailImg": "assets/previews/lab/user/2-6.webp"
+    },
+    {
+        "id": "user-2-7",
+        "category": "user",
+        "coords": [1924, 2823],
+        "previewImg": "assets/previews/lab/user/2-7.webp",
+        "detailTitle": "user-2-7",
+        "detailDesc": "파킹벨방",
+        "detailImg": "assets/previews/lab/user/2-7.webp"
+    },
+    {
+        "id": "user-2-8",
+        "category": "user",
+        "coords": [1808, 3320],
+        "previewImg": "assets/previews/lab/user/2-8.webp",
+        "detailTitle": "user-2-8",
+        "detailDesc": "식당 의자 위",
+        "detailImg": "assets/previews/lab/user/2-8.webp"
     },
 
 ];

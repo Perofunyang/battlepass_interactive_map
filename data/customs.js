@@ -148,10 +148,10 @@ window.MAP_DATA_customs = [
     {
         "id": "project-2",
         "category": "project",
-        "coords": [1969, 2668],
+        "coords": [1963, 2663],
         "previewImg": "assets/previews/customs/project/2.png",
         "detailTitle": "project-2",
-        "detailDesc": "인텔방 2층 2번째 책장 위(위치 부정확)",
+        "detailDesc": "인텔방 2층 2번째 책장 위",
         "detailImg": "assets/previews/customs/project/2.png"
     },
     {
@@ -180,5 +180,14 @@ window.MAP_DATA_customs = [
         "detailTitle": "project-5",
         "detailDesc": "빨창 컴터방",
         "detailImg": "assets/previews/customs/project/5.png"
+    },
+    {
+        "id": "project-6",
+        "category": "project",
+        "coords": [92, 3662],
+        "previewImg": "assets/previews/customs/project/6.webp",
+        "detailTitle": "project-6",
+        "detailDesc": "가동 212호 책상 밑",
+        "detailImg": "assets/previews/customs/project/6.webp"
     },
 ];

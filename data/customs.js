@@ -190,4 +190,13 @@ window.MAP_DATA_customs = [
         "detailDesc": "가동 212호 책상 밑",
         "detailImg": "assets/previews/customs/project/6.webp"
     },
+    {
+        "id": "project-7",
+        "category": "project",
+        "coords": [1670, 891],
+        "previewImg": "assets/previews/customs/project/7.png",
+        "detailTitle": "project-7",
+        "detailDesc": "크로마키방 건너편 2층 구석",
+        "detailImg": "assets/previews/customs/project/7.png"
+    },
 ];

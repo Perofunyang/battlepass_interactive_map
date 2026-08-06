@@ -20,7 +20,7 @@ window.MAP_DATA_lab = [
     {
         "id": "medical-1-3",
         "category": "medical",
-        "coords": [138, 1235],
+        "coords": [137, 1209],
         "previewImg": "assets/previews/lab/medical/1-3.webp",
         "detailTitle": "medical-1-3",
         "detailDesc": "좀비방 안쪽",
@@ -36,6 +36,15 @@ window.MAP_DATA_lab = [
         "detailImg": "assets/previews/lab/medical/1-4.webp"
     },
     {
+        "id": "medical-1-5",
+        "category": "medical",
+        "coords": [468, 1427],
+        "previewImg": "assets/previews/lab/medical/1-5.webp",
+        "detailTitle": "medical-1-5",
+        "detailDesc": "블루방 안",
+        "detailImg": "assets/previews/lab/medical/1-5.webp"
+    },
+    {
         "id": "medical-2-1",
         "category": "medical",
         "coords": [1241, 2855],
@@ -47,7 +56,7 @@ window.MAP_DATA_lab = [
     {
         "id": "medical-2-2",
         "category": "medical",
-        "coords": [1191, 2667],
+        "coords": [1189, 2757],
         "previewImg": "assets/previews/lab/medical/2-2.webp",
         "detailTitle": "medical-2-2",
         "detailDesc": "연구소 카고 앞 격리병동",
@@ -103,10 +112,10 @@ window.MAP_DATA_lab = [
     {
         "id": "user-2-5",
         "category": "user",
-        "coords": [2080, 3219],
+        "coords": [2081, 3183],
         "previewImg": "assets/previews/lab/user/2-5.webp",
         "detailTitle": "user-2-5",
-        "detailDesc": "바이올렛 안 (좌표 부정확)",
+        "detailDesc": "",
         "detailImg": "assets/previews/lab/user/2-5.webp"
     },
     {
@@ -135,6 +144,15 @@ window.MAP_DATA_lab = [
         "detailTitle": "user-2-8",
         "detailDesc": "식당 의자 위",
         "detailImg": "assets/previews/lab/user/2-8.webp"
+    },
+    {
+        "id": "user-2-9",
+        "category": "user",
+        "coords": [1310, 2643],
+        "previewImg": "assets/previews/lab/user/2-9.webp",
+        "detailTitle": "user-2-9",
+        "detailDesc": "남쪽 사무실",
+        "detailImg": "assets/previews/lab/user/2-9.webp"
     },
 
 ];

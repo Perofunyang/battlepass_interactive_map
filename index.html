@@ -266,6 +266,17 @@
         }
     </style>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGBBM09F3J"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-DGBBM09F3J');
+</script>
+
 <body>
 
     <!-- 좌측 메인 컨트롤 사이드바 -->
@@ -389,12 +400,12 @@
         function openDetailModal(data) {
             const modalBody = document.getElementById('modal-body');
             modalBody.innerHTML = `
-                    <div class="modal-detail">
-                        ${data.detailImg ? `<img src="${data.detailImg}" alt="detail" />` : ''}
-                        ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
-                        ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
-                    </div>
-                `;
+                        <div class="modal-detail">
+                            ${data.detailImg ? `<img src="${data.detailImg}" alt="detail" />` : ''}
+                            ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
+                            ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
+                        </div>
+                    `;
             document.getElementById('detail-modal').style.display = 'flex';
         }
 
@@ -489,10 +500,10 @@
                 // 호버 프리뷰 툴팁 (너비 480px)
                 if (data.previewImg) {
                     const tooltipHTML = `
-                            <div class="hover-photo-frame">
-                              <img src="${data.previewImg}" alt="preview" />
-                            </div>
-                        `;
+                                <div class="hover-photo-frame">
+                                  <img src="${data.previewImg}" alt="preview" />
+                                </div>
+                            `;
 
                     marker.bindTooltip(tooltipHTML, {
                         className: 'custom-tooltip-photo',
@@ -532,12 +543,12 @@
                 const item = document.createElement('label');
                 item.className = 'category-item';
                 item.innerHTML = `
-                        <input type="checkbox" value="${key}" checked onchange="toggleCategory('${key}', this.checked)">
-                        <span class="category-name">
-                            <img src="${cat.icon}" class="filter-icon-img" onError="this.style.display='none';" />
-                            ${cat.name}
-                        </span>
-                    `;
+                            <input type="checkbox" value="${key}" checked onchange="toggleCategory('${key}', this.checked)">
+                            <span class="category-name">
+                                <img src="${cat.icon}" class="filter-icon-img" onError="this.style.display='none';" />
+                                ${cat.name}
+                            </span>
+                        `;
 
                 item.addEventListener('mouseenter', () => {
                     const rect = item.getBoundingClientRect();

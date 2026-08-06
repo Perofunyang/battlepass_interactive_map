@@ -27,6 +27,15 @@ window.MAP_DATA_lab = [
         "detailImg": "assets/previews/lab/medical/1-3.png"
     },
     {
+        "id": "medical-1-4",
+        "category": "medical",
+        "coords": [282, 1133],
+        "previewImg": "assets/previews/lab/medical/1-4.jpg",
+        "detailTitle": "medical-1-4",
+        "detailDesc": "좀비방 레버 당기고 들어가서 오른쪽방",
+        "detailImg": "assets/previews/lab/medical/1-4.jpg"
+    },
+    {
         "id": "medical-2-1",
         "category": "medical",
         "coords": [1241, 2855],

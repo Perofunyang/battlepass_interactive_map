@@ -260,7 +260,7 @@
         </div>
 
         <div class="filter-section">
-            <h3>Filters</h3>
+            <h3>문서 종류 (총 필요 개수)</h3>
             <div id="category-filters"></div>
         </div>
     </div>
@@ -298,19 +298,19 @@
         };
 
         const CATEGORIES = {
-            technical: { name: "Technical", icon: "./assets/icons/technical.png", image: "./assets/category/technical.png" },
-            pmc: { name: "PMC", icon: "./assets/icons/pmc.png", image: "./assets/category/pmc.png" },
-            project: { name: "Project", icon: "./assets/icons/project.png", image: "./assets/category/project.png" },
-            blueprints: { name: "Blueprints", icon: "./assets/icons/blueprints.png", image: "./assets/category/blueprints.png" },
-            test: { name: "Test", icon: "./assets/icons/test.png", image: "./assets/category/test.png" },
-            user: { name: "User", icon: "./assets/icons/user.png", image: "./assets/category/user.png" },
-            medical: { name: "Medical", icon: "./assets/icons/medical.png", image: "./assets/category/medical.png" },
-            financial: { name: "Financial", icon: "./assets/icons/financial.png", image: "./assets/category/financial.png" }
+            technical: { name: "Technical(86개)", icon: "./assets/icons/technical.png", image: "./assets/category/technical.png" },
+            pmc: { name: "PMC(39개)", icon: "./assets/icons/pmc.png", image: "./assets/category/pmc.png" },
+            project: { name: "Project(55개)", icon: "./assets/icons/project.png", image: "./assets/category/project.png" },
+            blueprints: { name: "Blueprints(81개)", icon: "./assets/icons/blueprints.png", image: "./assets/category/blueprints.png" },
+            test: { name: "Test(48개)", icon: "./assets/icons/test.png", image: "./assets/category/test.png" },
+            user: { name: "User(40개)", icon: "./assets/icons/user.png", image: "./assets/category/user.png" },
+            medical: { name: "Medical(67개)", icon: "./assets/icons/medical.png", image: "./assets/category/medical.png" },
+            financial: { name: "Financial(83개)", icon: "./assets/icons/financial.png", image: "./assets/category/financial.png" }
         };
 
 
         let map = null;
-        let currentMapId = 'customs';
+        let currentMapId = 'factory';
         let currentImageOverlay = null;
         const layerGroups = {};
         const activeFilters = new Set(Object.keys(CATEGORIES));

@@ -35,6 +35,15 @@ window.MAP_DATA_woods = [
         "detailDesc": "유섹 체크포인트 안",
         "detailImg": "assets/previews/woods/test/4.png"
     },
+    {
+        "id": "test-5",
+        "category": "test",
+        "coords": [4178, 5697],
+        "previewImg": "assets/previews/woods/test/5.png",
+        "detailTitle": "test-5",
+        "detailDesc": "강변 마을 동쪽 가운데 집 2층",
+        "detailImg": "assets/previews/woods/test/5.png"
+    },
 
 
 

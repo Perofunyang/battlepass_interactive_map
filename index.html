@@ -192,50 +192,78 @@
             line-height: 0;
         }
 
+            /* [수정] 호버 프리뷰 이미지 너비 480px로 조절 */
             .hover-photo-frame img {
-                max-width: 320px;
-                max-height: 200px;
-                width: auto;
+                width: 480px;
+                max-height: 300px;
                 height: auto;
                 object-fit: contain;
                 display: block;
             }
 
-        /* 클릭 상세 팝업 스타일 */
-        .leaflet-popup-content-wrapper {
-            background-color: #242424 !important;
-            color: #fff !important;
-            border: 1px solid #444;
-            border-radius: 8px !important;
+        /* [신규] 화면 정중앙 모달 (상세 정보 창) 스타일 */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 10000; /* 최상위 레이어 */
+            justify-content: center;
+            align-items: center;
         }
 
-        .leaflet-popup-tip {
-            background-color: #242424 !important;
+        .modal-content {
+            position: relative;
+            width: 600px; /* 요청하신 600px 너비 */
+            max-width: 90vw;
+            max-height: 85vh;
+            background-color: #242424;
+            border: 2px solid #e5b35c;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+            overflow-y: auto;
         }
 
-        .popup-detail {
-            width: 300px;
+        .modal-close-btn {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: #aaa;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s;
         }
 
-            .popup-detail img {
-                width: 100%;
-                height: 170px;
-                object-fit: cover;
-                border-radius: 6px;
-                margin-bottom: 10px;
-            }
-
-            .popup-detail h3 {
-                font-size: 1.1rem;
+            .modal-close-btn:hover {
                 color: #e5b35c;
-                margin-bottom: 6px;
             }
 
-            .popup-detail p {
-                font-size: 0.85rem;
-                color: #ccc;
-                line-height: 1.4;
-            }
+        .modal-detail img {
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .modal-detail h3 {
+            font-size: 1.5rem;
+            color: #e5b35c;
+            margin-bottom: 10px;
+        }
+
+        .modal-detail p {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
@@ -245,9 +273,9 @@
         <div class="sidebar-header">
             <h2>Interactive Map</h2>
             <select id="map-select" class="map-select-box" onchange="switchMap(this.value)">
-                <option value="customs" selected>Customs (세관)</option>
+                <option value="customs">Customs (세관)</option>
                 <option value="ground_zero">Ground Zero (그라운드 제로)</option>
-                <option value="factory">Factory (공장)</option>
+                <option value="factory" selected>Factory (공장)</option>
                 <option value="woods">Woods (삼림)</option>
                 <option value="reserve">Reserve (리저브)</option>
                 <option value="shoreline">Shoreline (해안선)</option>
@@ -276,18 +304,23 @@
         <img id="global-preview-img" src="" alt="preview" />
     </div>
 
+    <!-- [신규] 화면 정중앙 상세 정보 모달창 -->
+    <div id="detail-modal" class="modal-backdrop">
+        <div class="modal-content">
+            <button class="modal-close-btn" onclick="closeDetailModal()">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <script>
-        // [수정된 맵 현황 데이터 반영]
         const MAPS = {
             customs: { name: "Customs", imageUrl: "./assets/maps/customs.webp", width: 4097, height: 2142 },
             factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850 },
             ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 6920, height: 6920 },
-            //interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.jpg", width: 2000, height: 1106 },
             interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.webp", width: 9600, height: 5400 },
-            //interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.png", width: 9600, height: 5400 },
             lab: { name: "Lab", imageUrl: "./assets/maps/lab.webp", width: 3820, height: 2189 },
             labyrinth: { name: "Labyrinth", imageUrl: "./assets/maps/labyrinth.webp", width: 4145, height: 3840 },
             lighthouse: { name: "Lighthouse", imageUrl: "./assets/maps/lighthouse.webp", width: 2242, height: 3892 },
@@ -308,7 +341,6 @@
             financial: { name: "Financial(83개)", icon: "./assets/icons/financial.png", image: "./assets/category/financial.png" }
         };
 
-
         let map = null;
         let currentMapId = 'factory';
         let currentImageOverlay = null;
@@ -316,17 +348,17 @@
         const activeFilters = new Set(Object.keys(CATEGORIES));
 
         function initMap() {
-            // [수정] minZoom을 -5로 크게 낮춰서 7000px급 거대한 지도도 한눈에 들어가도록 설정
             map = L.map('map', {
                 crs: L.CRS.Simple,
-                minZoom: -5,     /* 초고해상도 지도를 한눈에 축소해 볼 수 있도록 -5로 확장 */
-                maxZoom: 3,      /* 고해상도 지도의 구석구석을 확대해 볼 수 있도록 3으로 확장 */
-                zoomSnap: 0.1,   /* 줌 단계를 부드럽게 조절 */
+                minZoom: -5,
+                maxZoom: 3,
+                zoomSnap: 0.1,
                 attributionControl: false
             });
 
             renderFilterUI();
             setupCoordinateTracker();
+            setupModalEvents();
             loadMap(currentMapId);
         }
 
@@ -353,6 +385,39 @@
             });
         }
 
+        /* [신규] 정중앙 모달 조작 이벤트 */
+        function openDetailModal(data) {
+            const modalBody = document.getElementById('modal-body');
+            modalBody.innerHTML = `
+                    <div class="modal-detail">
+                        ${data.detailImg ? `<img src="${data.detailImg}" alt="detail" />` : ''}
+                        ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
+                        ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
+                    </div>
+                `;
+            document.getElementById('detail-modal').style.display = 'flex';
+        }
+
+        function closeDetailModal() {
+            document.getElementById('detail-modal').style.display = 'none';
+        }
+
+        function setupModalEvents() {
+            // 배경 클릭 시 닫기
+            document.getElementById('detail-modal').addEventListener('click', (e) => {
+                if (e.target.id === 'detail-modal') {
+                    closeDetailModal();
+                }
+            });
+
+            // ESC 키 누를 때 닫기
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeDetailModal();
+                }
+            });
+        }
+
         function loadMap(mapId) {
             currentMapId = mapId;
             const mapConfig = MAPS[mapId];
@@ -364,7 +429,6 @@
             const bounds = [[0, 0], [mapConfig.height, mapConfig.width]];
             currentImageOverlay = L.imageOverlay(mapConfig.imageUrl, bounds).addTo(map);
 
-            // fitBounds가 화면 크기에 딱 맞춰 줌 수준을 자동 계산합니다 (-5까지 축소 허용됨)
             map.fitBounds(bounds, { animate: false });
             map.setMaxBounds(bounds);
 
@@ -407,17 +471,11 @@
                 const catInfo = CATEGORIES[data.category];
                 const iconSrc = catInfo ? catInfo.icon : '';
 
-                // 마커의 상대적 위치 계산 (중앙 기준 상단/하단, 좌측/우측 판단)
                 const markerY = data.coords[0];
-                const markerX = data.coords[1];
                 const isTop = markerY > (mapConfig.height * 0.5);
-                const isRight = markerX > (mapConfig.width * 0.5);
 
-                // 호버 및 클릭 팝업 방향/위치 자동 결정
                 const tooltipDirection = isTop ? 'bottom' : 'top';
                 const tooltipOffset = isTop ? [0, 15] : [0, -15];
-                const popupY = isTop ? 230 : -10;
-                const popupX = isRight ? -80 : 80;
 
                 const customIcon = L.divIcon({
                     html: `<img src="${iconSrc}" class="map-marker-img" onError="this.onerror=null; this.src='https://via.placeholder.com/20?text=📍';" />`,
@@ -428,12 +486,13 @@
 
                 const marker = L.marker(data.coords, { icon: customIcon });
 
+                // 호버 프리뷰 툴팁 (너비 480px)
                 if (data.previewImg) {
                     const tooltipHTML = `
-                <div class="hover-photo-frame">
-                  <img src="${data.previewImg}" alt="preview" />
-                </div>
-              `;
+                            <div class="hover-photo-frame">
+                              <img src="${data.previewImg}" alt="preview" />
+                            </div>
+                        `;
 
                     marker.bindTooltip(tooltipHTML, {
                         className: 'custom-tooltip-photo',
@@ -443,19 +502,10 @@
                     });
                 }
 
-                if (data.detailImg || data.detailTitle) {
-                    const popupHTML = `
-                <div class="popup-detail">
-                  ${data.detailImg ? `<img src="${data.detailImg}" />` : ''}
-                  ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
-                  ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
-                </div>
-              `;
-
-                    marker.bindPopup(popupHTML, {
-                        offset: L.point(popupX, popupY),
-                        autoPan: true,
-                        autoPanPadding: [20, 20]
+                // [수정] 클릭 시 화면 정중앙 모달 오픈
+                if (data.detailImg || data.detailTitle || data.detailDesc) {
+                    marker.on('click', () => {
+                        openDetailModal(data);
                     });
                 }
 
@@ -482,12 +532,12 @@
                 const item = document.createElement('label');
                 item.className = 'category-item';
                 item.innerHTML = `
-              <input type="checkbox" value="${key}" checked onchange="toggleCategory('${key}', this.checked)">
-              <span class="category-name">
-                <img src="${cat.icon}" class="filter-icon-img" onError="this.style.display='none';" />
-                ${cat.name}
-              </span>
-            `;
+                        <input type="checkbox" value="${key}" checked onchange="toggleCategory('${key}', this.checked)">
+                        <span class="category-name">
+                            <img src="${cat.icon}" class="filter-icon-img" onError="this.style.display='none';" />
+                            ${cat.name}
+                        </span>
+                    `;
 
                 item.addEventListener('mouseenter', () => {
                     const rect = item.getBoundingClientRect();

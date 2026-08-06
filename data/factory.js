@@ -218,6 +218,15 @@ window.MAP_DATA_factory = [
         "detailImg": "assets/previews/factory/project/2-1.webp"
     },
     {
+        "id": "project-2-2",
+        "category": "project",
+        "coords": [566, 681],
+        "previewImg": "assets/previews/factory/project/2-2.png",
+        "detailTitle": "project-2-2",
+        "detailDesc": "2-2",
+        "detailImg": "assets/previews/factory/project/2-2.png"
+    },
+    {
         "id": "project-0-1",
         "category": "project",
         "coords": [405, 122],
@@ -226,5 +235,5 @@ window.MAP_DATA_factory = [
         "detailDesc": "0-1",
         "detailImg": "assets/previews/factory/project/0-1.webp"
     }
-
+    
 ];

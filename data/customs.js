@@ -65,16 +65,16 @@ window.MAP_DATA_customs = [
     {
         "id": "financial-8",
         "category": "financial",
-        "coords": [1948, 2669],
+        "coords": [1970, 2671],
         "previewImg": "assets/previews/customs/financial/8.png",
         "detailTitle": "financial-8",
-        "detailDesc": "인텔방 제일 안쪽 바닥에 책 사이",
+        "detailDesc": "인텔방 2번째 칸 오른쪽 구석 바닥",
         "detailImg": "assets/previews/customs/financial/8.png"
     },
     {
         "id": "financial-9",
         "category": "financial",
-        "coords": [1969, 2662],
+        "coords": [1947, 2670],
         "previewImg": "assets/previews/customs/financial/9.png",
         "detailTitle": "financial-9",
         "detailDesc": "인텔방 책장 책들 사이 (좌표 부정확)",

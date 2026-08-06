@@ -120,15 +120,26 @@
             max-width: 300px;
         }
 
-            #global-category-preview img {
-                max-width: 300px;
-                max-height: 200px;
-                width: auto;
-                height: auto;
-                object-fit: contain;
-                display: block;
-                margin: 0 auto;
-            }
+        #global-category-preview img {
+            max-width: 300px;
+            max-height: 200px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #global-preview-desc {
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            color: #ccc;
+            background-color: #242424;
+            border-top: 1px solid #333;
+            text-align: center;
+            line-height: 1.3;
+            white-space: pre-line;
+        }
 
         /* 메인 맵 영역 */
         #map-container {
@@ -293,7 +304,7 @@
                 <option value="interchange">Interchange (인터체인지)</option>
                 <option value="lighthouse">Lighthouse (등대)</option>
                 <option value="streets_of_tarkov">Streets of Tarkov (스오타)</option>
-                <option value="lab">The Lab (연구실)</option>
+                <option value="lab">The Lab (랩)</option>
                 <option value="labyrinth">The Labyrinth (미궁)</option>
             </select>
         </div>
@@ -313,6 +324,7 @@
     <!-- 최상위 레이어로 동작할 단일 카테고리 팝업 박스 -->
     <div id="global-category-preview">
         <img id="global-preview-img" src="" alt="preview" />
+        <div id="global-preview-desc"></div>
     </div>
 
     <!-- [신규] 화면 정중앙 상세 정보 모달창 -->
@@ -342,14 +354,38 @@
         };
 
         const CATEGORIES = {
-            technical: { name: "Technical(86개)", icon: "./assets/icons/technical.png", image: "./assets/category/technical.png" },
-            pmc: { name: "PMC(39개)", icon: "./assets/icons/pmc.png", image: "./assets/category/pmc.png" },
-            project: { name: "Project(55개)", icon: "./assets/icons/project.png", image: "./assets/category/project.png" },
-            blueprints: { name: "Blueprints(81개)", icon: "./assets/icons/blueprints.png", image: "./assets/category/blueprints.png" },
-            test: { name: "Test(48개)", icon: "./assets/icons/test.png", image: "./assets/category/test.png" },
-            user: { name: "User(40개)", icon: "./assets/icons/user.png", image: "./assets/category/user.png" },
-            medical: { name: "Medical(67개)", icon: "./assets/icons/medical.png", image: "./assets/category/medical.png" },
-            financial: { name: "Financial(83개)", icon: "./assets/icons/financial.png", image: "./assets/category/financial.png" }
+            technical: {
+                name: "Technical(86개)", icon: "./assets/icons/technical.png", image: "./assets/category/technical.png",
+                desc: "shoreline(쇼라)\n woods(우드)\n lighthouse(라하)"
+            },
+            pmc: {
+                name: "PMC(39개)", icon: "./assets/icons/pmc.png", image: "./assets/category/pmc.png",
+                desc: "reserve(리저브)\n icebreaker(쇄빙선)\n lighthouse(라하)"
+            },
+            project: {
+                name: "Project(55개)", icon: "./assets/icons/project.png", image: "./assets/category/project.png",
+                desc: "reserve(리저브)\n customs(세관)\n factory(공장)"
+            },
+            blueprints: {
+                name: "Blueprints(81개)", icon: "./assets/icons/blueprints.png", image: "./assets/category/blueprints.png",
+                desc: "interchange(인터체인지)\n factory(공장)\n The Labyrinth(미궁)"
+            },
+            test: {
+                name: "Test(48개)", icon: "./assets/icons/test.png", image: "./assets/category/test.png",
+                desc: "shoreline(쇼라)\n woods(우드)\n icebreaker(쇄빙선)"
+            },
+            user: {
+                name: "User(40개)", icon: "./assets/icons/user.png", image: "./assets/category/user.png",
+                desc: "Streets of Tarkov(스오타)\n Ground Zero(그제)\n The Lab(랩)"
+            },
+            medical: {
+                name: "Medical(67개)", icon: "./assets/icons/medical.png", image: "./assets/category/medical.png",
+                desc: "The Labyrinth(미궁)\n Ground Zero(그제)\n The Lab(랩)"
+            },
+            financial: {
+                name: "Financial(83개)", icon: "./assets/icons/financial.png", image: "./assets/category/financial.png",
+                desc: "customs(세관)\n Streets of Tarkov(스오타)\n interchange(인터체인지)"
+            }
         };
 
         let map = null;
@@ -556,6 +592,7 @@
 
             const previewBox = document.getElementById('global-category-preview');
             const previewImg = document.getElementById('global-preview-img');
+            const previewDesc = document.getElementById('global-preview-desc');
 
             Object.entries(CATEGORIES).forEach(([key, cat]) => {
                 const item = document.createElement('label');
@@ -574,6 +611,12 @@
                     previewImg.onerror = () => {
                         previewImg.src = `https://via.placeholder.com/220x140/222/e5b35c?text=${cat.name}`;
                     };
+
+                    // [수정] cat 변수가 존재하는 mouseenter 내부에서 안전하게 텍스트 대입
+                    if (previewDesc) {
+                        previewDesc.innerText = cat.desc || '';
+                        previewDesc.style.display = cat.desc ? 'block' : 'none';
+                    }
 
                     previewBox.style.top = `${rect.top}px`;
                     previewBox.style.left = `${rect.right + 10}px`;

@@ -8,4 +8,24 @@ window.MAP_DATA_shoreline = [
         "detailDesc": "라디오 타워 노트북 책상 사이",
         "detailImg": "assets/previews/shoreline/technical/1.png"
     },
+
+
+    {
+        "id": "test-1",
+        "category": "test",
+        "coords": [1275, 3547],
+        "previewImg": "assets/previews/shoreline/test/1.png",
+        "detailTitle": "test-1",
+        "detailDesc": "기상관측소 2층",
+        "detailImg": "assets/previews/shoreline/test/1.png"
+    },
+    {
+        "id": "test-2",
+        "category": "test",
+        "coords": [1734, 4214],
+        "previewImg": "assets/previews/shoreline/test/2.png",
+        "detailTitle": "test-2",
+        "detailDesc": "라디오타워",
+        "detailImg": "assets/previews/shoreline/test/2.png"
+    },
 ];

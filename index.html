@@ -407,6 +407,16 @@
                         </div>
                     `;
             document.getElementById('detail-modal').style.display = 'flex';
+
+            // [GA4 추가] 유저가 클릭한 마커 정보 전송
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_marker_detail', {
+                    'map_id': currentMapId,
+                    'category': data.category,
+                    'marker_id': data.id || 'unknown',
+                    'marker_title': data.detailTitle || data.id
+                });
+            }
         }
 
         function closeDetailModal() {
@@ -466,6 +476,14 @@
 
         function switchMap(mapId) {
             loadMap(mapId);
+
+            // [GA4 추가] 유저가 선택한 맵 이름을 구글 애널리틱스로 전송
+            if (typeof gtag === 'function') {
+                gtag('event', 'select_map', {
+                    'map_id': mapId,
+                    'map_name': MAPS[mapId] ? MAPS[mapId].name : mapId
+                });
+            }
         }
 
         function renderMarkers(markersData) {
@@ -577,6 +595,14 @@
             } else {
                 activeFilters.delete(categoryKey);
                 if (layerGroups[categoryKey]) map.removeLayer(layerGroups[categoryKey]);
+            }
+
+            // [GA4 추가] 필터 조작 이벤트 전송
+            if (typeof gtag === 'function') {
+                gtag('event', 'filter_category', {
+                    'category': categoryKey,
+                    'state': isChecked ? 'on' : 'off'
+                });
             }
         }
 

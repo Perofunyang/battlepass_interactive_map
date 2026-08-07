@@ -30,6 +30,15 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/technical/1-1-1-1.webp"
     },
     {
+        "id": "technical-2-3-2-1",
+        "category": "technical",
+        "coords": [3069, 545],
+        "previewImg": "assets/previews/lighthouse/technical/2-3-2-1.webp",
+        "detailTitle": "technical-2-3-2-1",
+        "detailDesc": "3창 2층 방안 구석",
+        "detailImg": "assets/previews/lighthouse/technical/2-3-2-1.webp"
+    },
+    {
         "id": "technical-2-0-1-1",
         "category": "technical",
         "coords": [2444, 1296],

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,18 @@
     <meta name="google-site-verification" content="Zb8IY_JkwSI9LmBgIlh9LFJcXQjCB8c6IFP7W8GWMpI" />
     <meta name="naver-site-verification" content="082327acf711127d70357c418344a9453ed9ff8d" />
 
-    <!-- SEO 타이틀 & 메타 태그 -->
-    <title>타르코프 배틀패스 문서 인터랙티브 맵 | EFT Battle Pass Map</title>
-    <meta name="description" content="EFT Battle Pass Documentation Interactive Map | 이스케이프 프롬 타르코프 배틀패스 문서 스폰 위치 전용 지도. Technical, PMC, Project, Blueprints, Test, User, Medical, Financial 총 8종 문서 위치 정밀 제공.">
-    <meta name="keywords" content="타르코프 배틀패스, 타르코프 문서 위치, 타르코프 문서 지도, EFT Battle Pass Documentation Interactive Map, Tarkov Document Map, Escape From Tarkov Map">
+    <!-- English SEO Title & Meta Tags -->
+    <title>EFT Battle Pass Documentation Interactive Map | Tarkov Doc Map</title>
+    <meta name="description" content="Interactive map for Escape From Tarkov Battle Pass Documents. Precise spawn locations for Technical, PMC, Project, Blueprints, Test, User, Medical, Financial documents across all maps.">
+    <meta name="keywords" content="Tarkov Battle Pass Map, EFT Battle Pass Documentation Interactive Map, Tarkov Document Map, Escape From Tarkov Map, Tarkov Document Spawns, EFT Document Locations">
 
-    <!-- 소셜 공유 카드 -->
+    <!-- Open Graph (Social Sharing) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="타르코프 배틀패스 인터랙티브 맵 | EFT Battle Pass Map">
-    <meta property="og:description" content="타르코프 배틀패스 문서 인터랙티브 맵을 확인하세요. (8가지 문서 카테고리 지원)">
+    <meta property="og:title" content="EFT Battle Pass Documentation Interactive Map">
+    <meta property="og:description" content="Find all Battle Pass Document spawn locations in Escape From Tarkov. Interactive map for all 8 document types.">
     <meta property="og:image" content="./assets/category/blueprints.webp">
 
-    <!-- 구글 SEO용 다국어(hreflang) 태그 -->
+    <!-- Multilingual SEO (hreflang) -->
     <link rel="alternate" hreflang="ko" href="https://perofunyang.github.io/battlepass-map/" />
     <link rel="alternate" hreflang="en" href="https://perofunyang.github.io/battlepass-map/en.html" />
     <link rel="alternate" hreflang="x-default" href="https://perofunyang.github.io/battlepass-map/en.html" />
@@ -41,7 +41,7 @@
             color: #fff;
         }
 
-        /* 사이드바 */
+        /* Sidebar */
         #sidebar {
             width: 300px;
             background-color: #242424;
@@ -82,7 +82,7 @@
                 background-color: #fff;
             }
 
-        /* 언어 전환 버튼 스타일 */
+        /* Language Switch Button Style */
         .lang-btn {
             display: inline-flex;
             align-items: center;
@@ -113,7 +113,6 @@
             gap: 8px;
         }
 
-        /* 접혔을 때 숨김 처리 */
         #sidebar.collapsed .sidebar-header h2,
         #sidebar.collapsed .sidebar-header .sub-title-row,
         #sidebar.collapsed .map-select-box,
@@ -448,19 +447,14 @@
             max-height: 360px;
             object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 16px;
+            margin-bottom: 0px;
         }
 
         .modal-detail h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #e5b35c;
-            margin-bottom: 10px;
-        }
-
-        .modal-detail p {
-            font-size: 1rem;
-            color: #ccc;
-            line-height: 1.5;
+            margin-top: 12px;
+            margin-bottom: 0px;
         }
     </style>
 </head>
@@ -477,54 +471,54 @@
 
 <body>
 
-    <!-- 좌측 메인 컨트롤 사이드바 -->
+    <!-- Left Sidebar -->
     <div id="sidebar">
-        <button id="sidebar-toggle-btn" onclick="toggleSidebar()" title="사이드바 접기/펼치기">◀</button>
+        <button id="sidebar-toggle-btn" onclick="toggleSidebar()" title="Toggle Sidebar">◀</button>
 
         <div class="sidebar-header">
-            <h2>배틀 패스 문서 인터랙티브 맵</h2>
+            <h2>Battle Pass Doc Map</h2>
             <div class="sub-title-row">
-                <span class="sub-title">Battle Pass Documentation Map</span>
-                <a href="./en.html" id="lang-switch-btn" class="lang-btn">🌐 EN</a>
+                <span class="sub-title">Escape From Tarkov</span>
+                <a href="./index.html" id="lang-switch-btn" class="lang-btn">🌐 KO</a>
             </div>
 
             <select id="map-select" class="map-select-box" onchange="switchMap(this.value)">
-                <option value="customs">Customs (세관)</option>
-                <option value="ground_zero">Ground Zero (그라운드 제로)</option>
-                <option value="factory">Factory (공장)</option>
-                <option value="interchange">Interchange (인터체인지)</option>
-                <option value="lab">The Lab (연구실)</option>
-                <option value="labyrinth">The Labyrinth (미궁)</option>
-                <option value="lighthouse">Lighthouse (등대)</option>
-                <option value="reserve">Reserve (리저브)</option>
-                <option value="shoreline">Shoreline (해안선)</option>
-                <option value="streets_of_tarkov">Streets of Tarkov (스오타)</option>
-                <option value="woods">Woods (삼림)</option>
+                <option value="customs">Customs</option>
+                <option value="ground_zero">Ground Zero</option>
+                <option value="factory">Factory</option>
+                <option value="woods">Woods</option>
+                <option value="reserve">Reserve</option>
+                <option value="shoreline">Shoreline</option>
+                <option value="interchange">Interchange</option>
+                <option value="lighthouse">Lighthouse</option>
+                <option value="streets_of_tarkov">Streets of Tarkov</option>
+                <option value="lab">The Lab</option>
+                <option value="labyrinth">The Labyrinth</option>
             </select>
 
-            <!-- 레이드당 문서 스폰 요약 카드 -->
+            <!-- Raid Spawns Summary Card -->
             <div id="map-spawn-summary" class="map-spawn-summary"></div>
         </div>
 
         <div class="filter-section">
-            <h3>문서 종류 / Categories</h3>
+            <h3>Categories</h3>
             <div id="category-filters"></div>
         </div>
     </div>
 
-    <!-- 메인 맵 영역 -->
+    <!-- Main Map Container -->
     <div id="map-container">
         <div id="map"></div>
-        <div id="coord-overlay">Y: 0, X: 0 (Click to Copy / 클릭시 복사)</div>
+        <div id="coord-overlay">Y: 0, X: 0 (Click to Copy)</div>
     </div>
 
-    <!-- 최상위 레이어로 동작할 단일 카테고리 팝업 박스 -->
+    <!-- Category Preview Popup -->
     <div id="global-category-preview">
         <img id="global-preview-img" src="" alt="preview" />
         <div id="global-preview-desc"></div>
     </div>
 
-    <!-- 화면 정중앙 상세 정보 모달창 -->
+    <!-- Detail Modal -->
     <div id="detail-modal" class="modal-backdrop">
         <div class="modal-content">
             <button class="modal-close-btn" onclick="closeDetailModal()">&times;</button>
@@ -542,102 +536,91 @@
                 imageUrl: "./assets/maps/customs.webp",
                 width: 4097,
                 height: 2142,
-                //spawns: { project: 2, financial: 1 }
-                spawns: { project: 3, financial: 3 }
+                spawns: { project: 2, financial: 1 }
             },
             factory: {
                 name: "Factory",
                 imageUrl: "./assets/maps/factory.png",
                 width: 850,
                 height: 850,
-                //spawns: { project: 2, blueprints: 1 }
-                spawns: { project: 3, blueprints: 3 }
+                spawns: { project: 2, blueprints: 1 }
             },
             ground_zero: {
                 name: "Ground Zero",
                 imageUrl: "./assets/maps/ground_zero.webp",
                 width: 6920,
                 height: 6920,
-                //spawns: { medical: 2, user: 1 }
-                spawns: { medical: 3, user: 3 }
+                spawns: { medical: 2, user: 1 }
             },
             interchange: {
                 name: "Interchange",
                 imageUrl: "./assets/maps/interchange.webp",
                 width: 9600,
                 height: 5400,
-                //spawns: { blueprints: 2, financial: 1 }
-                spawns: { blueprints: 3, financial: 3 }
+                spawns: { blueprints: 2, financial: 1 }
             },
             lab: {
                 name: "Lab",
                 imageUrl: "./assets/maps/lab.webp",
                 width: 3820,
                 height: 2189,
-                //spawns: { user: 2, medical: 1 }
-                spawns: { user: 3, medical: 3 }
+                spawns: { user: 2, medical: 1 }
             },
             labyrinth: {
                 name: "Labyrinth",
                 imageUrl: "./assets/maps/labyrinth.webp",
                 width: 4145,
                 height: 3840,
-                //spawns: { blueprints: 2, medical: 1 }
-                spawns: { blueprints: 3, medical: 3 }
+                spawns: { blueprints: 2, medical: 1 }
             },
             lighthouse: {
                 name: "Lighthouse",
                 imageUrl: "./assets/maps/lighthouse.png",
                 width: 2242,
                 height: 3892,
-                //spawns: { pmc: 2, technical: 1 }
-                spawns: { pmc: 3, technical: 3 }
+                spawns: { pmc: 2, technical: 1 }
             },
             reserve: {
                 name: "Reserve",
                 imageUrl: "./assets/maps/reserve.webp",
                 width: 4701,
                 height: 2785,
-                //spawns: { pmc: 2, project: 1 }
-                spawns: { pmc: 3, project: 3 }
+                spawns: { pmc: 2, project: 1 }
             },
             shoreline: {
                 name: "Shoreline",
                 imageUrl: "./assets/maps/shoreline.webp",
                 width: 6668,
                 height: 4567,
-                //spawns: { test: 2, technical: 1 }
-                spawns: { test: 3, technical: 3 }
+                spawns: { test: 2, technical: 1 }
             },
             streets_of_tarkov: {
                 name: "Streets of Tarkov",
                 imageUrl: "./assets/maps/streets_of_tarkov.webp",
                 width: 7620,
                 height: 5877,
-                //spawns: { financial: 2, user: 1 }
-                spawns: { financial: 3, user: 3 }
+                spawns: { financial: 2, user: 1 }
             },
             woods: {
                 name: "Woods",
                 imageUrl: "./assets/maps/woods.webp",
                 width: 6994,
                 height: 6843,
-                //spawns: { test: 2, technical: 1 }
-                spawns: { test: 3, technical: 3 }
+                spawns: { test: 2, technical: 1 }
             }
         };
 
         const CATEGORIES = {
-            technical: { name: "Technical", icon: "./assets/icons/technical.webp", image: "./assets/category/technical.webp", desc: "shoreline(쇼라)\n woods(우드)\n lighthouse(라하)" },
-            pmc: { name: "PMC", icon: "./assets/icons/pmc.webp", image: "./assets/category/pmc.webp", desc: "reserve(리저브)\n icebreaker(쇄빙선)\n lighthouse(라하)" },
-            project: { name: "Project", icon: "./assets/icons/project.webp", image: "./assets/category/project.webp", desc: "reserve(리저브)\n customs(세관)\n factory(공장)" },
-            blueprints: { name: "Blueprints", icon: "./assets/icons/blueprints.webp", image: "./assets/category/blueprints.webp", desc: "interchange(인터체인지)\n factory(공장)\n The Labyrinth(미궁)" },
-            test: { name: "Test", icon: "./assets/icons/test.webp", image: "./assets/category/test.webp", desc: "shoreline(쇼라)\n woods(우드)\n icebreaker(쇄빙선)" },
-            user: { name: "User", icon: "./assets/icons/user.webp", image: "./assets/category/user.webp", desc: "Streets of Tarkov(스오타)\n Ground Zero(그제)\n The Lab(랩)" },
-            medical: { name: "Medical", icon: "./assets/icons/medical.webp", image: "./assets/category/medical.webp", desc: "The Labyrinth(미궁)\n Ground Zero(그제)\n The Lab(랩)" },
-            financial: { name: "Financial", icon: "./assets/icons/financial.webp", image: "./assets/category/financial.webp", desc: "customs(세관)\n Streets of Tarkov(스오타)\n interchange(인터체인지)" },
-            transit: { name: "Transit", icon: "./assets/icons/transit.webp", image: "./assets/category/transit.webp", desc: "트랜짓(Transit) 포인트" },
-            temporary: { name: "Temporary", icon: "./assets/icons/temporary.png", desc: "임시 마커" }
+            technical: { name: "Technical", icon: "./assets/icons/technical.webp", image: "./assets/category/technical.webp", desc: "Shoreline\n Woods\n Lighthouse" },
+            pmc: { name: "PMC", icon: "./assets/icons/pmc.webp", image: "./assets/category/pmc.webp", desc: "Reserve\n Icebreaker\n Lighthouse" },
+            project: { name: "Project", icon: "./assets/icons/project.webp", image: "./assets/category/project.webp", desc: "Reserve\n Customs\n Factory" },
+            blueprints: { name: "Blueprints", icon: "./assets/icons/blueprints.webp", image: "./assets/category/blueprints.webp", desc: "Interchange\n Factory\n The Labyrinth" },
+            test: { name: "Test", icon: "./assets/icons/test.webp", image: "./assets/category/test.webp", desc: "Shoreline\n Woods\n Icebreaker" },
+            user: { name: "User", icon: "./assets/icons/user.webp", image: "./assets/category/user.webp", desc: "Streets of Tarkov\n Ground Zero\n The Lab" },
+            medical: { name: "Medical", icon: "./assets/icons/medical.webp", image: "./assets/category/medical.webp", desc: "The Labyrinth\n Ground Zero\n The Lab" },
+            financial: { name: "Financial", icon: "./assets/icons/financial.webp", image: "./assets/category/financial.webp", desc: "Customs\n Streets of Tarkov\n Interchange" },
+            transit: { name: "Transit", icon: "./assets/icons/transit.webp", image: "./assets/category/transit.webp", desc: "Transit Point" },
+            temporary: { name: "Temporary", icon: "./assets/icons/temporary.png", desc: "Temporary Marker" }
         };
 
         let map = null;
@@ -659,7 +642,7 @@
         function updateLangSwitchUrl() {
             const langBtn = document.getElementById('lang-switch-btn');
             if (langBtn) {
-                langBtn.href = `./en.html?map=${currentMapId}`;
+                langBtn.href = `./index.html?map=${currentMapId}`;
             }
         }
 
@@ -714,7 +697,7 @@
                 const coordString = `[${y}, ${x}],`;
 
                 navigator.clipboard.writeText(coordString).then(() => {
-                    coordDiv.innerText = `Copied! / 복사됨! -> ${coordString}`;
+                    coordDiv.innerText = `Copied! -> ${coordString}`;
                     setTimeout(() => {
                         coordDiv.innerText = `Y: ${y}, X: ${x}`;
                     }, 1500);
@@ -722,13 +705,13 @@
             });
         }
 
+        // [영문 전용 모달 출력 로직] 텍스트 설명(detailDesc)을 생략하고 이미지(detailImg) 위주 출력
         function openDetailModal(data) {
             const modalBody = document.getElementById('modal-body');
             modalBody.innerHTML = `
                         <div class="modal-detail">
-                            ${data.detailImg ? `<img src="${data.detailImg}" alt="detail" />` : ''}
+                            ${data.detailImg ? `<img src="${data.detailImg}" alt="Location detail" />` : ''}
                             ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
-                            ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
                         </div>
                     `;
             document.getElementById('detail-modal').style.display = 'flex';
@@ -823,8 +806,7 @@
             const summaryBox = document.getElementById('map-spawn-summary');
 
             if (summaryBox && mapConfig) {
-                //let html = `<div class="summary-title"><span>🎲 스폰 정보 (Raid Spawns)</span> <span style="font-size: 0.75rem; color: #888;">(Total 3)</span></div><ul>`;
-                let html = `<div class="summary-title"><span>🎲 스폰 정보 (Raid Spawns)</span> <span style="font-size: 0.75rem; color: #888;"></span></div><ul>`;
+                let html = `<div class="summary-title"><span>🎲 Raid Spawns</span> <span style="font-size: 0.75rem; color: #888;">(Total 3)</span></div><ul>`;
                 Object.entries(spawns).forEach(([catKey, count]) => {
                     const catInfo = CATEGORIES[catKey];
                     if (catInfo) {
@@ -905,7 +887,8 @@
                         });
                     }
 
-                    if (data.detailImg || data.detailTitle || data.detailDesc) {
+                    // 클릭 모달 바인딩 (이미지 또는 제목이 존재할 경우 모달 열기)
+                    if (data.detailImg || data.detailTitle) {
                         marker.on('click', () => {
                             openDetailModal(data);
                         });

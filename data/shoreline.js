@@ -92,6 +92,15 @@ window.MAP_DATA_shoreline = [
         "detailImg": "assets/previews/shoreline/test/2-3-218-1.webp"
     },
     {
+        "id": "test-2-3-326-1",
+        "category": "test",
+        "coords": [1110, 6429],
+        "previewImg": "assets/previews/shoreline/test/2-3-326-1.webp",
+        "detailTitle": "test-2-3-326-1",
+        "detailDesc": "동관 326호",
+        "detailImg": "assets/previews/shoreline/test/2-3-326-1.webp"
+    },
+    {
         "id": "test-2-0-1-1",
         "category": "test",
         "coords": [2098, 2267],
@@ -144,6 +153,15 @@ window.MAP_DATA_shoreline = [
         "detailTitle": "test-8-2-1-1",
         "detailDesc": "라디오타워",
         "detailImg": "assets/previews/shoreline/test/8-2-1-1.webp"
+    },
+    {
+        "id": "test-10-1-1-1",
+        "category": "test",
+        "coords": [419, 2887],
+        "previewImg": "assets/previews/shoreline/test/10-1-1-1.webp",
+        "detailTitle": "test-10-1-1-1",
+        "detailDesc": "피어보트 건물 앞",
+        "detailImg": "assets/previews/shoreline/test/10-1-1-1.webp"
     },
 
 

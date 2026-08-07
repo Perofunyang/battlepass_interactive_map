@@ -83,6 +83,15 @@ window.MAP_DATA_ground_zero = [
         "detailImg": "assets/previews/ground_zero/user/3-2-3-1.webp"
     },
     {
+        "id": "user-3-2-3-2",
+        "category": "user",
+        "coords": [4359, 4287],
+        "previewImg": "assets/previews/ground_zero/user/3-2-3-2.webp",
+        "detailTitle": "user-3-2-3-2",
+        "detailDesc": "3번 방 창가",
+        "detailImg": "assets/previews/ground_zero/user/3-2-3-2.webp"
+    },
+    {
         "id": "user-3-2-4-1",
         "category": "user",
         "coords": [4688, 4392],

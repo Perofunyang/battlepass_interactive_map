@@ -9,6 +9,33 @@ window.MAP_DATA_woods = [
         "detailImg": "assets/previews/woods/technical/1-1.webp"
     },
     {
+        "id": "technical-1-2",
+        "category": "technical",
+        "coords": [4768, 1879],
+        "previewImg": "assets/previews/woods/technical/1-2.webp",
+        "detailTitle": "technical-1-2",
+        "detailDesc": "북쪽 유섹 캠프 레이더 의자",
+        "detailImg": "assets/previews/woods/technical/1-2.webp"
+    },
+    {
+        "id": "technical-1-3",
+        "category": "technical",
+        "coords": [5684, 2182],
+        "previewImg": "assets/previews/woods/technical/1-3.webp",
+        "detailTitle": "technical-1-3",
+        "detailDesc": "스캐브 벙커 타워 밑",
+        "detailImg": "assets/previews/woods/technical/1-3.webp"
+    },
+    {
+        "id": "technical-1-4",
+        "category": "technical",
+        "coords": [3519, 3466],
+        "previewImg": "assets/previews/woods/technical/1-4.webp",
+        "detailTitle": "technical-1-4",
+        "detailDesc": "차량 조수석",
+        "detailImg": "assets/previews/woods/technical/1-4.webp"
+    },
+    {
         "id": "technical-2-1",
         "category": "technical",
         "coords": [5267, 5320],
@@ -25,6 +52,15 @@ window.MAP_DATA_woods = [
         "detailTitle": "technical-2-2",
         "detailDesc": "책장 밑에 널부러진 책 옆",
         "detailImg": "assets/previews/woods/technical/2-2.webp"
+    },
+    {
+        "id": "technical-2-3",
+        "category": "technical",
+        "coords": [3646, 3985],
+        "previewImg": "assets/previews/woods/technical/2-3.webp",
+        "detailTitle": "technical-2-3",
+        "detailDesc": "산 속 못들어가는 벙커 입구",
+        "detailImg": "assets/previews/woods/technical/2-3.webp"
     },
     {
         "id": "technical-5-1",
@@ -75,13 +111,13 @@ window.MAP_DATA_woods = [
         "detailImg": "assets/previews/woods/test/1-4.webp"
     },
     {
-        "id": "test-2-2-1",
+        "id": "test-1-5",
         "category": "test",
-        "coords": [4178, 5697],
-        "previewImg": "assets/previews/woods/test/2-2-1.webp",
-        "detailTitle": "test-2-2-1",
-        "detailDesc": "강변 마을 동쪽 가운데 집 2층",
-        "detailImg": "assets/previews/woods/test/2-2-1.webp"
+        "coords": [4786, 1898],
+        "previewImg": "assets/previews/woods/test/1-5.webp",
+        "detailTitle": "test-1-5",
+        "detailDesc": "",
+        "detailImg": "assets/previews/woods/test/1-5.webp"
     },
     {
         "id": "test-2-1-1",
@@ -91,6 +127,24 @@ window.MAP_DATA_woods = [
         "detailTitle": "test-2-1-1",
         "detailDesc": "구 제제소",
         "detailImg": "assets/previews/woods/test/2-1-1.webp"
+    },
+    {
+        "id": "test-2-2-1",
+        "category": "test",
+        "coords": [4178, 5697],
+        "previewImg": "assets/previews/woods/test/2-2-1.webp",
+        "detailTitle": "test-2-2-1",
+        "detailDesc": "강변 마을 동쪽 가운데 집 2층",
+        "detailImg": "assets/previews/woods/test/2-2-1.webp"
+    },
+    {
+        "id": "test-2-2-2",
+        "category": "test",
+        "coords": [3284, 5870],
+        "previewImg": "assets/previews/woods/test/2-2-2.webp",
+        "detailTitle": "test-2-2-2",
+        "detailDesc": "구 제제소 건물 2층",
+        "detailImg": "assets/previews/woods/test/2-2-2.webp"
     },
     {
         "id": "test-3-1",

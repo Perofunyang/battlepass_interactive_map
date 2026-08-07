@@ -45,6 +45,15 @@ window.MAP_DATA_lab = [
         "detailImg": "assets/previews/lab/medical/1-5.webp"
     },
     {
+        "id": "medical-1-6",
+        "category": "medical",
+        "coords": [400, 1738],
+        "previewImg": "assets/previews/lab/medical/1-6.webp",
+        "detailTitle": "medical-1-6",
+        "detailDesc": "블랙방 안",
+        "detailImg": "assets/previews/lab/medical/1-6.webp"
+    },
+    {
         "id": "medical-2-1",
         "category": "medical",
         "coords": [1241, 2855],

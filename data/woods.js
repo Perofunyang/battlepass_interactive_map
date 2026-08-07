@@ -66,6 +66,15 @@ window.MAP_DATA_woods = [
 
 
     {
+        "id": "technical-1-1",
+        "category": "technical",
+        "coords": [5790, 2595],
+        "previewImg": "assets/previews/woods/technical/1-1.webp",
+        "detailTitle": "technical-1-1",
+        "detailDesc": "컨테이너 2층",
+        "detailImg": "assets/previews/woods/technical/1-1.webp"
+    },
+    {
         "id": "technical-2-1",
         "category": "technical",
         "coords": [5267, 5320],

@@ -18,6 +18,33 @@ window.MAP_DATA_interchange = [
         "detailImg": "assets/previews/interchange/blueprints/1-2-1.webp"
     },
     {
+        "id": "blueprint-1-2-2",
+        "category": "blueprints",
+        "coords": [3123, 7947],
+        "previewImg": "assets/previews/interchange/blueprints/1-2-2.webp",
+        "detailTitle": "blueprints-1-2-2",
+        "detailDesc": "",
+        "detailImg": "assets/previews/interchange/blueprints/1-2-2.webp"
+    },
+    {
+        "id": "blueprint-1-2-3",
+        "category": "blueprints",
+        "coords": [2088, 7891],
+        "previewImg": "assets/previews/interchange/blueprints/1-2-3.webp",
+        "detailTitle": "blueprints-1-2-3",
+        "detailDesc": "",
+        "detailImg": "assets/previews/interchange/blueprints/1-2-3.webp"
+    },
+    {
+        "id": "blueprint-1-2-4",
+        "category": "blueprints",
+        "coords": [3183, 7894],
+        "previewImg": "assets/previews/interchange/blueprints/1-2-4.webp",
+        "detailTitle": "blueprints-1-2-4",
+        "detailDesc": "",
+        "detailImg": "assets/previews/interchange/blueprints/1-2-4.webp"
+    },
+    {
         "id": "blueprint-1-4-1",
         "category": "blueprints",
         "coords": [1772, 7088],
@@ -34,6 +61,24 @@ window.MAP_DATA_interchange = [
         "detailTitle": "blueprints-1-4-2",
         "detailDesc": "",
         "detailImg": "assets/previews/interchange/blueprints/1-4-2.webp"
+    },
+    {
+        "id": "blueprint-1-4-3",
+        "category": "blueprints",
+        "coords": [1795, 8000],
+        "previewImg": "assets/previews/interchange/blueprints/1-4-3.webp",
+        "detailTitle": "blueprints-1-4-3",
+        "detailDesc": "",
+        "detailImg": "assets/previews/interchange/blueprints/1-4-3.webp"
+    },
+    {
+        "id": "blueprint-1-4-4",
+        "category": "blueprints",
+        "coords": [1714, 7782],
+        "previewImg": "assets/previews/interchange/blueprints/1-4-4.webp",
+        "detailTitle": "blueprints-1-4-4",
+        "detailDesc": "",
+        "detailImg": "assets/previews/interchange/blueprints/1-4-4.webp"
     },
     
 
@@ -65,13 +110,13 @@ window.MAP_DATA_interchange = [
         "detailImg": "assets/previews/interchange/test/1-2-2.webp"
     },
     {
-        "id": "test-1-3-1",
+        "id": "test-1-2-3",
         "category": "test",
         "coords": [2153, 7881],
-        "previewImg": "assets/previews/interchange/test/1-3-1.webp",
-        "detailTitle": "test-1-3-1",
+        "previewImg": "assets/previews/interchange/test/1-2-3.webp",
+        "detailTitle": "test-1-2-3",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/test/1-3-1.webp"
+        "detailImg": "assets/previews/interchange/test/1-2-3.webp"
     },
 
     {

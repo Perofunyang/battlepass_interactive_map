@@ -74,7 +74,7 @@ window.MAP_DATA_factory = [
     {
         "id": "blueprint-1-5",
         "category": "blueprints",
-        "coords": [601, 601],
+        "coords": [610, 607],
         "previewImg": "assets/previews/factory/blueprints/1-5.webp",
         "detailTitle": "blueprint-1-5",
         "detailDesc": "",
@@ -225,6 +225,15 @@ window.MAP_DATA_factory = [
         "detailTitle": "project-1-6",
         "detailDesc": "1-6",
         "detailImg": "assets/previews/factory/project/1-6.webp"
+    },
+    {
+        "id": "project-1-7",
+        "category": "project",
+        "coords": [626, 605],
+        "previewImg": "assets/previews/factory/project/1-7.webp",
+        "detailTitle": "project-1-7",
+        "detailDesc": "1-7",
+        "detailImg": "assets/previews/factory/project/1-7.webp"
     },
     {
         "id": "project-2-1",

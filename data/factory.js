@@ -229,7 +229,7 @@ window.MAP_DATA_factory = [
     {
         "id": "project-1-7",
         "category": "project",
-        "coords": [626, 605],
+        "coords": [628, 603],
         "previewImg": "assets/previews/factory/project/1-7.webp",
         "detailTitle": "project-1-7",
         "detailDesc": "1-7",

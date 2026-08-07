@@ -1,5 +1,44 @@
 window.MAP_DATA_woods = [
     {
+        "id": "technical-1-1",
+        "category": "technical",
+        "coords": [5790, 2595],
+        "previewImg": "assets/previews/woods/technical/1-1.webp",
+        "detailTitle": "technical-1-1",
+        "detailDesc": "컨테이너 2층",
+        "detailImg": "assets/previews/woods/technical/1-1.webp"
+    },
+    {
+        "id": "technical-2-1",
+        "category": "technical",
+        "coords": [5267, 5320],
+        "previewImg": "assets/previews/woods/technical/2-1.webp",
+        "detailTitle": "technical-2-1",
+        "detailDesc": "벙커 화장실 입구 너머",
+        "detailImg": "assets/previews/woods/technical/2-1.webp"
+    },
+    {
+        "id": "technical-2-2",
+        "category": "technical",
+        "coords": [4053, 5448],
+        "previewImg": "assets/previews/woods/technical/2-2.webp",
+        "detailTitle": "technical-2-2",
+        "detailDesc": "책장 밑에 널부러진 책 옆",
+        "detailImg": "assets/previews/woods/technical/2-2.webp"
+    },
+    {
+        "id": "technical-5-1",
+        "category": "technical",
+        "coords": [2428, 4447],
+        "previewImg": "assets/previews/woods/technical/5-1.webp",
+        "detailTitle": "technical-5-1",
+        "detailDesc": "비행기 안",
+        "detailImg": "assets/previews/woods/technical/5-1.webp"
+    },
+
+
+
+    {
         "id": "test-1-1",
         "category": "test",
         "coords": [4760, 1959],
@@ -45,6 +84,15 @@ window.MAP_DATA_woods = [
         "detailImg": "assets/previews/woods/test/2-2-1.webp"
     },
     {
+        "id": "test-2-1-1",
+        "category": "test",
+        "coords": [3153, 5701],
+        "previewImg": "assets/previews/woods/test/2-1-1.webp",
+        "detailTitle": "test-2-1-1",
+        "detailDesc": "구 제제소",
+        "detailImg": "assets/previews/woods/test/2-1-1.webp"
+    },
+    {
         "id": "test-3-1",
         "category": "test",
         "coords": [2651, 2107],
@@ -62,44 +110,14 @@ window.MAP_DATA_woods = [
         "detailDesc": "제재소 작은 집 안 케비넷 위",
         "detailImg": "assets/previews/woods/test/4-1.webp"
     },
-
-
-
     {
-        "id": "technical-1-1",
-        "category": "technical",
-        "coords": [5790, 2595],
-        "previewImg": "assets/previews/woods/technical/1-1.webp",
-        "detailTitle": "technical-1-1",
-        "detailDesc": "컨테이너 2층",
-        "detailImg": "assets/previews/woods/technical/1-1.webp"
-    },
-    {
-        "id": "technical-2-1",
-        "category": "technical",
-        "coords": [5267, 5320],
-        "previewImg": "assets/previews/woods/technical/2-1.webp",
-        "detailTitle": "technical-2-1",
-        "detailDesc": "벙커 화장실 입구 너머",
-        "detailImg": "assets/previews/woods/technical/2-1.webp"
-    },
-    {
-        "id": "technical-2-2",
-        "category": "technical",
-        "coords": [4053, 5448],
-        "previewImg": "assets/previews/woods/technical/2-2.webp",
-        "detailTitle": "technical-2-2",
-        "detailDesc": "책장 밑에 널부러진 책 옆",
-        "detailImg": "assets/previews/woods/technical/2-2.webp"
-    },
-    {
-        "id": "technical-5-1",
-        "category": "technical",
-        "coords": [2428, 4447],
-        "previewImg": "assets/previews/woods/technical/5-1.webp",
-        "detailTitle": "technical-5-1",
-        "detailDesc": "비행기 안",
-        "detailImg": "assets/previews/woods/technical/5-1.webp"
+        "id": "test-5-1",
+        "category": "test",
+        "coords": [1190, 4231],
+        "previewImg": "assets/previews/woods/test/5-1.webp",
+        "detailTitle": "test-5-1",
+        "detailDesc": "하얀 컨테이너 안",
+        "detailImg": "assets/previews/woods/test/5-1.webp"
     },
 
 

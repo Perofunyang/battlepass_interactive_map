@@ -103,7 +103,7 @@ window.MAP_DATA_ground_zero = [
     {
         "id": "user-3-2-5-2",
         "category": "user",
-        "coords": [4394, 4455],
+        "coords": [4227, 4553],
         "previewImg": "assets/previews/ground_zero/user/3-2-5-2.webp",
         "detailTitle": "user-3-2-5-2",
         "detailDesc": "3번 방 옆 복도 의자 위",

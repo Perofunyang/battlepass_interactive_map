@@ -8,7 +8,7 @@
     <meta name="naver-site-verification" content="082327acf711127d70357c418344a9453ed9ff8d" />
 
     <!-- [1번] 한/영 다국어 검색 엔진 최적화(SEO) 타이틀 & 메타 태그 -->
-    <title>EFT Battle Pass Documentation Interactive Map | 타르코프 배틀패스 문서 인터랙티브 맵 </title>
+    <title>EFT Battle Pass Documentation Interactive Map | 타르코프 배틀패스 문서 인터랙티브 맵</title>
     <meta name="description" content="EFT Battle Pass Documentation Interactive Map | 이스케이프 프롬 타르코프 배틀패스 문서 스폰 위치 전용 지도. Technical, PMC, Project, Blueprints, Test, User, Medical, Financial 총 8종 문서 위치 정밀 제공.">
     <meta name="keywords" content="타르코프 배틀패스, 타르코프 문서 위치, 타르코프 문서 지도, EFT Battle Pass Documentation Interactive Map, Tarkov Document Map, Escape From Tarkov Map">
 
@@ -77,10 +77,14 @@
                 background-color: #fff;
             }
 
+        /* [수정] 접혔을 때 스폰 뱃지(.category-spawn-badge)까지 깔끔히 숨김 */
         #sidebar.collapsed .sidebar-header h2,
+        #sidebar.collapsed .sidebar-header .sub-title,
         #sidebar.collapsed .map-select-box,
+        #sidebar.collapsed .map-spawn-summary,
         #sidebar.collapsed .filter-section h3,
         #sidebar.collapsed .category-text,
+        #sidebar.collapsed .category-spawn-badge,
         #sidebar.collapsed .category-item input[type="checkbox"] {
             display: none !important;
         }
@@ -102,9 +106,18 @@
         }
 
             .sidebar-header h2 {
-                font-size: 1.2rem;
-                margin-bottom: 10px;
+                font-size: 1.1rem;
+                margin-bottom: 4px;
                 color: #e5b35c;
+                line-height: 1.3;
+            }
+
+            .sidebar-header .sub-title {
+                display: block;
+                font-size: 0.75rem;
+                color: #888;
+                margin-bottom: 12px;
+                font-weight: 500;
             }
 
         .map-select-box {
@@ -117,6 +130,49 @@
             font-size: 1rem;
             cursor: pointer;
         }
+
+        /* 선택된 맵 스폰 정보 요약 카드 스타일 */
+        .map-spawn-summary {
+            margin-top: 10px;
+            padding: 10px 12px;
+            background-color: #1a1a1a;
+            border: 1px solid #e5b35c;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+
+            /* [수정] 줄바꿈 방지 및 폰트 크기 정돈 */
+            .map-spawn-summary .summary-title {
+                color: #e5b35c;
+                font-weight: bold;
+                margin-bottom: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 0.82rem;
+                white-space: nowrap;
+            }
+
+            .map-spawn-summary ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .map-spawn-summary li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 4px;
+                font-size: 0.85rem;
+            }
+
+                .map-spawn-summary li img {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 6px;
+                    object-fit: contain;
+                }
 
         .filter-section {
             padding: 20px;
@@ -156,6 +212,12 @@
             .category-item.inactive {
                 opacity: 0.35;
                 filter: grayscale(80%);
+            }
+
+            .category-item.disabled-category {
+                opacity: 0.25;
+                filter: grayscale(100%);
+                cursor: not-allowed;
             }
 
         .filter-icon-img {
@@ -415,24 +477,29 @@
         <button id="sidebar-toggle-btn" onclick="toggleSidebar()" title="사이드바 접기/펼치기">◀</button>
 
         <div class="sidebar-header">
-            <h2>Interactive Map</h2>
+            <h2>배틀 패스 문서 인터랙티브 맵</h2>
+            <span class="sub-title">Battle Pass Documentation Map</span>
+
             <select id="map-select" class="map-select-box" onchange="switchMap(this.value)">
                 <option value="customs">Customs (세관)</option>
-                <option value="factory" selected>Factory (공장)</option>
                 <option value="ground_zero">Ground Zero (그라운드 제로)</option>
-                <option value="interchange">Interchange (인터체인지)</option>
-                <option value="lighthouse">Lighthouse (등대)</option>
+                <option value="factory" selected>Factory (공장)</option>
+                <option value="woods">Woods (삼림)</option>
                 <option value="reserve">Reserve (리저브)</option>
                 <option value="shoreline">Shoreline (해안선)</option>
+                <option value="interchange">Interchange (인터체인지)</option>
+                <option value="lighthouse">Lighthouse (등대)</option>
                 <option value="streets_of_tarkov">Streets of Tarkov (스오타)</option>
                 <option value="lab">The Lab (연구실)</option>
                 <option value="labyrinth">The Labyrinth (미궁)</option>
-                <option value="woods">Woods (삼림)</option>
             </select>
+
+            <!-- 레이드당 문서 스폰 요약 카드 -->
+            <div id="map-spawn-summary" class="map-spawn-summary"></div>
         </div>
 
         <div class="filter-section">
-            <h3>문서 종류 (총 필요 개수)</h3>
+            <h3>문서 종류 / Categories</h3>
             <div id="category-filters"></div>
         </div>
     </div>
@@ -440,7 +507,7 @@
     <!-- 메인 맵 영역 -->
     <div id="map-container">
         <div id="map"></div>
-        <div id="coord-overlay">Y: 0, X: 0 (클릭시 좌표 복사)</div>
+        <div id="coord-overlay">Y: 0, X: 0 (Click to Copy / 클릭시 복사)</div>
     </div>
 
     <!-- 최상위 레이어로 동작할 단일 카테고리 팝업 박스 -->
@@ -462,30 +529,96 @@
 
     <script>
         const MAPS = {
-            customs: { name: "Customs", imageUrl: "./assets/maps/customs.webp", width: 4097, height: 2142 },
-            factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850 },
-            ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 6920, height: 6920 },
-            interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.webp", width: 9600, height: 5400 },
-            lab: { name: "Lab", imageUrl: "./assets/maps/lab.webp", width: 3820, height: 2189 },
-            labyrinth: { name: "Labyrinth", imageUrl: "./assets/maps/labyrinth.webp", width: 4145, height: 3840 },
-            lighthouse: { name: "Lighthouse", imageUrl: "./assets/maps/lighthouse.webp", width: 2242, height: 3892 },
-            reserve: { name: "Reserve", imageUrl: "./assets/maps/reserve.webp", width: 4701, height: 2785 },
-            shoreline: { name: "Shoreline", imageUrl: "./assets/maps/shoreline.webp", width: 6668, height: 4567 },
-            streets_of_tarkov: { name: "Streets of Tarkov", imageUrl: "./assets/maps/streets_of_tarkov.webp", width: 7620, height: 5877 },
-            woods: { name: "Woods", imageUrl: "./assets/maps/woods.webp", width: 6994, height: 6843 }
+            customs: {
+                name: "Customs",
+                imageUrl: "./assets/maps/customs.webp",
+                width: 4097,
+                height: 2142,
+                spawns: { project: 2, financial: 1 }
+            },
+            factory: {
+                name: "Factory",
+                imageUrl: "./assets/maps/factory.png",
+                width: 850,
+                height: 850,
+                spawns: { project: 2, blueprints: 1 }
+            },
+            ground_zero: {
+                name: "Ground Zero",
+                imageUrl: "./assets/maps/ground_zero.webp",
+                width: 6920,
+                height: 6920,
+                spawns: { medical: 2, user: 1 }
+            },
+            interchange: {
+                name: "Interchange",
+                imageUrl: "./assets/maps/interchange.webp",
+                width: 9600,
+                height: 5400,
+                spawns: { blueprints: 2, financial: 1 }
+            },
+            lab: {
+                name: "Lab",
+                imageUrl: "./assets/maps/lab.webp",
+                width: 3820,
+                height: 2189,
+                spawns: { user: 2, medical: 1 }
+            },
+            labyrinth: {
+                name: "Labyrinth",
+                imageUrl: "./assets/maps/labyrinth.webp",
+                width: 4145,
+                height: 3840,
+                spawns: { blueprints: 2, medical: 1 }
+            },
+            lighthouse: {
+                name: "Lighthouse",
+                imageUrl: "./assets/maps/lighthouse.webp",
+                width: 2242,
+                height: 3892,
+                spawns: { pmc: 2, technical: 1 }
+            },
+            reserve: {
+                name: "Reserve",
+                imageUrl: "./assets/maps/reserve.webp",
+                width: 4701,
+                height: 2785,
+                spawns: { pmc: 2, project: 1 }
+            },
+            shoreline: {
+                name: "Shoreline",
+                imageUrl: "./assets/maps/shoreline.webp",
+                width: 6668,
+                height: 4567,
+                spawns: { test: 2, technical: 1 }
+            },
+            streets_of_tarkov: {
+                name: "Streets of Tarkov",
+                imageUrl: "./assets/maps/streets_of_tarkov.webp",
+                width: 7620,
+                height: 5877,
+                spawns: { financial: 2, user: 1 }
+            },
+            woods: {
+                name: "Woods",
+                imageUrl: "./assets/maps/woods.webp",
+                width: 6994,
+                height: 6843,
+                spawns: { test: 2, technical: 1 }
+            }
         };
 
         const CATEGORIES = {
-            technical: { name: "Technical(86개)", icon: "./assets/icons/technical.webp", image: "./assets/category/technical.webp", desc: "shoreline(쇼라)\n woods(우드)\n lighthouse(라하)" },
-            pmc: { name: "PMC(39개)", icon: "./assets/icons/pmc.webp", image: "./assets/category/pmc.webp", desc: "reserve(리저브)\n icebreaker(쇄빙선)\n lighthouse(라하)" },
-            project: { name: "Project(55개)", icon: "./assets/icons/project.webp", image: "./assets/category/project.webp", desc: "reserve(리저브)\n customs(세관)\n factory(공장)" },
-            blueprints: { name: "Blueprints(81개)", icon: "./assets/icons/blueprints.webp", image: "./assets/category/blueprints.webp", desc: "interchange(인터체인지)\n factory(공장)\n The Labyrinth(미궁)" },
-            test: { name: "Test(48개)", icon: "./assets/icons/test.webp", image: "./assets/category/test.webp", desc: "shoreline(쇼라)\n woods(우드)\n icebreaker(쇄빙선)" },
-            user: { name: "User(40개)", icon: "./assets/icons/user.webp", image: "./assets/category/user.webp", desc: "Streets of Tarkov(스오타)\n Ground Zero(그제)\n The Lab(랩)" },
-            medical: { name: "Medical(67개)", icon: "./assets/icons/medical.webp", image: "./assets/category/medical.webp", desc: "The Labyrinth(미궁)\n Ground Zero(그제)\n The Lab(랩)" },
-            financial: { name: "Financial(83개)", icon: "./assets/icons/financial.webp", image: "./assets/category/financial.webp", desc: "customs(세관)\n Streets of Tarkov(스오타)\n interchange(인터체인지)" },
-            transit: { name: "Transit (트랜짓)", icon: "./assets/icons/transit.webp", image: "./assets/category/transit.webp", desc: "트랜짓(Transit) 위치" },
-            temporary: { name: "Temporary (임시 마커)", icon: "./assets/icons/temporary.png",desc: "확인되지 않은 위치" }
+            technical: { name: "Technical (86)", icon: "./assets/icons/technical.webp", image: "./assets/category/technical.webp", desc: "shoreline(쇼라)\n woods(우드)\n lighthouse(라하)" },
+            pmc: { name: "PMC (39)", icon: "./assets/icons/pmc.webp", image: "./assets/category/pmc.webp", desc: "reserve(리저브)\n icebreaker(쇄빙선)\n lighthouse(라하)" },
+            project: { name: "Project (55)", icon: "./assets/icons/project.webp", image: "./assets/category/project.webp", desc: "reserve(리저브)\n customs(세관)\n factory(공장)" },
+            blueprints: { name: "Blueprints (81)", icon: "./assets/icons/blueprints.webp", image: "./assets/category/blueprints.webp", desc: "interchange(인터체인지)\n factory(공장)\n The Labyrinth(미궁)" },
+            test: { name: "Test (48)", icon: "./assets/icons/test.webp", image: "./assets/category/test.webp", desc: "shoreline(쇼라)\n woods(우드)\n icebreaker(쇄빙선)" },
+            user: { name: "User (40)", icon: "./assets/icons/user.webp", image: "./assets/category/user.webp", desc: "Streets of Tarkov(스오타)\n Ground Zero(그제)\n The Lab(랩)" },
+            medical: { name: "Medical (67)", icon: "./assets/icons/medical.webp", image: "./assets/category/medical.webp", desc: "The Labyrinth(미궁)\n Ground Zero(그제)\n The Lab(랩)" },
+            financial: { name: "Financial (83)", icon: "./assets/icons/financial.webp", image: "./assets/category/financial.webp", desc: "customs(세관)\n Streets of Tarkov(스오타)\n interchange(인터체인지)" },
+            transit: { name: "Transit (트랜짓)", icon: "./assets/icons/transit.webp", image: "./assets/category/transit.webp", desc: "트랜짓(Transit) 포인트" },
+            temporary: { name: "Temporary (임시 마커)", icon: "./assets/icons/temporary.png", desc: "임시 마커" }
         };
 
         let map = null;
@@ -506,7 +639,6 @@
 
             L.control.zoom({ position: 'bottomleft' }).addTo(map);
 
-            renderFilterUI();
             setupCoordinateTracker();
             setupModalEvents();
             loadMap(currentMapId);
@@ -543,7 +675,7 @@
                 const coordString = `[${y}, ${x}],`;
 
                 navigator.clipboard.writeText(coordString).then(() => {
-                    coordDiv.innerText = `복사됨! -> ${coordString}`;
+                    coordDiv.innerText = `Copied! / 복사됨! -> ${coordString}`;
                     setTimeout(() => {
                         coordDiv.innerText = `Y: ${y}, X: ${x}`;
                     }, 1500);
@@ -590,7 +722,6 @@
             });
         }
 
-        // [수정] 맵 테두리 여유 드래그 공간(MaxBounds Padding) 60% 확장 적용
         function loadMap(mapId) {
             currentMapId = mapId;
             const mapConfig = MAPS[mapId];
@@ -604,7 +735,6 @@
 
             map.fitBounds(bounds, { animate: false });
 
-            // ★ 맵 모서리/구석도 화면 정중앙으로 당길 수 있도록 maxBounds 범위 확장 (60% 여유 여백)
             const padY = mapConfig.height * 0.6;
             const padX = mapConfig.width * 0.6;
             const extendedBounds = [
@@ -613,6 +743,8 @@
             ];
 
             map.setMaxBounds(extendedBounds);
+
+            updateMapSpawnInfo();
 
             if (window[`MAP_DATA_${mapId}`]) {
                 renderMarkers(window[`MAP_DATA_${mapId}`]);
@@ -644,6 +776,29 @@
                     'map_name': MAPS[mapId] ? MAPS[mapId].name : mapId
                 });
             }
+        }
+
+        // [수정] 줄바꿈 방지 및 제목 정돈
+        function updateMapSpawnInfo() {
+            const mapConfig = MAPS[currentMapId];
+            const spawns = mapConfig ? mapConfig.spawns : {};
+            const summaryBox = document.getElementById('map-spawn-summary');
+
+            if (summaryBox && mapConfig) {
+                let html = `<div class="summary-title"><span>🎲 스폰 정보 (Raid Spawns)</span> <span style="font-size: 0.75rem; color: #888;">(Total 3)</span></div><ul>`;
+                Object.entries(spawns).forEach(([catKey, count]) => {
+                    const catInfo = CATEGORIES[catKey];
+                    if (catInfo) {
+                        const cleanName = catInfo.name.split('(')[0].trim();
+                        const spawnLabel = count > 1 ? 'Spawns' : 'Spawn';
+                        html += `<li><img src="${catInfo.icon}" onError="this.style.display='none';" /> ${cleanName}: <strong style="color: #e5b35c; margin-left: 4px;">${count} ${spawnLabel}</strong></li>`;
+                    }
+                });
+                html += `</ul>`;
+                summaryBox.innerHTML = html;
+            }
+
+            renderFilterUI();
         }
 
         function renderMarkers(markersData) {
@@ -718,6 +873,7 @@
             });
         }
 
+        // [수정] 접혔을 때 스폰 뱃지 숨김용 클래스(.category-spawn-badge) 부여
         function renderFilterUI() {
             const container = document.getElementById('category-filters');
             container.innerHTML = '';
@@ -726,15 +882,45 @@
             const previewImg = document.getElementById('global-preview-img');
             const previewDesc = document.getElementById('global-preview-desc');
 
+            const mapConfig = MAPS[currentMapId];
+            const spawns = mapConfig ? mapConfig.spawns : {};
+
             Object.entries(CATEGORIES).forEach(([key, cat]) => {
+                const isAlwaysActiveCategory = (key === 'transit' || key === 'temporary');
+                const isSpawningInCurrentMap = spawns.hasOwnProperty(key);
+
+                const shouldBeEnabled = isAlwaysActiveCategory || isSpawningInCurrentMap;
+
+                let spawnBadge = "";
+                if (isAlwaysActiveCategory) {
+                    spawnBadge = "";
+                } else if (isSpawningInCurrentMap) {
+                    const count = spawns[key];
+                    const spawnLabel = count > 1 ? 'Spawns' : 'Spawn';
+                    spawnBadge = `<span class="category-spawn-badge" style="color: #e5b35c; font-size: 0.8rem; margin-left: auto; font-weight: bold;">[${count} ${spawnLabel}]</span>`;
+                } else {
+                    spawnBadge = `<span class="category-spawn-badge" style="color: #666; font-size: 0.8rem; margin-left: auto;">[No Spawn]</span>`;
+                }
+
+                if (!shouldBeEnabled && activeFilters.has(key)) {
+                    activeFilters.delete(key);
+                    if (layerGroups[key]) map.removeLayer(layerGroups[key]);
+                } else if (shouldBeEnabled && !activeFilters.has(key)) {
+                    activeFilters.add(key);
+                    if (layerGroups[key]) map.addLayer(layerGroups[key]);
+                }
+
                 const isActive = activeFilters.has(key);
+
                 const item = document.createElement('label');
-                item.className = `category-item ${isActive ? '' : 'inactive'}`;
+                item.className = `category-item ${shouldBeEnabled ? (isActive ? '' : 'inactive') : 'disabled-category'}`;
+
                 item.innerHTML = `
-                        <input type="checkbox" value="${key}" ${isActive ? 'checked' : ''} onchange="toggleCategory('${key}', this.checked, this.parentElement)">
-                        <span class="category-name">
+                        <input type="checkbox" value="${key}" ${isActive ? 'checked' : ''} ${shouldBeEnabled ? '' : 'disabled'} onchange="toggleCategory('${key}', this.checked, this.parentElement)">
+                        <span class="category-name" style="width: 100%;">
                             <img src="${cat.icon}" class="filter-icon-img" onError="this.style.display='none';" />
                             <span class="category-text">${cat.name}</span>
+                            ${spawnBadge}
                         </span>
                     `;
 

@@ -191,6 +191,15 @@ window.MAP_DATA_customs = [
         "detailImg": "assets/previews/customs/project/2-6-2-1.webp"
     },
     {
+        "id": "project-2-6-3-1",
+        "category": "project",
+        "coords": [1322, 2418],
+        "previewImg": "assets/previews/customs/project/2-6-3-1.webp",
+        "detailTitle": "project-2-6-3-1",
+        "detailDesc": "3층",
+        "detailImg": "assets/previews/customs/project/2-6-3-1.webp"
+    },
+    {
         "id": "project-3-1-2-1",
         "category": "project",
         "coords": [772, 3676],

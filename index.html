@@ -77,7 +77,7 @@
                 background-color: #fff;
             }
 
-        /* [수정] 접혔을 때 스폰 뱃지(.category-spawn-badge)까지 깔끔히 숨김 */
+        /* 접혔을 때 스폰 뱃지(.category-spawn-badge)까지 깔끔히 숨김 */
         #sidebar.collapsed .sidebar-header h2,
         #sidebar.collapsed .sidebar-header .sub-title,
         #sidebar.collapsed .map-select-box,
@@ -142,7 +142,6 @@
             color: #ccc;
         }
 
-            /* [수정] 줄바꿈 방지 및 폰트 크기 정돈 */
             .map-spawn-summary .summary-title {
                 color: #e5b35c;
                 font-weight: bold;
@@ -608,17 +607,18 @@
             }
         };
 
+        // 카테고리 기본 명칭 (괄호 숫자 제거)
         const CATEGORIES = {
-            technical: { name: "Technical (86)", icon: "./assets/icons/technical.webp", image: "./assets/category/technical.webp", desc: "shoreline(쇼라)\n woods(우드)\n lighthouse(라하)" },
-            pmc: { name: "PMC (39)", icon: "./assets/icons/pmc.webp", image: "./assets/category/pmc.webp", desc: "reserve(리저브)\n icebreaker(쇄빙선)\n lighthouse(라하)" },
-            project: { name: "Project (55)", icon: "./assets/icons/project.webp", image: "./assets/category/project.webp", desc: "reserve(리저브)\n customs(세관)\n factory(공장)" },
-            blueprints: { name: "Blueprints (81)", icon: "./assets/icons/blueprints.webp", image: "./assets/category/blueprints.webp", desc: "interchange(인터체인지)\n factory(공장)\n The Labyrinth(미궁)" },
-            test: { name: "Test (48)", icon: "./assets/icons/test.webp", image: "./assets/category/test.webp", desc: "shoreline(쇼라)\n woods(우드)\n icebreaker(쇄빙선)" },
-            user: { name: "User (40)", icon: "./assets/icons/user.webp", image: "./assets/category/user.webp", desc: "Streets of Tarkov(스오타)\n Ground Zero(그제)\n The Lab(랩)" },
-            medical: { name: "Medical (67)", icon: "./assets/icons/medical.webp", image: "./assets/category/medical.webp", desc: "The Labyrinth(미궁)\n Ground Zero(그제)\n The Lab(랩)" },
-            financial: { name: "Financial (83)", icon: "./assets/icons/financial.webp", image: "./assets/category/financial.webp", desc: "customs(세관)\n Streets of Tarkov(스오타)\n interchange(인터체인지)" },
-            transit: { name: "Transit (트랜짓)", icon: "./assets/icons/transit.webp", image: "./assets/category/transit.webp", desc: "트랜짓(Transit) 포인트" },
-            temporary: { name: "Temporary (임시 마커)", icon: "./assets/icons/temporary.png", desc: "임시 마커" }
+            technical: { name: "Technical", icon: "./assets/icons/technical.webp", image: "./assets/category/technical.webp", desc: "shoreline(쇼라)\n woods(우드)\n lighthouse(라하)" },
+            pmc: { name: "PMC", icon: "./assets/icons/pmc.webp", image: "./assets/category/pmc.webp", desc: "reserve(리저브)\n icebreaker(쇄빙선)\n lighthouse(라하)" },
+            project: { name: "Project", icon: "./assets/icons/project.webp", image: "./assets/category/project.webp", desc: "reserve(리저브)\n customs(세관)\n factory(공장)" },
+            blueprints: { name: "Blueprints", icon: "./assets/icons/blueprints.webp", image: "./assets/category/blueprints.webp", desc: "interchange(인터체인지)\n factory(공장)\n The Labyrinth(미궁)" },
+            test: { name: "Test", icon: "./assets/icons/test.webp", image: "./assets/category/test.webp", desc: "shoreline(쇼라)\n woods(우드)\n icebreaker(쇄빙선)" },
+            user: { name: "User", icon: "./assets/icons/user.webp", image: "./assets/category/user.webp", desc: "Streets of Tarkov(스오타)\n Ground Zero(그제)\n The Lab(랩)" },
+            medical: { name: "Medical", icon: "./assets/icons/medical.webp", image: "./assets/category/medical.webp", desc: "The Labyrinth(미궁)\n Ground Zero(그제)\n The Lab(랩)" },
+            financial: { name: "Financial", icon: "./assets/icons/financial.webp", image: "./assets/category/financial.webp", desc: "customs(세관)\n Streets of Tarkov(스오타)\n interchange(인터체인지)" },
+            transit: { name: "Transit", icon: "./assets/icons/transit.webp", image: "./assets/category/transit.webp", desc: "트랜짓(Transit) 포인트" },
+            temporary: { name: "Temporary", icon: "./assets/icons/temporary.png", desc: "임시 마커" }
         };
 
         let map = null;
@@ -626,6 +626,7 @@
         let currentImageOverlay = null;
         const layerGroups = {};
         const activeFilters = new Set(Object.keys(CATEGORIES));
+        let categoryCounts = {}; // 현재 선택된 맵의 카테고리별 마커 개수 저장
 
         function initMap() {
             map = L.map('map', {
@@ -686,12 +687,12 @@
         function openDetailModal(data) {
             const modalBody = document.getElementById('modal-body');
             modalBody.innerHTML = `
-                    <div class="modal-detail">
-                        ${data.detailImg ? `<img src="${data.detailImg}" alt="detail" />` : ''}
-                        ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
-                        ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
-                    </div>
-                `;
+                        <div class="modal-detail">
+                            ${data.detailImg ? `<img src="${data.detailImg}" alt="detail" />` : ''}
+                            ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
+                            ${data.detailDesc ? `<p>${data.detailDesc}</p>` : ''}
+                        </div>
+                    `;
             document.getElementById('detail-modal').style.display = 'flex';
 
             if (typeof gtag === 'function') {
@@ -778,7 +779,6 @@
             }
         }
 
-        // [수정] 줄바꿈 방지 및 제목 정돈
         function updateMapSpawnInfo() {
             const mapConfig = MAPS[currentMapId];
             const spawns = mapConfig ? mapConfig.spawns : {};
@@ -789,7 +789,7 @@
                 Object.entries(spawns).forEach(([catKey, count]) => {
                     const catInfo = CATEGORIES[catKey];
                     if (catInfo) {
-                        const cleanName = catInfo.name.split('(')[0].trim();
+                        const cleanName = catInfo.name;
                         const spawnLabel = count > 1 ? 'Spawns' : 'Spawn';
                         html += `<li><img src="${catInfo.icon}" onError="this.style.display='none';" /> ${cleanName}: <strong style="color: #e5b35c; margin-left: 4px;">${count} ${spawnLabel}</strong></li>`;
                     }
@@ -804,6 +804,21 @@
         function renderMarkers(markersData) {
             const mapConfig = MAPS[currentMapId];
 
+            // 1. 현재 맵의 카테고리별 마커 개수 계산
+            categoryCounts = {};
+            Object.keys(CATEGORIES).forEach(catKey => {
+                categoryCounts[catKey] = 0;
+            });
+            markersData.forEach(data => {
+                if (categoryCounts[data.category] !== undefined) {
+                    categoryCounts[data.category]++;
+                }
+            });
+
+            // 2. 마커 수량이 업데이트된 필터 UI 재렌더링
+            renderFilterUI();
+
+            // 3. 지도 레이어 구성 및 마커 표시
             Object.keys(CATEGORIES).forEach(catKey => {
                 layerGroups[catKey] = L.layerGroup();
                 if (activeFilters.has(catKey)) {
@@ -841,10 +856,10 @@
                 } else {
                     if (data.previewImg) {
                         const tooltipHTML = `
-                                <div class="hover-photo-frame">
-                                  <img src="${data.previewImg}" alt="preview" />
-                                </div>
-                            `;
+                                    <div class="hover-photo-frame">
+                                      <img src="${data.previewImg}" alt="preview" />
+                                    </div>
+                                `;
 
                         marker.bindTooltip(tooltipHTML, {
                             className: 'custom-tooltip-photo',
@@ -873,7 +888,6 @@
             });
         }
 
-        // [수정] 접혔을 때 스폰 뱃지 숨김용 클래스(.category-spawn-badge) 부여
         function renderFilterUI() {
             const container = document.getElementById('category-filters');
             container.innerHTML = '';
@@ -912,17 +926,21 @@
 
                 const isActive = activeFilters.has(key);
 
+                // 현재 선택된 맵의 실시간 카테고리별 마커 개수 반영
+                const markerCount = categoryCounts[key] || 0;
+                const displayName = `${cat.name} (${markerCount})`;
+
                 const item = document.createElement('label');
                 item.className = `category-item ${shouldBeEnabled ? (isActive ? '' : 'inactive') : 'disabled-category'}`;
 
                 item.innerHTML = `
-                        <input type="checkbox" value="${key}" ${isActive ? 'checked' : ''} ${shouldBeEnabled ? '' : 'disabled'} onchange="toggleCategory('${key}', this.checked, this.parentElement)">
-                        <span class="category-name" style="width: 100%;">
-                            <img src="${cat.icon}" class="filter-icon-img" onError="this.style.display='none';" />
-                            <span class="category-text">${cat.name}</span>
-                            ${spawnBadge}
-                        </span>
-                    `;
+                            <input type="checkbox" value="${key}" ${isActive ? 'checked' : ''} ${shouldBeEnabled ? '' : 'disabled'} onchange="toggleCategory('${key}', this.checked, this.parentElement)">
+                            <span class="category-name" style="width: 100%;">
+                                <img src="${cat.icon}" class="filter-icon-img" onError="this.style.display='none';" />
+                                <span class="category-text">${displayName}</span>
+                                ${spawnBadge}
+                            </span>
+                        `;
 
                 item.addEventListener('mouseenter', () => {
                     const rect = item.getBoundingClientRect();

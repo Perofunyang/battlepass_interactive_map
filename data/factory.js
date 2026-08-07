@@ -125,6 +125,15 @@ window.MAP_DATA_factory = [
         "detailDesc": "",
         "detailImg": "assets/previews/factory/blueprints/0-1.webp"
     },
+    {
+        "id": "blueprint-0-2",
+        "category": "blueprints",
+        "coords": [517, 526],
+        "previewImg": "assets/previews/factory/blueprints/0-2.webp",
+        "detailTitle": "blueprint-0-2",
+        "detailDesc": "지하 시체",
+        "detailImg": "assets/previews/factory/blueprints/0-2.webp"
+    },
 
 
     {

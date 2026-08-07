@@ -36,6 +36,15 @@ window.MAP_DATA_shoreline = [
         "detailImg": "assets/previews/shoreline/technical/3-1-1-1.webp"
     },
     {
+        "id": "technical-3-0-1-1",
+        "category": "technical",
+        "coords": [3187, 3614],
+        "previewImg": "assets/previews/shoreline/technical/3-0-1-1.webp",
+        "detailTitle": "technical-3-0-1-1",
+        "detailDesc": "택시 탈출 밑에 건물",
+        "detailImg": "assets/previews/shoreline/technical/3-0-1-1.webp"
+    },
+    {
         "id": "technical-8-1-3-1",
         "category": "technical",
         "coords": [1188, 3547],

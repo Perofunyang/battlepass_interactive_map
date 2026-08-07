@@ -83,40 +83,49 @@ window.MAP_DATA_interchange = [
     
 
     {
-        "id": "test-1-1-1",
-        "category": "test",
+        "id": "financial-1-1-1",
+        "category": "financial",
         "coords": [3914, 7536],
-        "previewImg": "assets/previews/interchange/test/1-1-1.webp",
-        "detailTitle": "test-1-1-1",
+        "previewImg": "assets/previews/interchange/financial/1-1-1.webp",
+        "detailTitle": "financial-1-1-1",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/test/1-1-1.webp"
+        "detailImg": "assets/previews/interchange/financial/1-1-1.webp"
     },
     {
-        "id": "test-1-2-1",
-        "category": "test",
+        "id": "financial-1-2-1",
+        "category": "financial",
         "coords": [3194, 7874],
-        "previewImg": "assets/previews/interchange/test/1-2-1.webp",
-        "detailTitle": "test-1-2-1",
+        "previewImg": "assets/previews/interchange/financial/1-2-1.webp",
+        "detailTitle": "financial-1-2-1",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/test/1-2-1.webp"
+        "detailImg": "assets/previews/interchange/financial/1-2-1.webp"
     },
     {
-        "id": "test-1-2-2",
-        "category": "test",
+        "id": "financial-1-2-2",
+        "category": "financial",
         "coords": [3147, 7941],
-        "previewImg": "assets/previews/interchange/test/1-2-2.webp",
-        "detailTitle": "test-1-2-2",
+        "previewImg": "assets/previews/interchange/financial/1-2-2.webp",
+        "detailTitle": "financial-1-2-2",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/test/1-2-2.webp"
+        "detailImg": "assets/previews/interchange/financial/1-2-2.webp"
     },
     {
-        "id": "test-1-2-3",
-        "category": "test",
+        "id": "financial-1-2-3",
+        "category": "financial",
         "coords": [2153, 7881],
-        "previewImg": "assets/previews/interchange/test/1-2-3.webp",
-        "detailTitle": "test-1-2-3",
+        "previewImg": "assets/previews/interchange/financial/1-2-3.webp",
+        "detailTitle": "financial-1-2-3",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/test/1-2-3.webp"
+        "detailImg": "assets/previews/interchange/financial/1-2-3.webp"
+    },
+    {
+        "id": "financial-4-1-1",
+        "category": "financial",
+        "coords": [1491, 844],
+        "previewImg": "assets/previews/interchange/financial/4-1-1.webp",
+        "detailTitle": "financial-4-1-1",
+        "detailDesc": "",
+        "detailImg": "assets/previews/interchange/financial/4-1-1.webp"
     },
 
     {

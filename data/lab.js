@@ -62,6 +62,15 @@ window.MAP_DATA_lab = [
         "detailDesc": "연구소 카고 앞 격리병동",
         "detailImg": "assets/previews/lab/medical/2-2.webp"
     },
+    {
+        "id": "medical-2-3",
+        "category": "medical",
+        "coords": [1268, 2655],
+        "previewImg": "assets/previews/lab/medical/2-3.webp",
+        "detailTitle": "medical-2-3",
+        "detailDesc": "2층에 엘베 여는곳 화장실 맞은편",
+        "detailImg": "assets/previews/lab/medical/2-3.webp"
+    },
 
 
     {

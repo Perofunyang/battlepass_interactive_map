@@ -9,6 +9,15 @@ window.MAP_DATA_interchange = [
         "detailImg": "assets/previews/interchange/blueprints/1-1-1.webp"
     },
     {
+        "id": "blueprint-1-1-2",
+        "category": "blueprints",
+        "coords": [3382, 7672],
+        "previewImg": "assets/previews/interchange/blueprints/1-1-2.webp",
+        "detailTitle": "blueprints-1-1-2",
+        "detailDesc": "",
+        "detailImg": "assets/previews/interchange/blueprints/1-1-2.webp"
+    },
+    {
         "id": "blueprint-1-2-1",
         "category": "blueprints",
         "coords": [2128, 7952],

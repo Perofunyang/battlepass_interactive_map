@@ -29,7 +29,15 @@ window.MAP_DATA_lighthouse = [
         "detailDesc": "기차역 옆 창고건물 책상 옆 캐비넷 맨 밑칸",
         "detailImg": "assets/previews/lighthouse/technical/1-1-1-1.webp"
     },
-    //3-1, 3번지역 1번째
+    {
+        "id": "technical-2-0-1-1",
+        "category": "technical",
+        "coords": [2444, 1296],
+        "previewImg": "assets/previews/lighthouse/technical/2-0-1-1.webp",
+        "detailTitle": "technical-2-0-1-1",
+        "detailDesc": "",
+        "detailImg": "assets/previews/lighthouse/technical/2-0-1-1.webp"
+    },
     {
         "id": "technical-3-1-1-1",
         "category": "technical",
@@ -39,7 +47,6 @@ window.MAP_DATA_lighthouse = [
         "detailDesc": "",
         "detailImg": "assets/previews/lighthouse/technical/3-1-1-1.webp"
     },
-    //4-1-1-1, 4번지역 1번건물 1층 1번째
     {
         "id": "technical-4-1-1-1",
         "category": "technical",
@@ -61,10 +68,10 @@ window.MAP_DATA_lighthouse = [
     {
         "id": "technical-4-3-2-1",
         "category": "technical",
-        "coords": [865, 825],
+        "coords": [832, 577],
         "previewImg": "assets/previews/lighthouse/technical/4-3-2-1.webp",
         "detailTitle": "technical-4-3-2-1",
-        "detailDesc": "선착장 2층 선반 (좌표 부정확)",
+        "detailDesc": "선착장 2층 선반",
         "detailImg": "assets/previews/lighthouse/technical/4-3-2-1.webp"
     },
 

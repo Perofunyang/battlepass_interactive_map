@@ -53,6 +53,15 @@ window.MAP_DATA_ground_zero = [
         "detailDesc": "카페 정문 들어가자마자 좌측 테이블",
         "detailImg": "assets/previews/ground_zero/medical/4-2-1-1.webp"
     },
+    {
+        "id": "medical-5-0-1-1",
+        "category": "medical",
+        "coords": [3729, 2623],
+        "previewImg": "assets/previews/ground_zero/medical/5-0-1-1.webp",
+        "detailTitle": "medical-5-0-1-1",
+        "detailDesc": "야외 테이블",
+        "detailImg": "assets/previews/ground_zero/medical/5-0-1-1.webp"
+    },
 
 
     {

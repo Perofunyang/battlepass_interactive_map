@@ -262,6 +262,15 @@ window.MAP_DATA_factory = [
         "detailDesc": "0-1",
         "detailImg": "assets/previews/factory/project/0-1.webp"
     },
+    {
+        "id": "project-0-2",
+        "category": "project",
+        "coords": [302, 123],
+        "previewImg": "assets/previews/factory/project/0-2.webp",
+        "detailTitle": "project-0-2",
+        "detailDesc": "폴리킴 내부",
+        "detailImg": "assets/previews/factory/project/0-2.webp"
+    },
 
 
 

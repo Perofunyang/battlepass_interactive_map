@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://perofunyang.github.io/battlepass_interactive_map/sitemap.xml

@@ -1,5 +1,14 @@
 window.MAP_DATA_ground_zero = [
     {
+        "id": "medical-1-2-1-1",
+        "category": "medical",
+        "coords": [3861, 850],
+        "previewImg": "assets/previews/ground_zero/medical/1-2-1-1.webp",
+        "detailTitle": "medical-1-2-1-1",
+        "detailDesc": "건물 2층 탁자 위",
+        "detailImg": "assets/previews/ground_zero/medical/1-2-1-1.webp"
+    },
+    {
         "id": "medical-1-0-1-1",
         "category": "medical",
         "coords": [5956, 2275],
@@ -20,7 +29,7 @@ window.MAP_DATA_ground_zero = [
     {
         "id": "medical-3-2-3-2",
         "category": "medical",
-        "coords": [4241, 4414],
+        "coords": [4284, 4361],
         "previewImg": "assets/previews/ground_zero/medical/3-2-3-2.webp",
         "detailTitle": "medical-3-2-3-2",
         "detailDesc": "3번 방 컴퓨터 책상 위(좌표 부정확)",
@@ -43,6 +52,15 @@ window.MAP_DATA_ground_zero = [
         "detailTitle": "medical-3-2-4-2",
         "detailDesc": "4번 방 컴퓨터 책상 위",
         "detailImg": "assets/previews/ground_zero/medical/3-2-4-2.webp"
+    },
+    {
+        "id": "medical-3-3-1-1",
+        "category": "medical",
+        "coords": [4321, 3243],
+        "previewImg": "assets/previews/ground_zero/medical/3-3-1-1.webp",
+        "detailTitle": "medical-3-3-1-1",
+        "detailDesc": "의자 틈새",
+        "detailImg": "assets/previews/ground_zero/medical/3-3-1-1.webp"
     },
     {
         "id": "medical-4-2-1-1",

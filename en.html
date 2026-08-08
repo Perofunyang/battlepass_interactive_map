@@ -8,7 +8,7 @@
     <meta name="naver-site-verification" content="082327acf711127d70357c418344a9453ed9ff8d" />
 
     <!-- English SEO Title & Meta Tags -->
-    <title>EFT Battle Pass Documentation Interactive Map | Tarkov Doc Map</title>
+    <title>EFT Battle Pass Document Interactive Map | Tarkov Doc Map</title>
     <meta name="description" content="Interactive map for Escape From Tarkov Battle Pass Documents. Precise spawn locations for Technical, PMC, Project, Blueprints, Test, User, Medical, Financial documents across all maps.">
     <meta name="keywords" content="Tarkov Battle Pass Map, EFT Battle Pass Documentation Interactive Map, Tarkov Document Map, Escape From Tarkov Map, Tarkov Document Spawns, EFT Document Locations">
 
@@ -817,7 +817,8 @@ const MAPS = {
             const summaryBox = document.getElementById('map-spawn-summary');
 
             if (summaryBox && mapConfig) {
-                let html = `<div class="summary-title"><span>🎲 Raid Spawns</span> <span style="font-size: 0.75rem; color: #888;">(Total 3)</span></div><ul>`;
+                //let html = `<div class="summary-title"><span>🎲 Raid Spawns</span> <span style="font-size: 0.75rem; color: #888;">(Total 3)</span></div><ul>`;
+                let html = `<div class="summary-title"><span>🎲 Raid Spawns</span> <span style="font-size: 0.75rem; color: #888;"></span></div><ul>`;
                 Object.entries(spawns).forEach(([catKey, count]) => {
                     const catInfo = CATEGORIES[catKey];
                     if (catInfo) {

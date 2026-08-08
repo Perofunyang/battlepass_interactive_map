@@ -9,6 +9,42 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/pmc/2-2-1-1.webp"
     },
     {
+        "id": "pmc-2-0-1-1",
+        "category": "pmc",
+        "coords": [2444, 1284],
+        "previewImg": "assets/previews/lighthouse/pmc/2-0-1-1.webp",
+        "detailTitle": "pmc-2-0-1-1",
+        "detailDesc": "",
+        "detailImg": "assets/previews/lighthouse/pmc/2-0-1-1.webp"
+    },
+    {
+        "id": "pmc-3-2-2-1",
+        "category": "pmc",
+        "coords": [1706, 802],
+        "previewImg": "assets/previews/lighthouse/pmc/3-2-2-1.webp",
+        "detailTitle": "pmc-3-2-2-1",
+        "detailDesc": "남쪽 해상팬션 침실 선반 안",
+        "detailImg": "assets/previews/lighthouse/pmc/3-2-2-1.webp"
+    },
+    {
+        "id": "pmc-3-6-2-1",
+        "category": "pmc",
+        "coords": [1814, 2190],
+        "previewImg": "assets/previews/lighthouse/pmc/3-6-2-1.webp",
+        "detailTitle": "pmc-3-6-2-1",
+        "detailDesc": "뉴빌리지 빨간 벽돌집 2층 침실 안쪽 탁상 위",
+        "detailImg": "assets/previews/lighthouse/pmc/3-6-2-1.webp"
+    },
+    {
+        "id": "pmc-4-1-2-1",
+        "category": "pmc",
+        "coords": [1203, 1229],
+        "previewImg": "assets/previews/lighthouse/pmc/4-1-2-1.webp",
+        "detailTitle": "pmc-4-1-2-1",
+        "detailDesc": "코티지 2층의 3층 올라가는 계단 옆 책상",
+        "detailImg": "assets/previews/lighthouse/pmc/4-1-2-1.webp"
+    },
+    {
         "id": "pmc-4-2-1-1",
         "category": "pmc",
         "coords": [1203, 1229],
@@ -41,7 +77,7 @@ window.MAP_DATA_lighthouse = [
     {
         "id": "technical-2-0-1-1",
         "category": "technical",
-        "coords": [2444, 1296],
+        "coords": [2449, 1298],
         "previewImg": "assets/previews/lighthouse/technical/2-0-1-1.webp",
         "detailTitle": "technical-2-0-1-1",
         "detailDesc": "",
@@ -55,6 +91,15 @@ window.MAP_DATA_lighthouse = [
         "detailTitle": "technical-3-1-1-1",
         "detailDesc": "",
         "detailImg": "assets/previews/lighthouse/technical/3-1-1-1.webp"
+    },
+    {
+        "id": "technical-3-6-1-1",
+        "category": "technical",
+        "coords": [1845, 1483],
+        "previewImg": "assets/previews/lighthouse/technical/3-6-1-1.webp",
+        "detailTitle": "technical-3-6-1-1",
+        "detailDesc": "뉴빌리지 빨간 벽돌집 1층 거실 TV 우측 선반",
+        "detailImg": "assets/previews/lighthouse/technical/3-6-1-1.webp"
     },
     {
         "id": "technical-4-1-1-1",

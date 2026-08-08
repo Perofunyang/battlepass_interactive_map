@@ -80,6 +80,51 @@ window.MAP_DATA_lab = [
         "detailDesc": "2층에 엘베 여는곳 화장실 맞은편",
         "detailImg": "assets/previews/lab/medical/2-3.webp"
     },
+    {
+        "id": "medical-2-4",
+        "category": "medical",
+        "coords": [1187, 2943],
+        "previewImg": "assets/previews/lab/medical/2-4.webp",
+        "detailTitle": "medical-2-4",
+        "detailDesc": "그린방 내부",
+        "detailImg": "assets/previews/lab/medical/2-4.webp"
+    },
+    {
+        "id": "medical-2-5",
+        "category": "medical",
+        "coords": [1853, 3076],
+        "previewImg": "assets/previews/lab/medical/2-5.webp",
+        "detailTitle": "medical-2-5",
+        "detailDesc": "중앙 고양이 회의실?",
+        "detailImg": "assets/previews/lab/medical/2-5.webp"
+    },
+    {
+        "id": "medical-2-6",
+        "category": "medical",
+        "coords": [1853, 3289],
+        "previewImg": "assets/previews/lab/medical/2-6.webp",
+        "detailTitle": "medical-2-6",
+        "detailDesc": "카페테리아 창가 테이블",
+        "detailImg": "assets/previews/lab/medical/2-6.webp"
+    },
+    {
+        "id": "medical-2-7",
+        "category": "medical",
+        "coords": [1132, 2951],
+        "previewImg": "assets/previews/lab/medical/2-7.webp",
+        "detailTitle": "medical-2-7",
+        "detailDesc": "그린룸 앞 복도 침대",
+        "detailImg": "assets/previews/lab/medical/2-7.webp"
+    },
+    {
+        "id": "medical-2-8",
+        "category": "medical",
+        "coords": [1182, 2736],
+        "previewImg": "assets/previews/lab/medical/2-8.webp",
+        "detailTitle": "medical-2-8",
+        "detailDesc": "3층 카고 엘베 앞문 들어가서 바로 오른쪽방 구석",
+        "detailImg": "assets/previews/lab/medical/2-8.webp"
+    },
 
 
     {
@@ -171,6 +216,24 @@ window.MAP_DATA_lab = [
         "detailTitle": "user-2-9",
         "detailDesc": "남쪽 사무실",
         "detailImg": "assets/previews/lab/user/2-9.webp"
+    },
+    {
+        "id": "user-2-10",
+        "category": "user",
+        "coords": [1493, 3081],
+        "previewImg": "assets/previews/lab/user/2-10.webp",
+        "detailTitle": "user-2-10",
+        "detailDesc": "Manager's Office 키방 옆에 회의실 테이블",
+        "detailImg": "assets/previews/lab/user/2-10.webp"
+    },
+    {
+        "id": "user-2-11",
+        "category": "user",
+        "coords": [1959, 2933],
+        "previewImg": "assets/previews/lab/user/2-11.webp",
+        "detailTitle": "user-2-11",
+        "detailDesc": "블블방 앞에",
+        "detailImg": "assets/previews/lab/user/2-11.webp"
     },
 
 

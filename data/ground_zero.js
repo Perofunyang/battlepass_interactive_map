@@ -92,6 +92,15 @@ window.MAP_DATA_ground_zero = [
 
 
     {
+        "id": "user-2-5-1-1",
+        "category": "user",
+        "coords": [4388, 4738],
+        "previewImg": "assets/previews/ground_zero/user/2-5-1-1.webp",
+        "detailTitle": "user-2-5-1-1",
+        "detailDesc": "로비 의자 위",
+        "detailImg": "assets/previews/ground_zero/user/2-5-1-1.webp"
+    },
+    {
         "id": "user-2-0-1-1",
         "category": "user",
         "coords": [4638, 1377],

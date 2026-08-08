@@ -45,6 +45,24 @@ window.MAP_DATA_shoreline = [
         "detailImg": "assets/previews/shoreline/technical/3-0-1-1.webp"
     },
     {
+        "id": "technical-6-2-1-1",
+        "category": "technical",
+        "coords": [1665, 1493],
+        "previewImg": "assets/previews/shoreline/technical/6-2-1-1.webp",
+        "detailTitle": "technical-6-2-1-1",
+        "detailDesc": "코티지 뒷문 의자",
+        "detailImg": "assets/previews/shoreline/technical/6-2-1-1.webp"
+    },
+    {
+        "id": "technical-7-1-1-1",
+        "category": "technical",
+        "coords": [1418, 2628],
+        "previewImg": "assets/previews/shoreline/technical/7-1-1-1.webp",
+        "detailTitle": "technical-7-1-1-1",
+        "detailDesc": "발전소 건물 2번째 방",
+        "detailImg": "assets/previews/shoreline/technical/7-1-1-1.webp"
+    },
+    {
         "id": "technical-8-1-3-1",
         "category": "technical",
         "coords": [1188, 3547],

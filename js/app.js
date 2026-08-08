@@ -3,6 +3,7 @@ const MAPS = {
     factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850, spawns: { project: 3, blueprints: 3 } },
     ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 6920, height: 6920, spawns: { medical: 3, user: 3 } },
     interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.webp", width: 9600, height: 5400, spawns: { blueprints: 3, financial: 3 } },
+    icebreaker: { name: "Icebreaker", imageUrl: "./assets/maps/icebreaker.webp", width: 7680, height: 4320, spawns: { test: 3, pmc: 3 } },
     lab: { name: "Lab", imageUrl: "./assets/maps/lab.webp", width: 3820, height: 2189, spawns: { user: 3, medical: 3 } },
     labyrinth: { name: "Labyrinth", imageUrl: "./assets/maps/labyrinth.webp", width: 4145, height: 3840, spawns: { blueprints: 3, medical: 3 } },
     lighthouse: { name: "Lighthouse", imageUrl: "./assets/maps/lighthouse.png", width: 2242, height: 3892, spawns: { pmc: 3, technical: 3 } },

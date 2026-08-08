@@ -30,9 +30,9 @@ def convert_and_compress(directory):
 
                         # 스킵 조건: 이미 .webp 포맷이고 1000px 이하인 경우 (단, 새로 원본을 넣었을 때 처리되도록 설정)
                         if ext == ".webp" and width <= MAX_WIDTH:
-                            print(
-                                f"⏭️ [생략] 이미 완벽한 WebP 파일입니다: {file} ({width}px)"
-                            )
+                            #print(
+                                #f"⏭️ [생략] 이미 완벽한 WebP 파일입니다: {file} ({width}px)"
+                            #)
                             skipped_count += 1
                             continue
 

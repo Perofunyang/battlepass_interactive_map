@@ -62,8 +62,26 @@ window.MAP_DATA_ground_zero = [
         "detailDesc": "야외 테이블",
         "detailImg": "assets/previews/ground_zero/medical/5-0-1-1.webp"
     },
+    {
+        "id": "medical-6-0-1-1",
+        "category": "medical",
+        "coords": [2579, 1956],
+        "previewImg": "assets/previews/ground_zero/medical/6-0-1-1.webp",
+        "detailTitle": "medical-6-0-1-1",
+        "detailDesc": "주차장 끝 검은 차량 트렁크",
+        "detailImg": "assets/previews/ground_zero/medical/6-0-1-1.webp"
+    },
 
 
+    {
+        "id": "user-2-0-1-1",
+        "category": "user",
+        "coords": [4638, 1377],
+        "previewImg": "assets/previews/ground_zero/user/2-0-1-1.webp",
+        "detailTitle": "user-2-0-1-1",
+        "detailDesc": "플레어 탈출구 옆 철문 경비소",
+        "detailImg": "assets/previews/ground_zero/user/2-0-1-1.webp"
+    },
     {
         "id": "user-3-1-1-1",
         "category": "user",
@@ -128,6 +146,15 @@ window.MAP_DATA_ground_zero = [
         "detailImg": "assets/previews/ground_zero/user/3-2-5-2.webp"
     },
     {
+        "id": "user-3-3-1-1",
+        "category": "user",
+        "coords": [4418, 3364],
+        "previewImg": "assets/previews/ground_zero/user/3-3-1-1.webp",
+        "detailTitle": "user-3-3-1-1",
+        "detailDesc": "테라그룹 건물 앞 카페",
+        "detailImg": "assets/previews/ground_zero/user/3-3-1-1.webp"
+    },
+    {
         "id": "user-4-2-2-1",
         "category": "user",
         "coords": [3484, 639],
@@ -135,6 +162,15 @@ window.MAP_DATA_ground_zero = [
         "detailTitle": "user-4-2-2-1",
         "detailDesc": "2층카페",
         "detailImg": "assets/previews/ground_zero/user/4-2-2-1.webp"
+    },
+    {
+        "id": "user-4-0-1-1",
+        "category": "user",
+        "coords": [2899, 2482],
+        "previewImg": "assets/previews/ground_zero/user/4-0-1-1.webp",
+        "detailTitle": "user-4-0-1-1",
+        "detailDesc": "자동차 판매점 옆에 작은 카페의 붉은 파라솔 벤치",
+        "detailImg": "assets/previews/ground_zero/user/4-0-1-1.webp"
     },
     {
         "id": "user-5-1-1-1",

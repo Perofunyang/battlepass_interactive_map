@@ -7,7 +7,7 @@ const I18N = {
         categoriesHeader: "문서 종류 / Categories",
         raidSpawnsTitle: "🎲 스폰 정보 (Raid Spawns)",
         coordText: (y, x) => `Y: ${y}, X: ${x} (Click to Copy / 클릭시 복사)`,
-        copiedText: (coord) => `Copied! / 복사됨! -> ${coord}`,
+        copiedText: (coord) => `복사됨! -> ${coord}`,
         showDetailDesc: true, // 한국어 페이지: 상세 설명문 출력
         mapNames: {
             customs: "Customs (세관)",

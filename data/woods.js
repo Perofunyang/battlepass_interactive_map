@@ -45,6 +45,15 @@ window.MAP_DATA_woods = [
         "detailImg": "assets/previews/woods/technical/2-1.webp"
     },
     {
+        "id": "technical-2-1-2",
+        "category": "technical",
+        "coords": [3166, 5534],
+        "previewImg": "assets/previews/woods/technical/2-1-2.webp",
+        "detailTitle": "technical-2-1-2",
+        "detailDesc": "구 제재소 컨테이너 안",
+        "detailImg": "assets/previews/woods/technical/2-1-2.webp"
+    },
+    {
         "id": "technical-2-2",
         "category": "technical",
         "coords": [4053, 5448],
@@ -154,6 +163,15 @@ window.MAP_DATA_woods = [
         "detailTitle": "test-3-1",
         "detailDesc": "유섹 체크포인트 안",
         "detailImg": "assets/previews/woods/test/3-1.webp"
+    },
+    {
+        "id": "test-3-2",
+        "category": "test",
+        "coords": [2683, 2120],
+        "previewImg": "assets/previews/woods/test/3-2.webp",
+        "detailTitle": "test-3-2",
+        "detailDesc": "유섹 체크포인트 뒷편 화장실",
+        "detailImg": "assets/previews/woods/test/3-2.webp"
     },
     {
         "id": "test-4-1",

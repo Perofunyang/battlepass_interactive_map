@@ -1,5 +1,14 @@
 window.MAP_DATA_reserve = [
     {
+        "id": "pmc-5-1-0-1",
+        "category": "pmc",
+        "coords": [2524, 4301],
+        "previewImg": "assets/previews/reserve/pmc/5-1-0-1.webp",
+        "detailTitle": "pmc-5-1-0-1",
+        "detailDesc": "머리동 지하의 방 안",
+        "detailImg": "assets/previews/reserve/pmc/5-1-0-1.webp"
+    },
+    {
         "id": "pmc-5-2-3-1",
         "category": "pmc",
         "coords": [969, 4256],
@@ -14,13 +23,67 @@ window.MAP_DATA_reserve = [
         "coords": [511, 3248],
         "previewImg": "assets/previews/reserve/pmc/6-1-2-1.webp",
         "detailTitle": "pmc-6-1-2-1",
-        "detailDesc": "RB-RS 열쇠방 안 제일 안 쪽",
+        "detailDesc": "RB-RS 방 안 제일 안 쪽",
         "detailImg": "assets/previews/reserve/pmc/6-1-2-1.webp"
+    },
+    {
+        "id": "pmc-6-1-2-2",
+        "category": "pmc",
+        "coords": [619, 3256],
+        "previewImg": "assets/previews/reserve/pmc/6-1-2-2.webp",
+        "detailTitle": "pmc-6-1-2-2",
+        "detailDesc": "RB-KORL 방 안 오른쪽 책장",
+        "detailImg": "assets/previews/reserve/pmc/6-1-2-2.webp"
+    },
+    {
+        "id": "pmc-6-1-2-3",
+        "category": "pmc",
+        "coords": [607, 3320],
+        "previewImg": "assets/previews/reserve/pmc/6-1-2-3.webp",
+        "detailTitle": "pmc-6-1-2-3",
+        "detailDesc": "RB-RLSA 방 안 창가",
+        "detailImg": "assets/previews/reserve/pmc/6-1-2-3.webp"
+    },
+    {
+        "id": "pmc-6-0-1-1",
+        "category": "pmc",
+        "coords": [549, 2164],
+        "previewImg": "assets/previews/reserve/pmc/6-0-1-1.webp",
+        "detailTitle": "pmc-6-0-1-1",
+        "detailDesc": "RB-KPRL(경비실) 안 창가",
+        "detailImg": "assets/previews/reserve/pmc/6-0-1-1.webp"
+    },
+    {
+        "id": "pmc-8-3-2-1",
+        "category": "pmc",
+        "coords": [1650, 4086],
+        "previewImg": "assets/previews/reserve/pmc/8-3-2-1.webp",
+        "detailTitle": "pmc-8-3-2-1",
+        "detailDesc": "D2 가는길 금고 있는 방",
+        "detailImg": "assets/previews/reserve/pmc/8-3-2-1.webp"
     },
 
     //
 
 
+    {
+        "id": "project-6-1-2-1",
+        "category": "project",
+        "coords": [619, 3253],
+        "previewImg": "assets/previews/reserve/project/6-1-2-1.webp",
+        "detailTitle": "project-6-1-2-1",
+        "detailDesc": "RB-KORL 방 안 오른쪽 책장 (노란원은 PMC)",
+        "detailImg": "assets/previews/reserve/project/6-1-2-1.webp"
+    },
+    {
+        "id": "project-6-0-1-1",
+        "category": "project",
+        "coords": [777, 1581],
+        "previewImg": "assets/previews/reserve/project/6-0-1-1.webp",
+        "detailTitle": "project-6-0-1-1",
+        "detailDesc": "체크포인트 펜스 스캐브 탈출구 옆 건물 안쪽",
+        "detailImg": "assets/previews/reserve/project/6-0-1-1.webp"
+    },
     {
         "id": "project-8-0-1",
         "category": "project",

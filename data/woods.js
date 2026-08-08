@@ -98,6 +98,15 @@ window.MAP_DATA_woods = [
         "detailDesc": "비행기 안",
         "detailImg": "assets/previews/woods/technical/5-1.webp"
     },
+    {
+        "id": "technical-5-2",
+        "category": "technical",
+        "coords": [1252, 4277],
+        "previewImg": "assets/previews/woods/technical/5-2.webp",
+        "detailTitle": "technical-5-2",
+        "detailDesc": "이머컴",
+        "detailImg": "assets/previews/woods/technical/5-2.webp"
+    },
 
 
 

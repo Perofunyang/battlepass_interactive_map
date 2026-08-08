@@ -53,6 +53,15 @@ window.MAP_DATA_lighthouse = [
         "detailDesc": "샬레 테니스장 텐트 안 책상 위",
         "detailImg": "assets/previews/lighthouse/pmc/4-2-1-1.webp"
     },
+    {
+        "id": "pmc-4-2-1-2",
+        "category": "pmc",
+        "coords": [1266, 1339],
+        "previewImg": "assets/previews/lighthouse/pmc/4-2-1-2.webp",
+        "detailTitle": "pmc-4-2-1-2",
+        "detailDesc": "샬레 1층 주방",
+        "detailImg": "assets/previews/lighthouse/pmc/4-2-1-2.webp"
+    },
 
 
 

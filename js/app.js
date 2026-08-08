@@ -127,11 +127,14 @@ function openDetailModal(data) {
     document.getElementById('detail-modal').style.display = 'flex';
 
     if (typeof gtag === 'function') {
+        const mapName = MAPS[currentMapId]?.name || currentMapId;
+        const formattedTitle = `[${mapName}] ${data.detailTitle || data.id || 'unknown'}`;
+
         gtag('event', 'click_marker_detail', {
             'map_id': currentMapId,
             'category': data.category,
             'marker_id': data.id || 'unknown',
-            'marker_title': data.detailTitle || data.id
+            'marker_title': formattedTitle
         });
     }
 }
@@ -281,6 +284,21 @@ function renderMarkers(markersData) {
                     direction: tooltipDirection,
                     offset: tooltipOffset,
                     opacity: 1
+                });
+
+                // 마우스를 올려 320px 미리보기 스샷이 열릴 때 GA4 호버 이벤트 전송
+                marker.on('tooltipopen', () => {
+                    if (typeof gtag === 'function') {
+                        const mapName = MAPS[currentMapId]?.name || currentMapId;
+                        const formattedTitle = `[${mapName}] ${data.detailTitle || data.id || 'unknown'}`;
+
+                        gtag('event', 'hover_marker_preview', {
+                            'map_id': currentMapId,
+                            'category': data.category,
+                            'marker_id': data.id || 'unknown',
+                            'marker_title': formattedTitle
+                        });
+                    }
                 });
             }
 

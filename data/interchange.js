@@ -136,6 +136,15 @@ window.MAP_DATA_interchange = [
         "detailDesc": "",
         "detailImg": "assets/previews/interchange/financial/4-1-1.webp"
     },
+    {
+        "id": "financial-4-0-1",
+        "category": "financial",
+        "coords": [991, 9019],
+        "previewImg": "assets/previews/interchange/financial/4-0-1.webp",
+        "detailTitle": "financial-4-0-1",
+        "detailDesc": "스토리 진행 시 열 수 있는 인체 발전소 지하",
+        "detailImg": "assets/previews/interchange/financial/4-0-1.webp"
+    },
 
     {
         "id": "transit-streetsoftarkov",

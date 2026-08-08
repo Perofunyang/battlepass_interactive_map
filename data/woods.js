@@ -36,6 +36,15 @@ window.MAP_DATA_woods = [
         "detailImg": "assets/previews/woods/technical/1-4.webp"
     },
     {
+        "id": "technical-1-5",
+        "category": "technical",
+        "coords": [4704, 3525],
+        "previewImg": "assets/previews/woods/technical/1-5.webp",
+        "detailTitle": "technical-1-5",
+        "detailDesc": "호숫가 옆 묘지",
+        "detailImg": "assets/previews/woods/technical/1-5.webp"
+    },
+    {
         "id": "technical-2-1",
         "category": "technical",
         "coords": [5267, 5320],
@@ -70,6 +79,15 @@ window.MAP_DATA_woods = [
         "detailTitle": "technical-2-3",
         "detailDesc": "산 속 못들어가는 벙커 입구",
         "detailImg": "assets/previews/woods/technical/2-3.webp"
+    },
+    {
+        "id": "technical-4-1",
+        "category": "technical",
+        "coords": [2700, 3267],
+        "previewImg": "assets/previews/woods/technical/4-1.webp",
+        "detailTitle": "technical-4-1",
+        "detailDesc": "",
+        "detailImg": "assets/previews/woods/technical/4-1.webp"
     },
     {
         "id": "technical-5-1",

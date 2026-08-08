@@ -125,6 +125,15 @@ window.MAP_DATA_lab = [
         "detailDesc": "3층 카고 엘베 앞문 들어가서 바로 오른쪽방 구석",
         "detailImg": "assets/previews/lab/medical/2-8.webp"
     },
+    {
+        "id": "medical-2-9",
+        "category": "medical",
+        "coords": [1287, 2779],
+        "previewImg": "assets/previews/lab/medical/2-9.webp",
+        "detailTitle": "medical-2-9",
+        "detailDesc": "연구소 카고 앞 격리병동 안쪽 끝",
+        "detailImg": "assets/previews/lab/medical/2-9.webp"
+    },
 
 
     {

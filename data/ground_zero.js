@@ -18,6 +18,15 @@ window.MAP_DATA_ground_zero = [
         "detailImg": "assets/previews/ground_zero/medical/1-0-1-1.webp"
     },
     {
+        "id": "medical-1-0-1-2",
+        "category": "medical",
+        "coords": [6020, 1880],
+        "previewImg": "assets/previews/ground_zero/medical/1-0-1-2.webp",
+        "detailTitle": "medical-1-0-1-2",
+        "detailDesc": "이머컴 탈출구 앞 휠체어",
+        "detailImg": "assets/previews/ground_zero/medical/1-0-1-2.webp"
+    },
+    {
         "id": "medical-3-2-3-1",
         "category": "medical",
         "coords": [4427, 4293],

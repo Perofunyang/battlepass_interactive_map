@@ -38,7 +38,7 @@ window.MAP_DATA_lighthouse = [
     {
         "id": "pmc-4-1-2-1",
         "category": "pmc",
-        "coords": [1203, 1229],
+        "coords": [1498, 1777],
         "previewImg": "assets/previews/lighthouse/pmc/4-1-2-1.webp",
         "detailTitle": "pmc-4-1-2-1",
         "detailDesc": "코티지 2층의 3층 올라가는 계단 옆 책상",
@@ -61,6 +61,15 @@ window.MAP_DATA_lighthouse = [
         "detailTitle": "pmc-4-2-1-2",
         "detailDesc": "샬레 1층 주방",
         "detailImg": "assets/previews/lighthouse/pmc/4-2-1-2.webp"
+    },
+    {
+        "id": "pmc-4-3-2-1",
+        "category": "pmc",
+        "coords": [841, 577],
+        "previewImg": "assets/previews/lighthouse/pmc/4-3-2-1.webp",
+        "detailTitle": "pmc-4-3-2-1",
+        "detailDesc": "sunken house 2층 침대위",
+        "detailImg": "assets/previews/lighthouse/pmc/4-3-2-1.webp"
     },
 
 

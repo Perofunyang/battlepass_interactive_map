@@ -54,6 +54,15 @@ window.MAP_DATA_reserve = [
         "detailImg": "assets/previews/reserve/pmc/6-0-1-1.webp"
     },
     {
+        "id": "pmc-6-0-1-2",
+        "category": "pmc",
+        "coords": [770, 1588],
+        "previewImg": "assets/previews/reserve/pmc/6-0-1-2.webp",
+        "detailTitle": "pmc-6-0-1-2",
+        "detailDesc": "체크포인트 스캐브 탈출구 옆 건물 책상 서랍",
+        "detailImg": "assets/previews/reserve/pmc/6-0-1-2.webp"
+    },
+    {
         "id": "pmc-8-3-2-1",
         "category": "pmc",
         "coords": [1650, 4086],
@@ -66,6 +75,15 @@ window.MAP_DATA_reserve = [
     //
 
 
+    {
+        "id": "project-5-1-3-1",
+        "category": "project",
+        "coords": [750, 4318],
+        "previewImg": "assets/previews/reserve/project/5-1-3-1.webp",
+        "detailTitle": "project-5-1-3-1",
+        "detailDesc": "블랙 비숍 3층 끝 방",
+        "detailImg": "assets/previews/reserve/project/5-1-3-1.webp"
+    },
     {
         "id": "project-6-1-2-1",
         "category": "project",

@@ -81,6 +81,15 @@ window.MAP_DATA_woods = [
         "detailImg": "assets/previews/woods/technical/2-3.webp"
     },
     {
+        "id": "technical-3-1",
+        "category": "technical",
+        "coords": [1865, 1540],
+        "previewImg": "assets/previews/woods/technical/3-1.webp",
+        "detailTitle": "technical-3-1",
+        "detailDesc": "아웃스커트 가는 길",
+        "detailImg": "assets/previews/woods/technical/3-1.webp"
+    },
+    {
         "id": "technical-4-1",
         "category": "technical",
         "coords": [2700, 3267],
@@ -183,6 +192,15 @@ window.MAP_DATA_woods = [
         "detailImg": "assets/previews/woods/test/2-2-2.webp"
     },
     {
+        "id": "test-2-3",
+        "category": "test",
+        "coords": [4062, 5435],
+        "previewImg": "assets/previews/woods/test/2-3.webp",
+        "detailTitle": "test-2-3",
+        "detailDesc": "",
+        "detailImg": "assets/previews/woods/test/2-3.webp"
+    },
+    {
         "id": "test-3-1",
         "category": "test",
         "coords": [2651, 2107],
@@ -208,6 +226,15 @@ window.MAP_DATA_woods = [
         "detailTitle": "test-4-1",
         "detailDesc": "제재소 작은 집 안 케비넷 위",
         "detailImg": "assets/previews/woods/test/4-1.webp"
+    },
+    {
+        "id": "test-4-2",
+        "category": "test",
+        "coords": [2558, 2988],
+        "previewImg": "assets/previews/woods/test/4-2.webp",
+        "detailTitle": "test-4-2",
+        "detailDesc": "제제소 앞 트럭 뒷자석 왼편",
+        "detailImg": "assets/previews/woods/test/4-2.webp"
     },
     {
         "id": "test-5-1",

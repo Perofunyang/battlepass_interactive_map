@@ -18,6 +18,15 @@ window.MAP_DATA_icebreaker = [
         "detailDesc": "항공유 줍는 조타실 위치(그린플레어 스폰하는 곳)",
         "detailImg": "assets/previews/icebreaker/pmc/4-1.webp"
     },
+    {
+        "id": "pmc-5-1",
+        "category": "pmc",
+        "coords": [2405, 3064],
+        "previewImg": "assets/previews/icebreaker/pmc/5-1.webp",
+        "detailTitle": "pmc-5-1",
+        "detailDesc": "웨지 잡고 윗윗층에 있는 비밀번호방 탁상 위에 1개",
+        "detailImg": "assets/previews/icebreaker/pmc/5-1.webp"
+    },
 
 
 

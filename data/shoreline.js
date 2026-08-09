@@ -184,6 +184,17 @@ window.MAP_DATA_shoreline = [
 
 
     {
+        "id": "temporary-1",
+        "category": "temporary",
+        "coords": [2710, 6177],
+        "previewImg": "assets/previews/shoreline/temporary/temporary-1.webp",
+        "detailTitle": "temporary-1",
+        "detailDesc": "서관 206호",
+        "detailImg": "assets/previews/shoreline/temporary/temporary-1.webp"
+    },
+
+
+    {
         "id": "transit-lighthouse",
         "category": "transit",
         "coords": [2792, 399],

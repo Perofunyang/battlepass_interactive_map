@@ -98,6 +98,24 @@ window.MAP_DATA_ground_zero = [
         "detailDesc": "주차장 끝 검은 차량 트렁크",
         "detailImg": "assets/previews/ground_zero/medical/6-0-1-1.webp"
     },
+    {
+        "id": "medical-7-0-1-1",
+        "category": "medical",
+        "coords": [1440, 3273],
+        "previewImg": "assets/previews/ground_zero/medical/7-0-1-1.webp",
+        "detailTitle": "medical-7-0-1-1",
+        "detailDesc": "나카타니 건물 앞 벤치",
+        "detailImg": "assets/previews/ground_zero/medical/7-0-1-1.webp"
+    },
+    {
+        "id": "medical-8-0-1-1",
+        "category": "medical",
+        "coords": [3798, 6063],
+        "previewImg": "assets/previews/ground_zero/medical/8-0-1-1.webp",
+        "detailTitle": "medical-8-0-1-1",
+        "detailDesc": "",
+        "detailImg": "assets/previews/ground_zero/medical/8-0-1-1.webp"
+    },
 
 
     {

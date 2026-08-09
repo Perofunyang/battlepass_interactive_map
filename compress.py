@@ -3,7 +3,7 @@ from PIL import Image, ImageSequence
 
 # 설정값
 TARGET_DIR = "./assets/previews"  # 최상위 assets 폴더
-#EXCLUDE_DIRS = ["maps"]  # 제외할 폴더 (지도는 원본 보존!)
+# EXCLUDE_DIRS = ["maps"]  # 제외할 폴더 (지도는 원본 보존!)
 MAX_WIDTH = 1000  # 마커 스샷 최대 너비 (1000px)
 QUALITY = 80  # WebP 압축 품질 (80%)
 
@@ -15,24 +15,20 @@ def convert_and_compress(directory):
     animated_count = 0
 
     for root, dirs, files in os.walk(directory):
-        # maps 폴더 탐색 제외
-        #dirs[:] = [d for d in dirs if d not in EXCLUDE_DIRS]
-
         for file in files:
             ext = os.path.splitext(file)[1].lower()
 
             if ext in [".png", ".jpg", ".jpeg", ".webp", ".gif"]:
                 file_path = os.path.join(root, file)
+                should_delete_original = False
 
                 try:
+                    # 1. 파일 열기 및 WebP 변환 작업
                     with Image.open(file_path) as img:
                         width, height = img.size
 
-                        # 스킵 조건: 이미 .webp 포맷이고 1000px 이하인 경우 (단, 새로 원본을 넣었을 때 처리되도록 설정)
+                        # 스킵 조건: 이미 .webp 포맷이고 1000px 이하인 경우
                         if ext == ".webp" and width <= MAX_WIDTH:
-                            #print(
-                                #f"⏭️ [생략] 이미 완벽한 WebP 파일입니다: {file} ({width}px)"
-                            #)
                             skipped_count += 1
                             continue
 
@@ -49,14 +45,11 @@ def convert_and_compress(directory):
 
                         if is_animated:
                             loop = img.info.get("loop", 0)
-
                             frames = []
-                            durations = []  # ★ 각 프레임별 원본 재생 속도를 저장할 배열
+                            durations = []  # 프레임별 원본 재생 속도
 
                             for frame in ImageSequence.Iterator(img):
                                 f = frame.copy()
-
-                                # ★ 핵심: 프레임별 원본 재생 속도(ms) 개별 추출
                                 frame_duration = frame.info.get("duration", 40)
                                 durations.append(frame_duration)
 
@@ -69,7 +62,6 @@ def convert_and_compress(directory):
                                     )
                                 frames.append(f)
 
-                            # ★ duration=durations 배열을 넘겨 원본 속도 100% 보존
                             frames[0].save(
                                 webp_file_path,
                                 "WEBP",
@@ -81,7 +73,7 @@ def convert_and_compress(directory):
                             )
                             animated_count += 1
                             print(
-                                f"🎬 [원본 속도 보존 완벽 변환] {file} ({img.n_frames}개 프레임)"
+                                f"🎬 [원본 속도 보존 변환] {file} ({img.n_frames}개 프레임)"
                             )
 
                         else:
@@ -101,11 +93,16 @@ def convert_and_compress(directory):
                                 f"🖼️ [WebP 저장 완료] {file_name_without_ext}.webp"
                             )
 
+                        # .webp가 아닌 원본 파일 삭제 플래그 설정
                         if ext != ".webp":
-                            os.remove(file_path)
-                            converted_count += 1
+                            should_delete_original = True
 
                         processed_count += 1
+
+                    # 2. 파일이 완전히 닫힌(with 탈출) 후 안전하게 원본 삭제
+                    if should_delete_original:
+                        os.remove(file_path)
+                        converted_count += 1
 
                 except Exception as e:
                     print(f"❌ [오류 발생] {file_path}: {e}")
@@ -114,6 +111,7 @@ def convert_and_compress(directory):
     print(f"✨ 작업 결과 요약:")
     print(f" - 스킵(생략)된 파일: {skipped_count}개")
     print(f" - 원본 속도로 변환된 움직이는 WebP/GIF: {animated_count}개")
+    print(f" - 삭제된 원본 이미지: {converted_count}개")
     print(f" - 총 처리된 파일: {processed_count}개")
     print("==================================================")
 

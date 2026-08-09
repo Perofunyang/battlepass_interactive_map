@@ -8,6 +8,15 @@ window.MAP_DATA_labyrinth = [
         "detailDesc": "",
         "detailImg": "assets/previews/labyrinth/blueprints/1.webp"
     },
+    {
+        "id": "blueprints-2",
+        "category": "blueprints",
+        "coords": [1511, 1661],
+        "previewImg": "assets/previews/labyrinth/blueprints/2.webp",
+        "detailTitle": "blueprints-2",
+        "detailDesc": "Observation 방 안",
+        "detailImg": "assets/previews/labyrinth/blueprints/2.webp"
+    },
 
 
     {

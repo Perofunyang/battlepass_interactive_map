@@ -253,12 +253,6 @@ function renderMarkers(markersData) {
         const catInfo = CATEGORIES[data.category];
         const iconSrc = catInfo ? catInfo.icon : '';
 
-        const markerY = data.coords[0];
-        const isTop = markerY > (mapConfig.height * 0.5);
-
-        const tooltipDirection = isTop ? 'bottom' : 'top';
-        const tooltipOffset = isTop ? [0, 15] : [0, -15];
-
         const customIcon = L.divIcon({
             html: `<img src="${iconSrc}" class="map-marker-img" onError="this.onerror=null; this.src='https://via.placeholder.com/20?text=📍';" />`,
             className: 'custom-map-icon',
@@ -272,22 +266,60 @@ function renderMarkers(markersData) {
             const transitText = data.title || data.detailTitle || 'Transit';
             marker.bindTooltip(transitText, {
                 className: 'transit-tooltip',
-                direction: tooltipDirection,
-                offset: tooltipOffset,
+                direction: 'top',
+                offset: [0, -15],
                 opacity: 1
             });
         } else {
             if (data.previewImg) {
                 const tooltipHTML = `<div class="hover-photo-frame"><img src="${data.previewImg}" alt="preview" /></div>`;
+
                 marker.bindTooltip(tooltipHTML, {
                     className: 'custom-tooltip-photo',
-                    direction: tooltipDirection,
-                    offset: tooltipOffset,
+                    direction: 'top',
+                    offset: [0, -15],
                     opacity: 1
                 });
 
-                // 마우스를 올려 320px 미리보기 스샷이 열릴 때 GA4 호버 이벤트 전송
-                marker.on('tooltipopen', () => {
+                // 🌟 미리보기 팝업이 실제로 켜질 때 화면 경계 벗어남 자동 밀어내기 보정
+                marker.on('tooltipopen', (e) => {
+                    const tooltipEl = e.tooltip ? e.tooltip._container : null;
+                    const container = document.getElementById('map-container');
+
+                    if (tooltipEl && container) {
+                        // 위치 보정값 초기화
+                        tooltipEl.style.marginLeft = '0px';
+                        tooltipEl.style.marginTop = '0px';
+
+                        const tRect = tooltipEl.getBoundingClientRect();
+                        const cRect = container.getBoundingClientRect();
+
+                        let shiftX = 0;
+                        let shiftY = 0;
+
+                        // 1. 오른쪽 화면 경계 벗어남 보정 (좌측으로 밀어넣기)
+                        if (tRect.right > cRect.right - 10) {
+                            shiftX = cRect.right - 10 - tRect.right;
+                        }
+                        // 2. 왼쪽 화면 경계 벗어남 보정 (우측으로 밀어넣기)
+                        if (tRect.left < cRect.left + 10) {
+                            shiftX = cRect.left + 10 - tRect.left;
+                        }
+                        // 3. 아래쪽 화면 경계 벗어남 보정 (위로 밀어넣기)
+                        if (tRect.bottom > cRect.bottom - 10) {
+                            shiftY = cRect.bottom - 10 - tRect.bottom;
+                        }
+                        // 4. 위쪽 화면 경계 벗어남 보정 (아래로 밀어넣기)
+                        if (tRect.top < cRect.top + 10) {
+                            shiftY = cRect.top + 10 - tRect.top;
+                        }
+
+                        // 보정값 적용
+                        if (shiftX !== 0) tooltipEl.style.marginLeft = `${shiftX}px`;
+                        if (shiftY !== 0) tooltipEl.style.marginTop = `${shiftY}px`;
+                    }
+
+                    // GA4 미리보기 호버 추적
                     if (typeof gtag === 'function') {
                         const mapName = MAPS[currentMapId]?.name || currentMapId;
                         const formattedTitle = `[${mapName}] ${data.detailTitle || data.id || 'unknown'}`;

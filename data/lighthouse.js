@@ -18,6 +18,15 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/pmc/2-0-1-1.webp"
     },
     {
+        "id": "pmc-3-1-2-1",
+        "category": "pmc",
+        "coords": [1819, 810],
+        "previewImg": "assets/previews/lighthouse/pmc/3-1-2-1.webp",
+        "detailTitle": "pmc-3-1-2-1",
+        "detailDesc": "북쪽 펜션 베란다 의자위",
+        "detailImg": "assets/previews/lighthouse/pmc/3-1-2-1.webp"
+    },
+    {
         "id": "pmc-3-2-2-1",
         "category": "pmc",
         "coords": [1706, 802],
@@ -127,6 +136,15 @@ window.MAP_DATA_lighthouse = [
         "detailTitle": "technical-4-1-1-1",
         "detailDesc": "큰 별장 안 거실 옆에",
         "detailImg": "assets/previews/lighthouse/technical/4-1-1-1.webp"
+    },
+    {
+        "id": "technical-4-1-3-1",
+        "category": "technical",
+        "coords": [1493, 1849],
+        "previewImg": "assets/previews/lighthouse/technical/4-1-3-1.webp",
+        "detailTitle": "technical-4-1-3-1",
+        "detailDesc": "큰 별장(블루 샬레) 3층 구석",
+        "detailImg": "assets/previews/lighthouse/technical/4-1-3-1.webp"
     },
     {
         "id": "technical-4-2-1-1",

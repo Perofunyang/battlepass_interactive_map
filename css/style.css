@@ -327,9 +327,14 @@ body {
 	padding: 0 !important;
 }
 
-	.custom-tooltip-photo .leaflet-tooltip-pane {
-		color: transparent;
-	}
+.custom-tooltip-photo .leaflet-tooltip-pane {
+	color: transparent;
+}
+
+
+.custom-tooltip-photo .leaflet-tooltip-tip {
+	display: none !important;
+}
 
 .hover-photo-frame {
 	border: 2px solid #e5b35c;

@@ -1,6 +1,15 @@
 window.MAP_DATA_icebreaker = [
 
     {
+        "id": "pmc-12-1",
+        "category": "pmc",
+        "coords": [3175, 6715],
+        "previewImg": "assets/previews/icebreaker/pmc/12-1.webp",
+        "detailTitle": "pmc-12-1",
+        "detailDesc": "엔진룸 비번적힌 방 선반",
+        "detailImg": "assets/previews/icebreaker/pmc/12-1.webp"
+    },
+    {
         "id": "pmc-1-1",
         "category": "pmc",
         "coords": [2445, 5217],
@@ -8,6 +17,24 @@ window.MAP_DATA_icebreaker = [
         "detailTitle": "pmc-1-1",
         "detailDesc": "1층 의료실",
         "detailImg": "assets/previews/icebreaker/pmc/1-1.webp"
+    },
+    {
+        "id": "pmc-1-2",
+        "category": "pmc",
+        "coords": [3860, 5227],
+        "previewImg": "assets/previews/icebreaker/pmc/1-2.webp",
+        "detailTitle": "pmc-1-2",
+        "detailDesc": "헬리페드 아래와 위쪽 사이 중간 함교 들어가서 오른쪽 (좌표는 부정확)",
+        "detailImg": "assets/previews/icebreaker/pmc/1-2.webp"
+    },
+    {
+        "id": "pmc-3-1",
+        "category": "pmc",
+        "coords": [2196, 3953],
+        "previewImg": "assets/previews/icebreaker/pmc/3-1.webp",
+        "detailTitle": "pmc-3-1",
+        "detailDesc": "웨지방 테이블(식당 내부, 왼쪽방인지 오른쪽방인지 모르겠음)",
+        "detailImg": "assets/previews/icebreaker/pmc/3-1.webp"
     },
     {
         "id": "pmc-4-1",

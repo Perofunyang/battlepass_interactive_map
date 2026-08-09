@@ -1,5 +1,32 @@
 window.MAP_DATA_reserve = [
     {
+        "id": "pmc-3-1-1-1",
+        "category": "pmc",
+        "coords": [1776, 1474],
+        "previewImg": "assets/previews/reserve/pmc/3-1-1-1.webp",
+        "detailTitle": "pmc-3-1-1-1",
+        "detailDesc": "K1, K3 창고 사이 기차 안쪽",
+        "detailImg": "assets/previews/reserve/pmc/3-1-1-1.webp"
+    },
+    {
+        "id": "pmc-3-4-1-1",
+        "category": "pmc",
+        "coords": [1854, 1289],
+        "previewImg": "assets/previews/reserve/pmc/3-4-1-1.webp",
+        "detailTitle": "pmc-3-4-1-1",
+        "detailDesc": "K4번 창고",
+        "detailImg": "assets/previews/reserve/pmc/3-4-1-1.webp"
+    },
+    {
+        "id": "pmc-4-1-3-1",
+        "category": "pmc",
+        "coords": [435, 460],
+        "previewImg": "assets/previews/reserve/pmc/4-1-3-1.webp",
+        "detailTitle": "pmc-4-1-3-1",
+        "detailDesc": "백마 3층",
+        "detailImg": "assets/previews/reserve/pmc/4-1-3-1.webp"
+    },
+    {
         "id": "pmc-5-1-0-1",
         "category": "pmc",
         "coords": [2524, 4301],
@@ -16,6 +43,15 @@ window.MAP_DATA_reserve = [
         "detailTitle": "pmc-5-2-3-1",
         "detailDesc": "RB-OB 열쇠방 안",
         "detailImg": "assets/previews/reserve/pmc/5-2-3-1.webp"
+    },
+    {
+        "id": "pmc-5-3-4-1",
+        "category": "pmc",
+        "coords": [541, 4534],
+        "previewImg": "assets/previews/reserve/pmc/5-3-4-1.webp",
+        "detailTitle": "pmc-5-3-4-1",
+        "detailDesc": "꼬리동 4층",
+        "detailImg": "assets/previews/reserve/pmc/5-3-4-1.webp"
     },
     {
         "id": "pmc-6-1-2-1",
@@ -76,9 +112,18 @@ window.MAP_DATA_reserve = [
 
 
     {
+        "id": "project-4-3-3-1",
+        "category": "project",
+        "coords": [270, 402],
+        "previewImg": "assets/previews/reserve/project/4-3-3-1.webp",
+        "detailTitle": "project-4-3-3-1",
+        "detailDesc": "",
+        "detailImg": "assets/previews/reserve/project/4-3-3-1.webp"
+    },
+    {
         "id": "project-5-1-3-1",
         "category": "project",
-        "coords": [750, 4318],
+        "coords": [573, 4135],
         "previewImg": "assets/previews/reserve/project/5-1-3-1.webp",
         "detailTitle": "project-5-1-3-1",
         "detailDesc": "블랙 비숍 3층 끝 방",

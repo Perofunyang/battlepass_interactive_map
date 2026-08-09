@@ -182,9 +182,18 @@ window.MAP_DATA_customs = [
         "detailImg": "assets/previews/customs/project/2-2-2-2.webp"
     },
     {
+        "id": "project-2-5-1-1",
+        "category": "project",
+        "coords": [1391, 2262],
+        "previewImg": "assets/previews/customs/project/2-5-1-1.webp",
+        "detailTitle": "project-2-5-1-1",
+        "detailDesc": "보일러 빌딩 옆 정비소",
+        "detailImg": "assets/previews/customs/project/2-5-1-1.webp"
+    },
+    {
         "id": "project-2-5-2-1",
         "category": "project",
-        "coords": [1296, 2311],
+        "coords": [1307, 2318],
         "previewImg": "assets/previews/customs/project/2-5-2-1.webp",
         "detailTitle": "project-2-5-2-1",
         "detailDesc": "보일러 빌딩 위층 컴패니룸키 사용처 안에 책장",

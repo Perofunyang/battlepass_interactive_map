@@ -80,6 +80,15 @@ window.MAP_DATA_lighthouse = [
         "detailDesc": "sunken house 2층 침대위",
         "detailImg": "assets/previews/lighthouse/pmc/4-3-2-1.webp"
     },
+    {
+        "id": "pmc-4-4-2-1",
+        "category": "pmc",
+        "coords": [1545, 1932],
+        "previewImg": "assets/previews/lighthouse/pmc/4-4-2-1.webp",
+        "detailTitle": "pmc-4-4-2-1",
+        "detailDesc": "큰 별장 옆 건물 2층(인듯)",
+        "detailImg": "assets/previews/lighthouse/pmc/4-4-2-1.webp"
+    },
 
 
 

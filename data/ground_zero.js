@@ -90,6 +90,15 @@ window.MAP_DATA_ground_zero = [
         "detailImg": "assets/previews/ground_zero/medical/5-0-1-1.webp"
     },
     {
+        "id": "medical-5-0-1-2",
+        "category": "medical",
+        "coords": [2394, 3011],
+        "previewImg": "assets/previews/ground_zero/medical/5-0-1-2.webp",
+        "detailTitle": "medical-5-0-1-2",
+        "detailDesc": "케피탈 건너편 공원에 벤치위 책에 스폰",
+        "detailImg": "assets/previews/ground_zero/medical/5-0-1-2.webp"
+    },
+    {
         "id": "medical-6-0-1-1",
         "category": "medical",
         "coords": [2579, 1956],

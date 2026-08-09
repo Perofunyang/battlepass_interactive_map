@@ -112,6 +112,15 @@ window.MAP_DATA_reserve = [
 
 
     {
+        "id": "project-4-1-3-1",
+        "category": "project",
+        "coords": [452, 493],
+        "previewImg": "assets/previews/reserve/project/4-1-3-1.webp",
+        "detailTitle": "project-4-1-3-1",
+        "detailDesc": "백마 3층",
+        "detailImg": "assets/previews/reserve/project/4-1-3-1.webp"
+    },
+    {
         "id": "project-4-3-3-1",
         "category": "project",
         "coords": [270, 402],

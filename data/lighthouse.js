@@ -1,5 +1,14 @@
 window.MAP_DATA_lighthouse = [
     {
+        "id": "pmc-1-1-1-1",
+        "category": "pmc",
+        "coords": [3181, 1021],
+        "previewImg": "assets/previews/lighthouse/pmc/1-1-1-1.webp",
+        "detailTitle": "pmc-1-1-1-1",
+        "detailDesc": "기차역 옆 창고건물 선반",
+        "detailImg": "assets/previews/lighthouse/pmc/1-1-1-1.webp"
+    },
+    {
         "id": "pmc-2-2-1-1",
         "category": "pmc",
         "coords": [2946, 1228],
@@ -34,6 +43,15 @@ window.MAP_DATA_lighthouse = [
         "detailTitle": "pmc-3-2-2-1",
         "detailDesc": "남쪽 해상팬션 침실 선반 안",
         "detailImg": "assets/previews/lighthouse/pmc/3-2-2-1.webp"
+    },
+    {
+        "id": "pmc-3-4-2-1",
+        "category": "pmc",
+        "coords": [1811, 2084],
+        "previewImg": "assets/previews/lighthouse/pmc/3-4-2-1.webp",
+        "detailTitle": "pmc-3-4-2-1",
+        "detailDesc": "2층",
+        "detailImg": "assets/previews/lighthouse/pmc/3-4-2-1.webp"
     },
     {
         "id": "pmc-3-6-2-1",
@@ -72,9 +90,18 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/pmc/4-2-1-2.webp"
     },
     {
+        "id": "pmc-4-2-1-3",
+        "category": "pmc",
+        "coords": [1219, 1341],
+        "previewImg": "assets/previews/lighthouse/pmc/4-2-1-3.webp",
+        "detailTitle": "pmc-4-2-1-3",
+        "detailDesc": "샬레 1층 남쪽방",
+        "detailImg": "assets/previews/lighthouse/pmc/4-2-1-3.webp"
+    },
+    {
         "id": "pmc-4-3-2-1",
         "category": "pmc",
-        "coords": [841, 577],
+        "coords": [834, 584],
         "previewImg": "assets/previews/lighthouse/pmc/4-3-2-1.webp",
         "detailTitle": "pmc-4-3-2-1",
         "detailDesc": "sunken house 2층 침대위",
@@ -83,10 +110,10 @@ window.MAP_DATA_lighthouse = [
     {
         "id": "pmc-4-4-2-1",
         "category": "pmc",
-        "coords": [1545, 1932],
+        "coords": [1547, 1949],
         "previewImg": "assets/previews/lighthouse/pmc/4-4-2-1.webp",
         "detailTitle": "pmc-4-4-2-1",
-        "detailDesc": "큰 별장 옆 건물 2층(인듯)",
+        "detailDesc": "큰 별장 옆 건물 2층",
         "detailImg": "assets/previews/lighthouse/pmc/4-4-2-1.webp"
     },
 
@@ -129,6 +156,15 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/technical/3-1-1-1.webp"
     },
     {
+        "id": "technical-3-4-2-1",
+        "category": "technical",
+        "coords": [1771, 2080],
+        "previewImg": "assets/previews/lighthouse/technical/3-4-2-1.webp",
+        "detailTitle": "technical-3-4-2-1",
+        "detailDesc": "2층",
+        "detailImg": "assets/previews/lighthouse/technical/3-4-2-1.webp"
+    },
+    {
         "id": "technical-3-6-1-1",
         "category": "technical",
         "coords": [1845, 1483],
@@ -167,7 +203,7 @@ window.MAP_DATA_lighthouse = [
     {
         "id": "technical-4-3-2-1",
         "category": "technical",
-        "coords": [832, 577],
+        "coords": [832, 573],
         "previewImg": "assets/previews/lighthouse/technical/4-3-2-1.webp",
         "detailTitle": "technical-4-3-2-1",
         "detailDesc": "선착장 2층 선반",

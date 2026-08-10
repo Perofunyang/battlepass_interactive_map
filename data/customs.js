@@ -218,6 +218,15 @@ window.MAP_DATA_customs = [
         "detailImg": "assets/previews/customs/project/2-6-3-1.webp"
     },
     {
+        "id": "project-2-0-1-1",
+        "category": "project",
+        "coords": [1747, 2426],
+        "previewImg": "assets/previews/customs/project/2-0-1-1.webp",
+        "detailTitle": "project-2-0-1-1",
+        "detailDesc": "인텔방 옆에 작은 컨테이너",
+        "detailImg": "assets/previews/customs/project/2-0-1-1.webp"
+    },
+    {
         "id": "project-3-1-2-1",
         "category": "project",
         "coords": [772, 3676],
@@ -243,6 +252,15 @@ window.MAP_DATA_customs = [
         "detailTitle": "project-5-2-2-1",
         "detailDesc": "나동 216호",
         "detailImg": "assets/previews/customs/project/5-2-2-1.webp"
+    },
+    {
+        "id": "project-5-2-2-2",
+        "category": "project",
+        "coords": [353, 2639],
+        "previewImg": "assets/previews/customs/project/5-2-2-2.webp",
+        "detailTitle": "project-5-2-2-2",
+        "detailDesc": "나동 207호",
+        "detailImg": "assets/previews/customs/project/5-2-2-2.webp"
     },
     
 

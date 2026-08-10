@@ -55,4 +55,22 @@ window.MAP_DATA_labyrinth = [
         "detailDesc": "중앙 연구실 과학자 시체",
         "detailImg": "assets/previews/labyrinth/medical/4.webp"
     },
+    {
+        "id": "medical-5",
+        "category": "medical",
+        "coords": [1962, 1936],
+        "previewImg": "assets/previews/labyrinth/medical/5.webp",
+        "detailTitle": "medical-5",
+        "detailDesc": "중앙 지게차 옆 시체",
+        "detailImg": "assets/previews/labyrinth/medical/5.webp"
+    },
+    {
+        "id": "medical-6",
+        "category": "medical",
+        "coords": [1489, 1734],
+        "previewImg": "assets/previews/labyrinth/medical/6.webp",
+        "detailTitle": "medical-6",
+        "detailDesc": "Observation 방 안",
+        "detailImg": "assets/previews/labyrinth/medical/6.webp"
+    },
 ];

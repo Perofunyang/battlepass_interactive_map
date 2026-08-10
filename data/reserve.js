@@ -27,6 +27,15 @@ window.MAP_DATA_reserve = [
         "detailImg": "assets/previews/reserve/pmc/4-1-3-1.webp"
     },
     {
+        "id": "pmc-4-3-3-1",
+        "category": "pmc",
+        "coords": [270, 393],
+        "previewImg": "assets/previews/reserve/pmc/4-3-3-1.webp",
+        "detailTitle": "pmc-4-3-3-1",
+        "detailDesc": "흑마 3층 (좌표 불확실)",
+        "detailImg": "assets/previews/reserve/pmc/4-3-3-1.webp"
+    },
+    {
         "id": "pmc-5-1-0-1",
         "category": "pmc",
         "coords": [2524, 4301],
@@ -34,6 +43,15 @@ window.MAP_DATA_reserve = [
         "detailTitle": "pmc-5-1-0-1",
         "detailDesc": "머리동 지하의 방 안",
         "detailImg": "assets/previews/reserve/pmc/5-1-0-1.webp"
+    },
+    {
+        "id": "pmc-5-1-2-1",
+        "category": "pmc",
+        "coords": [312, 4083],
+        "previewImg": "assets/previews/reserve/pmc/5-1-2-1.webp",
+        "detailTitle": "pmc-5-1-2-1",
+        "detailDesc": "머리동 2층",
+        "detailImg": "assets/previews/reserve/pmc/5-1-2-1.webp"
     },
     {
         "id": "pmc-5-2-3-1",

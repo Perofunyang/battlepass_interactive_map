@@ -119,7 +119,7 @@ window.MAP_DATA_ground_zero = [
     {
         "id": "medical-8-0-1-1",
         "category": "medical",
-        "coords": [3798, 6063],
+        "coords": [3662, 6067],
         "previewImg": "assets/previews/ground_zero/medical/8-0-1-1.webp",
         "detailTitle": "medical-8-0-1-1",
         "detailDesc": "",

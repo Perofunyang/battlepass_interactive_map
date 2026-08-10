@@ -128,6 +128,15 @@ window.MAP_DATA_interchange = [
         "detailImg": "assets/previews/interchange/financial/1-2-3.webp"
     },
     {
+        "id": "financial-1-2-4",
+        "category": "financial",
+        "coords": [3053, 7424],
+        "previewImg": "assets/previews/interchange/financial/1-2-4.webp",
+        "detailTitle": "financial-1-2-4",
+        "detailDesc": "TTS 매장 안 (좌표 불확실)",
+        "detailImg": "assets/previews/interchange/financial/1-2-4.webp"
+    },
+    {
         "id": "financial-4-1-1",
         "category": "financial",
         "coords": [1491, 844],

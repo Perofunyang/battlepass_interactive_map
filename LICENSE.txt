@@ -10,4 +10,8 @@ Under the following terms:
 - Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
 - NonCommercial — You may not use the material for commercial purposes.
 
+Notice:
+- All Escape From Tarkov game assets, map images, icons, and trademarks are the property of Battlestate Games.
+- This project is a non-commercial, fan-made interactive map tool.
+
 Official License Text: https://creativecommons.org/licenses/by-nc/4.0/

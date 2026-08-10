@@ -34,7 +34,8 @@ const I18N = {
             financial: { name: "Financial", icon: "./assets/icons/financial.webp", image: "./assets/category/financial.webp", desc: "customs(세관)\n Streets of Tarkov(스오타)\n interchange(인터체인지)" },
             transit: { name: "Transit", icon: "./assets/icons/transit.webp", image: "./assets/category/transit.webp", desc: "트랜짓(Transit) 포인트" },
             temporary: { name: "Temporary", icon: "./assets/icons/temporary.png", desc: "임시 마커" }
-        }
+        },
+        copyright: "© 2026 EFT BP Map.<br>본 사이트는 팬 제작 지도이며, 게임 관련 자산의 모든 권리는 Battlestate Games에 있습니다."
     },
     en: {
         title: "Battle Pass Doc Map",
@@ -71,6 +72,7 @@ const I18N = {
             financial: { name: "Financial", icon: "./assets/icons/financial.webp", image: "./assets/category/financial.webp", desc: "Customs\n Streets of Tarkov\n Interchange" },
             transit: { name: "Transit", icon: "./assets/icons/transit.webp", image: "./assets/category/transit.webp", desc: "Transit Point" },
             temporary: { name: "Temporary", icon: "./assets/icons/temporary.png", desc: "Temporary Marker" }
-        }
+        },
+        copyright: "© 2026 EFT BP Map.<br>Fan-made map. Game assets © Battlestate Games."
     }
 };

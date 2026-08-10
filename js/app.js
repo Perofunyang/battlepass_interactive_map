@@ -46,6 +46,10 @@ function setupUI() {
     document.getElementById('ui-subtitle').innerText = langData.subtitle;
     document.getElementById('ui-categories-header').innerText = langData.categoriesHeader;
 
+    // 🌟 [추가] 하단 카피라이트 문구 바인딩
+    const copyrightEl = document.getElementById('ui-copyright');
+    if (copyrightEl) copyrightEl.innerHTML = langData.copyright;
+
     const langBtn = document.getElementById('lang-switch-btn');
     langBtn.innerText = langData.langBtnText;
 

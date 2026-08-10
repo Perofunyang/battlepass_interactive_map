@@ -440,3 +440,18 @@ body {
 	margin-top: 8px;
 	line-height: 1.5;
 }
+
+/* 사이드바 하단 저작권 (Copyright) 스타일 */
+.sidebar-footer {
+	padding: 15px 20px;
+	border-top: 1px solid #333;
+	font-size: 0.7rem;
+	color: #666;
+	text-align: center;
+	line-height: 1.4;
+}
+
+/* 사이드바 접혔을 때 저작권 문구 깔끔하게 숨김 */
+#sidebar.collapsed .sidebar-footer {
+	display: none !important;
+}

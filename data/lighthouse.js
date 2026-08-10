@@ -147,6 +147,15 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/technical/1-1-1-1.webp"
     },
     {
+        "id": "technical-2-1-2-1",
+        "category": "technical",
+        "coords": [3128, 78],
+        "previewImg": "assets/previews/lighthouse/technical/2-1-2-1.webp",
+        "detailTitle": "technical-2-1-2-1",
+        "detailDesc": "1창 2층",
+        "detailImg": "assets/previews/lighthouse/technical/2-1-2-1.webp"
+    },
+    {
         "id": "technical-2-3-2-1",
         "category": "technical",
         "coords": [3069, 545],
@@ -199,6 +208,15 @@ window.MAP_DATA_lighthouse = [
         "detailTitle": "technical-4-1-1-1",
         "detailDesc": "큰 별장 안 거실 옆에",
         "detailImg": "assets/previews/lighthouse/technical/4-1-1-1.webp"
+    },
+    {
+        "id": "technical-4-1-1-2",
+        "category": "technical",
+        "coords": [1701, 1217],
+        "previewImg": "assets/previews/lighthouse/technical/4-1-1-2.webp",
+        "detailTitle": "technical-4-1-1-2",
+        "detailDesc": "큰 별장 밖 야외",
+        "detailImg": "assets/previews/lighthouse/technical/4-1-1-2.webp"
     },
     {
         "id": "technical-4-1-3-1",

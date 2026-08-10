@@ -28,6 +28,15 @@ window.MAP_DATA_icebreaker = [
         "detailImg": "assets/previews/icebreaker/pmc/1-2.webp"
     },
     {
+        "id": "pmc-1-3",
+        "category": "pmc",
+        "coords": [3860, 5227],
+        "previewImg": "assets/previews/icebreaker/pmc/1-3.webp",
+        "detailTitle": "pmc-1-3",
+        "detailDesc": "1층 플레어 스폰방",
+        "detailImg": "assets/previews/icebreaker/pmc/1-3.webp"
+    },
+    {
         "id": "pmc-3-1",
         "category": "pmc",
         "coords": [2196, 3953],
@@ -78,11 +87,11 @@ window.MAP_DATA_icebreaker = [
     {
         "id": "test-2-1",
         "category": "test",
-        "coords": [3306, 4659],
+        "coords": [3264, 4659],
         "previewImg": "assets/previews/icebreaker/test/2-1.webp",
         "detailTitle": "test-2-1",
-        "detailDesc": "헬리패드 직전 방 (좌표 부정확)",
-        "detailImg": "assets/previews/icebreaker/test/2-1.webp"
+        "detailDesc": "헬리패드 직전 방",
+        "detailImg": "assets/previews/icebreaker/test/2-1s.webp"
     },
     {
         "id": "test-3-1",

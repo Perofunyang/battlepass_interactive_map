@@ -72,6 +72,15 @@ window.MAP_DATA_reserve = [
         "detailImg": "assets/previews/reserve/pmc/5-2-3-1.webp"
     },
     {
+        "id": "pmc-5-2-3-2",
+        "category": "pmc",
+        "coords": [808, 4289],
+        "previewImg": "assets/previews/reserve/pmc/5-2-3-2.webp",
+        "detailTitle": "pmc-5-2-3-2",
+        "detailDesc": "허리동 3층 (좌표 불확실)",
+        "detailImg": "assets/previews/reserve/pmc/5-2-3-2.webp"
+    },
+    {
         "id": "pmc-5-3-4-1",
         "category": "pmc",
         "coords": [541, 4534],
@@ -164,6 +173,24 @@ window.MAP_DATA_reserve = [
         "detailTitle": "project-5-1-3-1",
         "detailDesc": "블랙 비숍 3층 끝 방",
         "detailImg": "assets/previews/reserve/project/5-1-3-1.webp"
+    },
+    {
+        "id": "project-5-2-2-1",
+        "category": "project",
+        "coords": [768, 4140],
+        "previewImg": "assets/previews/reserve/project/5-2-2-1.webp",
+        "detailTitle": "project-5-2-2-1",
+        "detailDesc": "허리동 2층",
+        "detailImg": "assets/previews/reserve/project/5-2-2-1.webp"
+    },
+    {
+        "id": "project-5-3-2-1",
+        "category": "project",
+        "coords": [192, 4338],
+        "previewImg": "assets/previews/reserve/project/5-3-2-1.webp",
+        "detailTitle": "project-5-3-2-1",
+        "detailDesc": "꼬리동 2층",
+        "detailImg": "assets/previews/reserve/project/5-3-2-1.webp"
     },
     {
         "id": "project-6-1-2-1",

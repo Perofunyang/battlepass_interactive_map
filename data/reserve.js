@@ -1,5 +1,14 @@
 window.MAP_DATA_reserve = [
     {
+        "id": "pmc-1-1-1-1",
+        "category": "pmc",
+        "coords": [2321, 688],
+        "previewImg": "assets/previews/reserve/pmc/1-1-1-1.webp",
+        "detailTitle": "pmc-1-1-1-1",
+        "detailDesc": "왼쪽 끝방 입구 들어가자마자 오른쪽 책?장 아래",
+        "detailImg": "assets/previews/reserve/pmc/1-1-1-1.webp"
+    },
+    {
         "id": "pmc-3-1-1-1",
         "category": "pmc",
         "coords": [1776, 1474],

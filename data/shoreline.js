@@ -89,8 +89,18 @@ window.MAP_DATA_shoreline = [
         "detailDesc": "피어보트 건물 1층 로비",
         "detailImg": "assets/previews/shoreline/technical/10-1-1-1.webp"
     },
+    {
+        "id": "technical-10-2-1-1",
+        "category": "technical",
+        "coords": [837, 2443],
+        "previewImg": "assets/previews/shoreline/technical/10-2-1-1.webp",
+        "detailTitle": "technical-10-2-1-1",
+        "detailDesc": "불타는 주유소 진입 후 오른쪽 방",
+        "detailImg": "assets/previews/shoreline/technical/10-2-1-1.webp"
+    },
 
 
+    //Test Category
     {
         "id": "test-2-1-211-1",
         "category": "test",
@@ -99,6 +109,15 @@ window.MAP_DATA_shoreline = [
         "detailTitle": "test-2-1-211-1",
         "detailDesc": "서관 211호",
         "detailImg": "assets/previews/shoreline/test/2-1-211-1.webp"
+    },
+    {
+        "id": "test-2-3-2-1",
+        "category": "test",
+        "coords": [4221, 3615],
+        "previewImg": "assets/previews/shoreline/test/2-3-2-1.webp",
+        "detailTitle": "test-2-3-2-1",
+        "detailDesc": "북관 2층",
+        "detailImg": "assets/previews/shoreline/test/2-3-2-1.webp"
     },
     {
         "id": "test-2-3-218-1",
@@ -181,8 +200,26 @@ window.MAP_DATA_shoreline = [
         "detailDesc": "피어보트 건물 앞",
         "detailImg": "assets/previews/shoreline/test/10-1-1-1.webp"
     },
+    {
+        "id": "test-10-2-1-1",
+        "category": "test",
+        "coords": [842, 2432],
+        "previewImg": "assets/previews/shoreline/test/10-2-1-1.webp",
+        "detailTitle": "test-10-2-1-1",
+        "detailDesc": "불타는 주유소 진입 후 오른쪽 방",
+        "detailImg": "assets/previews/shoreline/test/10-2-1-1.webp"
+    },
 
 
+    {
+        "id": "temporary-0",
+        "category": "temporary",
+        "coords": [760, 2442],
+        "previewImg": "assets/previews/shoreline/temporary-0.webp",
+        "detailTitle": "temporary-0",
+        "detailDesc": "주유소 진입 방법",
+        "detailImg": "assets/previews/shoreline/temporary-0.webp"
+    },
     {
         "id": "temporary-1",
         "category": "temporary",

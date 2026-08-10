@@ -68,6 +68,15 @@ window.MAP_DATA_streets_of_tarkov = [
     //
 
     {
+        "id": "user-1-3-2-1",
+        "category": "user",
+        "coords": [4066, 2073],
+        "previewImg": "assets/previews/streets_of_tarkov/user/1-3-2-1.webp",
+        "detailTitle": "user-1-3-2-1",
+        "detailDesc": "Cardinal apartment key 방 거실",
+        "detailImg": "assets/previews/streets_of_tarkov/user/1-3-2-1.webp"
+    },
+    {
         "id": "user-1-4-1-1",
         "category": "user",
         "coords": [3946, 3683],
@@ -84,6 +93,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailTitle": "user-1-6-1-1",
         "detailDesc": "테라그룹 무기고 방문옆 사물함있는 책상",
         "detailImg": "assets/previews/streets_of_tarkov/user/1-6-1-1.webp"
+    },
+    {
+        "id": "user-1-6-1-2",
+        "category": "user",
+        "coords": [4160, 3791],
+        "previewImg": "assets/previews/streets_of_tarkov/user/1-6-1-2.webp",
+        "detailTitle": "user-1-6-1-2",
+        "detailDesc": "카운터 옆 방 서류꽂이",
+        "detailImg": "assets/previews/streets_of_tarkov/user/1-6-1-2.webp"
     },
     {
         "id": "user-2-8-1-1",
@@ -106,7 +124,7 @@ window.MAP_DATA_streets_of_tarkov = [
     {
         "id": "user-5-1-2-1",
         "category": "user",
-        "coords": [3132, 6348],
+        "coords": [3179, 6271],
         "previewImg": "assets/previews/streets_of_tarkov/user/5-1-2-1.webp",
         "detailTitle": "user-5-1-2-1",
         "detailDesc": "파인우드호텔 208호 USER 문서",

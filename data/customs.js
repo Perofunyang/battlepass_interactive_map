@@ -236,6 +236,15 @@ window.MAP_DATA_customs = [
         "detailImg": "assets/previews/customs/project/3-1-2-1.webp"
     },
     {
+        "id": "project-3-0-1-1",
+        "category": "project",
+        "coords": [1784, 3407],
+        "previewImg": "assets/previews/customs/project/3-0-1-1.webp",
+        "detailTitle": "project-3-0-1-1",
+        "detailDesc": "빨창 앞 북쪽 건물 ",
+        "detailImg": "assets/previews/customs/project/3-0-1-1.webp"
+    },
+    {
         "id": "project-5-1-2-1",
         "category": "project",
         "coords": [92, 3662],

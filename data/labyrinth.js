@@ -17,6 +17,15 @@ window.MAP_DATA_labyrinth = [
         "detailDesc": "Observation 방 안",
         "detailImg": "assets/previews/labyrinth/blueprints/2.webp"
     },
+    {
+        "id": "blueprints-3",
+        "category": "blueprints",
+        "coords": [2045, 2358],
+        "previewImg": "assets/previews/labyrinth/blueprints/3.webp",
+        "detailTitle": "blueprints-3",
+        "detailDesc": "중앙 연구실 왼쪽문",
+        "detailImg": "assets/previews/labyrinth/blueprints/3.webp"
+    },
 
 
     {

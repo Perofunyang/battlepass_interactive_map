@@ -9,6 +9,15 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/pmc/1-1-1-1.webp"
     },
     {
+        "id": "pmc-2-1-2-1",
+        "category": "pmc",
+        "coords": [2747, 978],
+        "previewImg": "assets/previews/lighthouse/pmc/2-1-2-1.webp",
+        "detailTitle": "pmc-2-1-2-1",
+        "detailDesc": "1번 창고 2층 제어실 테이블 위 (좌표 부정확)",
+        "detailImg": "assets/previews/lighthouse/pmc/2-1-2-1.webp"
+    },
+    {
         "id": "pmc-2-2-1-1",
         "category": "pmc",
         "coords": [2946, 1228],
@@ -25,6 +34,15 @@ window.MAP_DATA_lighthouse = [
         "detailTitle": "pmc-2-0-1-1",
         "detailDesc": "",
         "detailImg": "assets/previews/lighthouse/pmc/2-0-1-1.webp"
+    },
+    {
+        "id": "pmc-2-0-1-2",
+        "category": "pmc",
+        "coords": [2572, 984],
+        "previewImg": "assets/previews/lighthouse/pmc/2-0-1-2.webp",
+        "detailTitle": "pmc-2-0-1-2",
+        "detailDesc": "1창 앞 컨테이너, Rogue usec stash key(필요) 내부 소파 팔걸이 위",
+        "detailImg": "assets/previews/lighthouse/pmc/2-0-1-2.webp"
     },
     {
         "id": "pmc-3-1-2-1",

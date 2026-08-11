@@ -263,6 +263,15 @@ window.MAP_DATA_woods = [
         "detailDesc": "하얀 컨테이너 안",
         "detailImg": "assets/previews/woods/test/5-1.webp"
     },
+    {
+        "id": "test-5-2",
+        "category": "test",
+        "coords": [1286, 4218],
+        "previewImg": "assets/previews/woods/test/5-2.webp",
+        "detailTitle": "test-5-2",
+        "detailDesc": "이머컴",
+        "detailImg": "assets/previews/woods/test/5-2.webp"
+    },
 
 
     {

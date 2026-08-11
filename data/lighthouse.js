@@ -27,6 +27,15 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/pmc/2-2-1-1.webp"
     },
     {
+        "id": "pmc-2-3-2-1",
+        "category": "pmc",
+        "coords": [3068, 539],
+        "previewImg": "assets/previews/lighthouse/pmc/2-3-2-1.webp",
+        "detailTitle": "pmc-2-3-2-1",
+        "detailDesc": "3번 창고 2층 복도",
+        "detailImg": "assets/previews/lighthouse/pmc/2-3-2-1.webp"
+    },
+    {
         "id": "pmc-2-0-1-1",
         "category": "pmc",
         "coords": [2444, 1284],

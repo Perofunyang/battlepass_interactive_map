@@ -125,6 +125,15 @@ window.MAP_DATA_ground_zero = [
         "detailDesc": "",
         "detailImg": "assets/previews/ground_zero/medical/8-0-1-1.webp"
     },
+    {
+        "id": "medical-8-0-1-2",
+        "category": "medical",
+        "coords": [5513, 6089],
+        "previewImg": "assets/previews/ground_zero/medical/8-0-1-2.webp",
+        "detailTitle": "medical-8-0-1-2",
+        "detailDesc": "",
+        "detailImg": "assets/previews/ground_zero/medical/8-0-1-2.webp"
+    },
 
 
     {
@@ -152,7 +161,7 @@ window.MAP_DATA_ground_zero = [
         "previewImg": "assets/previews/ground_zero/user/3-1-1-1.webp",
         "detailTitle": "user-3-1-1-1",
         "detailDesc": "검은색 차 조수석 문 아래",
-        "detailImg": "assets/previews/ground_zero/user/3-1-1-1.webp"
+        "detailImg": "assets/previews/ground_zero/user/3-1-1-1s.webp"
     },
     {
         "id": "user-3-2-3-1",

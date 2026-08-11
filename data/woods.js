@@ -45,6 +45,15 @@ window.MAP_DATA_woods = [
         "detailImg": "assets/previews/woods/technical/1-5.webp"
     },
     {
+        "id": "technical-1-6",
+        "category": "technical",
+        "coords": [5633, 3890],
+        "previewImg": "assets/previews/woods/technical/1-6.webp",
+        "detailTitle": "technical-1-6",
+        "detailDesc": "건물 들어와서 좌측에 매트",
+        "detailImg": "assets/previews/woods/technical/1-6.webp"
+    },
+    {
         "id": "technical-2-1",
         "category": "technical",
         "coords": [5267, 5320],
@@ -115,6 +124,15 @@ window.MAP_DATA_woods = [
         "detailTitle": "technical-5-2",
         "detailDesc": "이머컴",
         "detailImg": "assets/previews/woods/technical/5-2.webp"
+    },
+    {
+        "id": "technical-6-1",
+        "category": "technical",
+        "coords": [1686, 6558],
+        "previewImg": "assets/previews/woods/technical/6-1.webp",
+        "detailTitle": "technical-6-1",
+        "detailDesc": "기차에 무기상자 있는 컨테이너칸 (좌표 부정확)",
+        "detailImg": "assets/previews/woods/technical/6-1.webp"
     },
 
 

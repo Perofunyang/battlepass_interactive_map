@@ -146,6 +146,15 @@ window.MAP_DATA_lab = [
         "detailImg": "assets/previews/lab/user/1-1.webp"
     },
     {
+        "id": "user-1-2",
+        "category": "user",
+        "coords": [657, 1793],
+        "previewImg": "assets/previews/lab/user/1-2.webp",
+        "detailTitle": "user-1-2",
+        "detailDesc": "1층",
+        "detailImg": "assets/previews/lab/user/1-2.webp"
+    },
+    {
         "id": "user-2-1",
         "category": "user",
         "coords": [2069, 2921],

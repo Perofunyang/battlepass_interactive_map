@@ -156,6 +156,15 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/technical/2-1-2-1.webp"
     },
     {
+        "id": "technical-2-2-3-1",
+        "category": "technical",
+        "coords": [3049, 367],
+        "previewImg": "assets/previews/lighthouse/technical/2-2-3-1.webp",
+        "detailTitle": "technical-2-2-3-1",
+        "detailDesc": "2창 옥상 천막",
+        "detailImg": "assets/previews/lighthouse/technical/2-2-3-1.webp"
+    },
+    {
         "id": "technical-2-3-2-1",
         "category": "technical",
         "coords": [3069, 545],
@@ -172,6 +181,15 @@ window.MAP_DATA_lighthouse = [
         "detailTitle": "technical-2-0-1-1",
         "detailDesc": "",
         "detailImg": "assets/previews/lighthouse/technical/2-0-1-1.webp"
+    },
+    {
+        "id": "technical-2-0-1-2",
+        "category": "technical",
+        "coords": [2570, 994],
+        "previewImg": "assets/previews/lighthouse/technical/2-0-1-2.webp",
+        "detailTitle": "technical-2-0-1-2",
+        "detailDesc": "Rogue USEC Stash key로 여는 컨테이너 내부",
+        "detailImg": "assets/previews/lighthouse/technical/2-0-1-2.webp"
     },
     {
         "id": "technical-3-1-1-1",

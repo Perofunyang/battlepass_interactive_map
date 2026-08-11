@@ -27,6 +27,15 @@ window.MAP_DATA_shoreline = [
         "detailImg": "assets/previews/shoreline/technical/2-3-212-1.webp"
     },
     {
+        "id": "technical-2-0-1-1",
+        "category": "technical",
+        "coords": [1988, 2529],
+        "previewImg": "assets/previews/shoreline/technical/2-0-1-1.webp",
+        "detailTitle": "technical-2-0-1-1",
+        "detailDesc": "리조트 바로 아래 전망대",
+        "detailImg": "assets/previews/shoreline/technical/2-0-1-1s.webp"
+    },
+    {
         "id": "technical-3-1-1-1",
         "category": "technical",
         "coords": [2862, 3923],

@@ -166,6 +166,15 @@ window.MAP_DATA_reserve = [
         "detailImg": "assets/previews/reserve/project/4-3-3-1.webp"
     },
     {
+        "id": "project-4-7-3-1",
+        "category": "project",
+        "coords": [49, 1037],
+        "previewImg": "assets/previews/reserve/project/4-7-3-1.webp",
+        "detailTitle": "project-4-7-3-1",
+        "detailDesc": "킹 3층",
+        "detailImg": "assets/previews/reserve/project/4-7-3-1.webp"
+    },
+    {
         "id": "project-5-1-3-1",
         "category": "project",
         "coords": [573, 4135],
@@ -182,6 +191,15 @@ window.MAP_DATA_reserve = [
         "detailTitle": "project-5-2-2-1",
         "detailDesc": "허리동 2층",
         "detailImg": "assets/previews/reserve/project/5-2-2-1.webp"
+    },
+    {
+        "id": "project-5-2-4-1",
+        "category": "project",
+        "coords": [989, 4365],
+        "previewImg": "assets/previews/reserve/project/5-2-4-1.webp",
+        "detailTitle": "project-5-2-4-1",
+        "detailDesc": "허리동 4층",
+        "detailImg": "assets/previews/reserve/project/5-2-4-1.webp"
     },
     {
         "id": "project-5-3-2-1",
@@ -209,6 +227,15 @@ window.MAP_DATA_reserve = [
         "detailTitle": "project-6-0-1-1",
         "detailDesc": "체크포인트 펜스 스캐브 탈출구 옆 건물 안쪽",
         "detailImg": "assets/previews/reserve/project/6-0-1-1.webp"
+    },
+    {
+        "id": "project-6-0-1-2",
+        "category": "project",
+        "coords": [494, 2196],
+        "previewImg": "assets/previews/reserve/project/6-0-1-2.webp",
+        "detailTitle": "project-6-0-1-2",
+        "detailDesc": "돔 그냥 열리는 경비실 구석",
+        "detailImg": "assets/previews/reserve/project/6-0-1-2.webp"
     },
     {
         "id": "project-8-0-1",

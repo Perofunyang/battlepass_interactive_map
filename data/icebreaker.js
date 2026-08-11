@@ -30,11 +30,20 @@ window.MAP_DATA_icebreaker = [
     {
         "id": "pmc-1-3",
         "category": "pmc",
-        "coords": [3860, 5227],
+        "coords": [1924, 5172],
         "previewImg": "assets/previews/icebreaker/pmc/1-3.webp",
         "detailTitle": "pmc-1-3",
         "detailDesc": "1층 플레어 스폰방",
         "detailImg": "assets/previews/icebreaker/pmc/1-3.webp"
+    },
+    {
+        "id": "pmc-2-1",
+        "category": "pmc",
+        "coords": [3237, 4742],
+        "previewImg": "assets/previews/icebreaker/pmc/2-1.webp",
+        "detailTitle": "pmc-2-1",
+        "detailDesc": "헬리패드 전 방",
+        "detailImg": "assets/previews/icebreaker/pmc/2-1.webp"
     },
     {
         "id": "pmc-3-1",

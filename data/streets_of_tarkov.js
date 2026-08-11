@@ -122,6 +122,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailImg": "assets/previews/streets_of_tarkov/user/3-2-1-1.webp"
     },
     {
+        "id": "user-4-2-2-1",
+        "category": "user",
+        "coords": [4478, 4438],
+        "previewImg": "assets/previews/streets_of_tarkov/user/4-2-2-1.webp",
+        "detailTitle": "user-4-2-2-1",
+        "detailDesc": "테라 그룹 오피스 2층",
+        "detailImg": "assets/previews/streets_of_tarkov/user/4-2-2-1.webp"
+    },
+    {
         "id": "user-5-1-2-1",
         "category": "user",
         "coords": [3179, 6271],

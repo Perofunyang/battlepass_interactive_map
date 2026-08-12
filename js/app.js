@@ -1,6 +1,6 @@
 const MAPS = {
     customs: { name: "Customs", imageUrl: "./assets/maps/customs.webp", width: 4097, height: 2142, spawns: { project: 7, financial: 7 } },
-    factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850, spawns: { project: 6, blueprints: 6 } },
+    factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850, spawns: { project: 5, blueprints: 5 } },
     ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 6920, height: 6920, spawns: { medical: 7, user: 7 } },
     interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.webp", width: 9600, height: 5400, spawns: { blueprints: 7, financial: 7 } },
     icebreaker: { name: "Icebreaker", imageUrl: "./assets/maps/icebreaker.webp", width: 7680, height: 4320, spawns: { test: 7, pmc: 7 } },

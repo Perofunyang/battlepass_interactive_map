@@ -56,6 +56,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailImg": "assets/previews/streets_of_tarkov/financial/4-2-2-1.webp"
     },
     {
+        "id": "financial-5-1-2-1",
+        "category": "financial",
+        "coords": [3065, 6440],
+        "previewImg": "assets/previews/streets_of_tarkov/financial/5-1-2-1.webp",
+        "detailTitle": "financial-5-1-2-1",
+        "detailDesc": "파인우드 호텔 212호 내부 책상 (좌표 불확실)",
+        "detailImg": "assets/previews/streets_of_tarkov/financial/5-1-2-1.webp"
+    },
+    {
         "id": "financial-8-1-1-1",
         "category": "financial",
         "coords": [2437, 5316],

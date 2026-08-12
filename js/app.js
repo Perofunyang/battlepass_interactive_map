@@ -22,7 +22,7 @@ let map = null;
 let currentMapId = 'factory';
 let currentImageOverlay = null;
 const layerGroups = {};
-const activeFilters = new Set(Object.keys(CATEGORIES));
+const activeFilters = new Set();
 let categoryCounts = {};
 
 function getMapFromUrl() {
@@ -46,7 +46,6 @@ function setupUI() {
     document.getElementById('ui-subtitle').innerText = langData.subtitle;
     document.getElementById('ui-categories-header').innerText = langData.categoriesHeader;
 
-    // 🌟 [추가] 하단 카피라이트 문구 바인딩
     const copyrightEl = document.getElementById('ui-copyright');
     if (copyrightEl) copyrightEl.innerHTML = langData.copyright;
 
@@ -64,6 +63,11 @@ function setupUI() {
 }
 
 function initMap() {
+    // 레이어 그룹 초기화
+    Object.keys(CATEGORIES).forEach(catKey => {
+        layerGroups[catKey] = L.layerGroup();
+    });
+
     setupUI();
     currentMapId = getMapFromUrl();
     document.getElementById('map-select').value = currentMapId;
@@ -157,6 +161,22 @@ function setupModalEvents() {
     });
 }
 
+// 🌟 [신규] 맵 변경 시 해당 맵에서 스폰하는 카테고리를 필터 기본값(Checked)으로 리셋
+function resetFiltersForMap(mapId) {
+    const mapConfig = MAPS[mapId];
+    const spawns = mapConfig ? mapConfig.spawns : {};
+
+    activeFilters.clear();
+    Object.keys(CATEGORIES).forEach(key => {
+        const isAlwaysActiveCategory = (key === 'transit' || key === 'temporary');
+        const isSpawningInCurrentMap = spawns.hasOwnProperty(key);
+
+        if (isAlwaysActiveCategory || isSpawningInCurrentMap) {
+            activeFilters.add(key);
+        }
+    });
+}
+
 function loadMap(mapId) {
     currentMapId = mapId;
     updateLangSwitchUrl();
@@ -164,7 +184,10 @@ function loadMap(mapId) {
 
     map.setMaxBounds(null);
     if (currentImageOverlay) map.removeLayer(currentImageOverlay);
+
+    // 🌟 맵 전환 시 이전 마커 완전히 지우기 & 해당 맵 필터 상태 전원 활성화 리셋
     clearAllMarkers();
+    resetFiltersForMap(mapId);
 
     const bounds = [[0, 0], [mapConfig.height, mapConfig.width]];
     currentImageOverlay = L.imageOverlay(mapConfig.imageUrl, bounds).addTo(map);
@@ -234,6 +257,7 @@ function updateMapSpawnInfo() {
 function renderMarkers(markersData) {
     const mapConfig = MAPS[currentMapId];
 
+    // 1. 카테고리별 마커 수 카운팅
     categoryCounts = {};
     Object.keys(CATEGORIES).forEach(catKey => {
         categoryCounts[catKey] = 0;
@@ -244,15 +268,10 @@ function renderMarkers(markersData) {
         }
     });
 
+    // 2. UI 갱신
     renderFilterUI();
 
-    Object.keys(CATEGORIES).forEach(catKey => {
-        layerGroups[catKey] = L.layerGroup();
-        if (activeFilters.has(catKey)) {
-            layerGroups[catKey].addTo(map);
-        }
-    });
-
+    // 3. 새로운 마커 생성 및 레이어 그룹에 추가
     markersData.forEach(data => {
         const catInfo = CATEGORIES[data.category];
         const iconSrc = catInfo ? catInfo.icon : '';
@@ -285,13 +304,11 @@ function renderMarkers(markersData) {
                     opacity: 1
                 });
 
-                // 🌟 미리보기 팝업이 실제로 켜질 때 화면 경계 벗어남 자동 밀어내기 보정
                 marker.on('tooltipopen', (e) => {
                     const tooltipEl = e.tooltip ? e.tooltip._container : null;
                     const container = document.getElementById('map-container');
 
                     if (tooltipEl && container) {
-                        // 위치 보정값 초기화
                         tooltipEl.style.marginLeft = '0px';
                         tooltipEl.style.marginTop = '0px';
 
@@ -301,29 +318,23 @@ function renderMarkers(markersData) {
                         let shiftX = 0;
                         let shiftY = 0;
 
-                        // 1. 오른쪽 화면 경계 벗어남 보정 (좌측으로 밀어넣기)
                         if (tRect.right > cRect.right - 10) {
                             shiftX = cRect.right - 10 - tRect.right;
                         }
-                        // 2. 왼쪽 화면 경계 벗어남 보정 (우측으로 밀어넣기)
                         if (tRect.left < cRect.left + 10) {
                             shiftX = cRect.left + 10 - tRect.left;
                         }
-                        // 3. 아래쪽 화면 경계 벗어남 보정 (위로 밀어넣기)
                         if (tRect.bottom > cRect.bottom - 10) {
                             shiftY = cRect.bottom - 10 - tRect.bottom;
                         }
-                        // 4. 위쪽 화면 경계 벗어남 보정 (아래로 밀어넣기)
                         if (tRect.top < cRect.top + 10) {
                             shiftY = cRect.top + 10 - tRect.top;
                         }
 
-                        // 보정값 적용
                         if (shiftX !== 0) tooltipEl.style.marginLeft = `${shiftX}px`;
                         if (shiftY !== 0) tooltipEl.style.marginTop = `${shiftY}px`;
                     }
 
-                    // GA4 미리보기 호버 추적
                     if (typeof gtag === 'function') {
                         const mapName = MAPS[currentMapId]?.name || currentMapId;
                         const formattedTitle = `[${mapName}] ${data.detailTitle || data.id || 'unknown'}`;
@@ -353,11 +364,25 @@ function renderMarkers(markersData) {
             layerGroups[data.category].addLayer(marker);
         }
     });
+
+    // 4. activeFilters 에 등록된 레이어만 지도에 표시
+    Object.keys(CATEGORIES).forEach(catKey => {
+        if (activeFilters.has(catKey)) {
+            layerGroups[catKey].addTo(map);
+        }
+    });
 }
 
 function clearAllMarkers() {
-    Object.keys(layerGroups).forEach(catKey => {
-        map.removeLayer(layerGroups[catKey]);
+    Object.keys(CATEGORIES).forEach(catKey => {
+        if (layerGroups[catKey]) {
+            layerGroups[catKey].clearLayers(); // 레이어 안의 마커 내용 삭제
+            if (map && map.hasLayer(layerGroups[catKey])) {
+                map.removeLayer(layerGroups[catKey]); // 지도에서 레이어 분리
+            }
+        } else {
+            layerGroups[catKey] = L.layerGroup();
+        }
     });
 }
 
@@ -375,7 +400,6 @@ function renderFilterUI() {
     Object.entries(CATEGORIES).forEach(([key, cat]) => {
         const isAlwaysActiveCategory = (key === 'transit' || key === 'temporary');
         const isSpawningInCurrentMap = spawns.hasOwnProperty(key);
-
         const shouldBeEnabled = isAlwaysActiveCategory || isSpawningInCurrentMap;
 
         let spawnBadge = "";
@@ -387,14 +411,6 @@ function renderFilterUI() {
             spawnBadge = `<span class="category-spawn-badge" style="color: #e5b35c; font-size: 0.8rem; margin-left: auto; font-weight: bold;">[${count} ${spawnLabel}]</span>`;
         } else {
             spawnBadge = `<span class="category-spawn-badge" style="color: #666; font-size: 0.8rem; margin-left: auto;">[No Spawn]</span>`;
-        }
-
-        if (!shouldBeEnabled && activeFilters.has(key)) {
-            activeFilters.delete(key);
-            if (layerGroups[key]) map.removeLayer(layerGroups[key]);
-        } else if (shouldBeEnabled && !activeFilters.has(key)) {
-            activeFilters.add(key);
-            if (layerGroups[key]) map.addLayer(layerGroups[key]);
         }
 
         const isActive = activeFilters.has(key);

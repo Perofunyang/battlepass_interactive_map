@@ -27,6 +27,15 @@ window.MAP_DATA_shoreline = [
         "detailImg": "assets/previews/shoreline/technical/2-3-212-1.webp"
     },
     {
+        "id": "technical-2-3-3-1",
+        "category": "technical",
+        "coords": [1277, 5346],
+        "previewImg": "assets/previews/shoreline/technical/2-3-3-1.webp",
+        "detailTitle": "technical-2-3-3-1",
+        "detailDesc": "동관 3층",
+        "detailImg": "assets/previews/shoreline/technical/2-3-3-1.webp"
+    },
+    {
         "id": "technical-2-0-1-1",
         "category": "technical",
         "coords": [1988, 2529],
@@ -163,6 +172,15 @@ window.MAP_DATA_shoreline = [
         "detailTitle": "test-3-2-1-1",
         "detailDesc": "밀수꾼 캠프 위장막 있는 창고 의자 위",
         "detailImg": "assets/previews/shoreline/test/3-2-1-1.webp"
+    },
+    {
+        "id": "test-3-0-2-1",
+        "category": "test",
+        "coords": [3193, 3557],
+        "previewImg": "assets/previews/shoreline/test/3-0-2-1.webp",
+        "detailTitle": "test-3-0-2-1",
+        "detailDesc": "택시 탈출구 앞 2층 컨테이너 바닥",
+        "detailImg": "assets/previews/shoreline/test/3-0-2-1.webp"
     },
     {
         "id": "test-4-1-1-1",

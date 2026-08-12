@@ -11,16 +11,16 @@ window.MAP_DATA_lighthouse = [
     {
         "id": "pmc-2-1-2-1",
         "category": "pmc",
-        "coords": [2747, 978],
+        "coords": [3126, 85],
         "previewImg": "assets/previews/lighthouse/pmc/2-1-2-1.webp",
         "detailTitle": "pmc-2-1-2-1",
-        "detailDesc": "1번 창고 2층 제어실 테이블 위 (좌표 부정확)",
+        "detailDesc": "1번 창고 2층 제어실 테이블 위",
         "detailImg": "assets/previews/lighthouse/pmc/2-1-2-1.webp"
     },
     {
         "id": "pmc-2-2-1-1",
         "category": "pmc",
-        "coords": [2946, 1228],
+        "coords": [2948, 1224],
         "previewImg": "assets/previews/lighthouse/pmc/2-2-1-1.webp",
         "detailTitle": "pmc-2-2-1-1",
         "detailDesc": "2번 창고 1층 방 안",
@@ -29,7 +29,7 @@ window.MAP_DATA_lighthouse = [
     {
         "id": "pmc-2-3-2-1",
         "category": "pmc",
-        "coords": [3068, 539],
+        "coords": [3063, 517],
         "previewImg": "assets/previews/lighthouse/pmc/2-3-2-1.webp",
         "detailTitle": "pmc-2-3-2-1",
         "detailDesc": "3번 창고 2층 복도",
@@ -176,7 +176,7 @@ window.MAP_DATA_lighthouse = [
     {
         "id": "technical-2-3-2-1",
         "category": "technical",
-        "coords": [3069, 545],
+        "coords": [3070, 511],
         "previewImg": "assets/previews/lighthouse/technical/2-3-2-1.webp",
         "detailTitle": "technical-2-3-2-1",
         "detailDesc": "3창 2층 방안 구석",

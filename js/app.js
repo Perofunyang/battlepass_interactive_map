@@ -1,16 +1,16 @@
 const MAPS = {
-    customs: { name: "Customs", imageUrl: "./assets/maps/customs.webp", width: 4097, height: 2142, spawns: { project: 5, financial: 5 } },
-    factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850, spawns: { project: 4, blueprints: 4 } },
-    ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 6920, height: 6920, spawns: { medical: 5, user: 5 } },
-    interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.webp", width: 9600, height: 5400, spawns: { blueprints: 5, financial: 5 } },
-    icebreaker: { name: "Icebreaker", imageUrl: "./assets/maps/icebreaker.webp", width: 7680, height: 4320, spawns: { test: 5, pmc: 5 } },
-    lab: { name: "Lab", imageUrl: "./assets/maps/lab.webp", width: 3820, height: 2189, spawns: { user: 5, medical: 5 } },
-    labyrinth: { name: "Labyrinth", imageUrl: "./assets/maps/labyrinth.webp", width: 4145, height: 3840, spawns: { blueprints: 5, medical: 5 } },
-    lighthouse: { name: "Lighthouse", imageUrl: "./assets/maps/lighthouse.png", width: 2242, height: 3892, spawns: { pmc: 5, technical: 5 } },
-    reserve: { name: "Reserve", imageUrl: "./assets/maps/reserve.webp", width: 4701, height: 2785, spawns: { pmc: 5, project: 5 } },
-    shoreline: { name: "Shoreline", imageUrl: "./assets/maps/shoreline.webp", width: 6668, height: 4567, spawns: { test: 5, technical: 5 } },
-    streets_of_tarkov: { name: "Streets of Tarkov", imageUrl: "./assets/maps/streets_of_tarkov.webp", width: 7620, height: 5877, spawns: { financial: 5, user: 5 } },
-    woods: { name: "Woods", imageUrl: "./assets/maps/woods.webp", width: 6994, height: 6843, spawns: { test: 5, technical: 5 } }
+    customs: { name: "Customs", imageUrl: "./assets/maps/customs.webp", width: 4097, height: 2142, spawns: { project: 7, financial: 7 } },
+    factory: { name: "Factory", imageUrl: "./assets/maps/factory.png", width: 850, height: 850, spawns: { project: 6, blueprints: 6 } },
+    ground_zero: { name: "Ground Zero", imageUrl: "./assets/maps/ground_zero.webp", width: 6920, height: 6920, spawns: { medical: 7, user: 7 } },
+    interchange: { name: "Interchange", imageUrl: "./assets/maps/interchange.webp", width: 9600, height: 5400, spawns: { blueprints: 7, financial: 7 } },
+    icebreaker: { name: "Icebreaker", imageUrl: "./assets/maps/icebreaker.webp", width: 7680, height: 4320, spawns: { test: 7, pmc: 7 } },
+    lab: { name: "Lab", imageUrl: "./assets/maps/lab.webp", width: 3820, height: 2189, spawns: { user: 7, medical: 7 } },
+    labyrinth: { name: "Labyrinth", imageUrl: "./assets/maps/labyrinth.webp", width: 4145, height: 3840, spawns: { blueprints: 7, medical: 7 } },
+    lighthouse: { name: "Lighthouse", imageUrl: "./assets/maps/lighthouse.png", width: 2242, height: 3892, spawns: { pmc: 7, technical: 7 } },
+    reserve: { name: "Reserve", imageUrl: "./assets/maps/reserve.webp", width: 4701, height: 2785, spawns: { pmc: 7, project: 7 } },
+    shoreline: { name: "Shoreline", imageUrl: "./assets/maps/shoreline.webp", width: 6668, height: 4567, spawns: { test: 7, technical: 7 } },
+    streets_of_tarkov: { name: "Streets of Tarkov", imageUrl: "./assets/maps/streets_of_tarkov.webp", width: 7620, height: 5877, spawns: { financial: 7, user: 7 } },
+    woods: { name: "Woods", imageUrl: "./assets/maps/woods.webp", width: 6994, height: 6843, spawns: { test: 7, technical: 7 } }
 };
 
 // 현재 언어 데이터 참조

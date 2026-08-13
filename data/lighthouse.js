@@ -264,6 +264,15 @@ window.MAP_DATA_lighthouse = [
         "detailImg": "assets/previews/lighthouse/technical/4-2-1-1.webp"
     },
     {
+        "id": "technical-4-2-1-2",
+        "category": "technical",
+        "coords": [1239, 1331],
+        "previewImg": "assets/previews/lighthouse/technical/4-2-1-2.webp",
+        "detailTitle": "technical-4-2-1-2",
+        "detailDesc": "샬레 거실 쇼파 사이",
+        "detailImg": "assets/previews/lighthouse/technical/4-2-1-2s.webp"
+    },
+    {
         "id": "technical-4-3-2-1",
         "category": "technical",
         "coords": [832, 573],

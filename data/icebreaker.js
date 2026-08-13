@@ -1,6 +1,15 @@
 window.MAP_DATA_icebreaker = [
 
     {
+        "id": "pmc-13-1",
+        "category": "pmc",
+        "coords": [3198, 7333],
+        "previewImg": "assets/previews/icebreaker/pmc/13-1.webp",
+        "detailTitle": "pmc-13-1",
+        "detailDesc": "엔진룸 비번 누르고 들어가는 방",
+        "detailImg": "assets/previews/icebreaker/pmc/13-1.webp"
+    },
+    {
         "id": "pmc-12-1",
         "category": "pmc",
         "coords": [3175, 6715],

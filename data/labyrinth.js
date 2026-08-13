@@ -26,6 +26,15 @@ window.MAP_DATA_labyrinth = [
         "detailDesc": "중앙 연구실 왼쪽문",
         "detailImg": "assets/previews/labyrinth/blueprints/3.webp"
     },
+    {
+        "id": "blueprints-4",
+        "category": "blueprints",
+        "coords": [2338, 1888],
+        "previewImg": "assets/previews/labyrinth/blueprints/4.webp",
+        "detailTitle": "blueprints-4",
+        "detailDesc": "나무 상자 위 (위치 부정확)",
+        "detailImg": "assets/previews/labyrinth/blueprints/4.webp"
+    },
 
 
     {
@@ -52,7 +61,7 @@ window.MAP_DATA_labyrinth = [
         "coords": [1805, 3408],
         "previewImg": "assets/previews/labyrinth/medical/3.webp",
         "detailTitle": "medical-3",
-        "detailDesc": "Corp 키 6번 스폰 옆",
+        "detailDesc": "Corpse 키 6번 스폰 옆",
         "detailImg": "assets/previews/labyrinth/medical/3.webp"
     },
     {
@@ -81,5 +90,32 @@ window.MAP_DATA_labyrinth = [
         "detailTitle": "medical-6",
         "detailDesc": "Observation 방 안",
         "detailImg": "assets/previews/labyrinth/medical/6.webp"
+    },
+    {
+        "id": "medical-7",
+        "category": "medical",
+        "coords": [1559, 1226],
+        "previewImg": "assets/previews/labyrinth/medical/7.webp",
+        "detailTitle": "medical-7",
+        "detailDesc": "Corpse 방 입구 옆 벽",
+        "detailImg": "assets/previews/labyrinth/medical/7.webp"
+    },
+    {
+        "id": "medical-8",
+        "category": "medical",
+        "coords": [1390, 2713],
+        "previewImg": "assets/previews/labyrinth/medical/8.webp",
+        "detailTitle": "medical-8",
+        "detailDesc": "3번 과학자 시체 옆",
+        "detailImg": "assets/previews/labyrinth/medical/8.webp"
+    },
+    {
+        "id": "medical-9",
+        "category": "medical",
+        "coords": [1310, 2134],
+        "previewImg": "assets/previews/labyrinth/medical/9.webp",
+        "detailTitle": "medical-9",
+        "detailDesc": "남쪽(아리아드네 쪽) 미노타우루스 상 옆에 박스",
+        "detailImg": "assets/previews/labyrinth/medical/9.webp"
     },
 ];

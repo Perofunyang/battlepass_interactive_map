@@ -54,6 +54,24 @@ window.MAP_DATA_lab = [
         "detailImg": "assets/previews/lab/medical/1-6.webp"
     },
     {
+        "id": "medical-1-7",
+        "category": "medical",
+        "coords": [445, 1449],
+        "previewImg": "assets/previews/lab/medical/1-7.webp",
+        "detailTitle": "medical-1-7",
+        "detailDesc": "블루방 안",
+        "detailImg": "assets/previews/lab/medical/1-7.webp"
+    },
+    {
+        "id": "medical-1-8",
+        "category": "medical",
+        "coords": [723, 1677],
+        "previewImg": "assets/previews/lab/medical/1-8.webp",
+        "detailTitle": "medical-1-8",
+        "detailDesc": "중앙 돔 근처 테이블",
+        "detailImg": "assets/previews/lab/medical/1-8.webp"
+    },
+    {
         "id": "medical-2-1",
         "category": "medical",
         "coords": [1241, 2855],

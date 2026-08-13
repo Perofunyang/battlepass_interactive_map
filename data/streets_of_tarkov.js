@@ -18,7 +18,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailDesc": "로비 카운터",
         "detailImg": "assets/previews/streets_of_tarkov/financial/1-6-1-1.webp"
     },
-
+    {
+        "id": "financial-1-6-1-2",
+        "category": "financial",
+        "coords": [4242, 3854],
+        "previewImg": "assets/previews/streets_of_tarkov/financial/1-6-1-2.webp",
+        "detailTitle": "financial-1-6-1-2",
+        "detailDesc": "아머리건물 열쇠 열기전 책장",
+        "detailImg": "assets/previews/streets_of_tarkov/financial/1-6-1-2.webp"
+    },
     {
         "id": "financial-2-8-1-1",
         "category": "financial",

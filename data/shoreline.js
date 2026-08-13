@@ -63,6 +63,15 @@ window.MAP_DATA_shoreline = [
         "detailImg": "assets/previews/shoreline/technical/3-0-1-1.webp"
     },
     {
+        "id": "technical-4-2-1-1",
+        "category": "technical",
+        "coords": [1514, 404],
+        "previewImg": "assets/previews/shoreline/technical/4-2-1-1.webp",
+        "detailTitle": "technical-4-2-1-1",
+        "detailDesc": "소파 아래 레이저로 가리키는 곳",
+        "detailImg": "assets/previews/shoreline/technical/4-2-1-1.webp"
+    },
+    {
         "id": "technical-6-2-1-1",
         "category": "technical",
         "coords": [1665, 1493],

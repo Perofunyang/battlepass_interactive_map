@@ -73,6 +73,15 @@ window.MAP_DATA_icebreaker = [
         "detailImg": "assets/previews/icebreaker/pmc/4-1.webp"
     },
     {
+        "id": "pmc-4-2",
+        "category": "pmc",
+        "coords": [2176, 3509],
+        "previewImg": "assets/previews/icebreaker/pmc/4-2.webp",
+        "detailTitle": "pmc-4-2",
+        "detailDesc": "오른쪽 문 기준 오른쪽 테이블 아래 서류더미 (좌표 부정확)",
+        "detailImg": "assets/previews/icebreaker/pmc/4-2.webp"
+    },
+    {
         "id": "pmc-5-1",
         "category": "pmc",
         "coords": [2405, 3064],
@@ -80,6 +89,15 @@ window.MAP_DATA_icebreaker = [
         "detailTitle": "pmc-5-1",
         "detailDesc": "웨지 잡고 윗윗층에 있는 비밀번호방 탁상 위에 1개",
         "detailImg": "assets/previews/icebreaker/pmc/5-1.webp"
+    },
+    {
+        "id": "pmc-9-1",
+        "category": "pmc",
+        "coords": [2351, 800],
+        "previewImg": "assets/previews/icebreaker/pmc/9-1.webp",
+        "detailTitle": "pmc-9-1",
+        "detailDesc": "선장실 떨어지자 마자 컨트롤 패널 위쪽 선반",
+        "detailImg": "assets/previews/icebreaker/pmc/9-1.webp"
     },
 
 
@@ -128,5 +146,32 @@ window.MAP_DATA_icebreaker = [
         "detailTitle": "test-4-1",
         "detailDesc": "웨지 잡고 난 이후 위에층 비번 치고 들어가는 방 내부 책장 앞 (좌표는 부정확)",
         "detailImg": "assets/previews/icebreaker/test/4-1.webp"
+    },
+    {
+        "id": "test-4-2",
+        "category": "test",
+        "coords": [3420, 3608],
+        "previewImg": "assets/previews/icebreaker/test/4-2.webp",
+        "detailTitle": "test-4-2",
+        "detailDesc": "함교쪽 AMG 및 플레어 확정스팟 문 바로 오른쪽",
+        "detailImg": "assets/previews/icebreaker/test/4-2.webp"
+    },
+    {
+        "id": "test-4-3",
+        "category": "test",
+        "coords": [2261, 3549],
+        "previewImg": "assets/previews/icebreaker/test/4-3.webp",
+        "detailTitle": "test-4-3",
+        "detailDesc": "웨지 잡고 바로 위 2층 비번방 오른쪽 비번 문 열고 나오자마자 왼쪽 대각 선반안 (좌표 부정확)",
+        "detailImg": "assets/previews/icebreaker/test/4-3.webp"
+    },
+    {
+        "id": "test-9-1",
+        "category": "test",
+        "coords": [2301, 797],
+        "previewImg": "assets/previews/icebreaker/test/9-1.webp",
+        "detailTitle": "test-9-1",
+        "detailDesc": "선장실 선장 옆쪽 서류더미",
+        "detailImg": "assets/previews/icebreaker/test/9-1.webp"
     },
 ];

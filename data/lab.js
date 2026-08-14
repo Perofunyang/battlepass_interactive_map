@@ -110,10 +110,10 @@ window.MAP_DATA_lab = [
     {
         "id": "medical-2-5",
         "category": "medical",
-        "coords": [1853, 3076],
+        "coords": [1842, 3070],
         "previewImg": "assets/previews/lab/medical/2-5.webp",
         "detailTitle": "medical-2-5",
-        "detailDesc": "중앙 고양이 회의실?",
+        "detailDesc": "중앙 고양이 회의실",
         "detailImg": "assets/previews/lab/medical/2-5.webp"
     },
     {
@@ -271,12 +271,21 @@ window.MAP_DATA_lab = [
         "detailDesc": "블블방 앞에",
         "detailImg": "assets/previews/lab/user/2-11.webp"
     },
+    {
+        "id": "user-2-12",
+        "category": "user",
+        "coords": [1844, 3091],
+        "previewImg": "assets/previews/lab/user/2-12.webp",
+        "detailTitle": "user-2-12",
+        "detailDesc": "중앙 고양이 회의실",
+        "detailImg": "assets/previews/lab/user/2-12.webp"
+    },
 
 
     {
         "id": "transit-streetsoftarkov",
         "category": "transit",
         "coords": [650, 1294],
-        "title": "Streets of Tarkov (스오타) - 지금 비활성화 되어있음"
+        "title": "Streets of Tarkov (스오타)"
     }
 ];

@@ -72,6 +72,15 @@ window.MAP_DATA_lab = [
         "detailImg": "assets/previews/lab/medical/1-8.webp"
     },
     {
+        "id": "medical-1-9",
+        "category": "medical",
+        "coords": [473, 1359],
+        "previewImg": "assets/previews/lab/medical/1-9.webp",
+        "detailTitle": "medical-1-9",
+        "detailDesc": "블루방 바깥",
+        "detailImg": "assets/previews/lab/medical/1-9.webp"
+    },
+    {
         "id": "medical-2-1",
         "category": "medical",
         "coords": [1241, 2855],
@@ -279,6 +288,24 @@ window.MAP_DATA_lab = [
         "detailTitle": "user-2-12",
         "detailDesc": "중앙 고양이 회의실",
         "detailImg": "assets/previews/lab/user/2-12.webp"
+    },
+    {
+        "id": "user-2-13",
+        "category": "user",
+        "coords": [1739, 2825],
+        "previewImg": "assets/previews/lab/user/2-13.webp",
+        "detailTitle": "user-2-13",
+        "detailDesc": "옐로우 안",
+        "detailImg": "assets/previews/lab/user/2-13.webp"
+    },
+    {
+        "id": "user-2-14",
+        "category": "user",
+        "coords": [1596, 2708],
+        "previewImg": "assets/previews/lab/user/2-14.webp",
+        "detailTitle": "user-2-14",
+        "detailDesc": "북쪽 오피스",
+        "detailImg": "assets/previews/lab/user/2-14.webp"
     },
 
 

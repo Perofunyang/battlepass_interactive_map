@@ -137,6 +137,15 @@ window.MAP_DATA_interchange = [
         "detailImg": "assets/previews/interchange/financial/1-2-4.webp"
     },
     {
+        "id": "financial-2-1",
+        "category": "financial",
+        "coords": [3066, 9044],
+        "previewImg": "assets/previews/interchange/financial/2-1.webp",
+        "detailTitle": "financial-2-1",
+        "detailDesc": "MK 매장 안 선반위",
+        "detailImg": "assets/previews/interchange/financial/2-1.webp"
+    },
+    {
         "id": "financial-4-1-1",
         "category": "financial",
         "coords": [1491, 844],

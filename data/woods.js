@@ -84,10 +84,12 @@ window.MAP_DATA_woods = [
         "id": "technical-2-3",
         "category": "technical",
         "coords": [3646, 3985],
-        "previewImg": "assets/previews/woods/technical/2-3.webp",
+        "previewImg": "assets/previews/woods/technical/2-3-a.webp",
         "detailTitle": "technical-2-3",
         "detailDesc": "산 속 못들어가는 벙커 입구",
-        "detailImg": "assets/previews/woods/technical/2-3.webp"
+        "detailImg": ["assets/previews/woods/technical/2-3.webp",
+            "assets/previews/woods/technical/2-3-a.webp"
+        ]
     },
     {
         "id": "technical-3-1",
@@ -141,10 +143,12 @@ window.MAP_DATA_woods = [
         "id": "test-1-1",
         "category": "test",
         "coords": [4760, 1959],
-        "previewImg": "assets/previews/woods/test/1-1.webp",
+        "previewImg": "assets/previews/woods/test/1-1-a.webp",
         "detailTitle": "test-1-1",
         "detailDesc": "",
-        "detailImg": "assets/previews/woods/test/1-1.webp"
+        "detailImg": ["assets/previews/woods/test/1-1.webp",
+            "assets/previews/woods/test/1-1-a.webp"
+        ]
     },
     {
         "id": "test-1-2",
@@ -198,7 +202,9 @@ window.MAP_DATA_woods = [
         "previewImg": "assets/previews/woods/test/2-2-1.webp",
         "detailTitle": "test-2-2-1",
         "detailDesc": "강변 마을 동쪽 가운데 집 2층",
-        "detailImg": "assets/previews/woods/test/2-2-1.webp"
+        "detailImg": ["assets/previews/woods/test/2-2-1.webp",
+                      "assets/previews/woods/test/2-2-1-a.webp"
+        ]           
     },
     {
         "id": "test-2-2-2",

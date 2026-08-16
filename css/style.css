@@ -415,16 +415,62 @@ body {
 	transition: color 0.2s;
 }
 
-	.modal-close-btn:hover {
+.modal-close-btn:hover {
+	color: #e5b35c;
+}
+
+/* 모달 내부 전체 레이아웃 (Flex) */
+.modal-detail {
+	display: flex;
+	flex-direction: column;
+	max-height: 75vh;
+}
+
+/* 📌 1. 상단 설명 고정 영역 (스크롤되지 않음) */
+.modal-text-section {
+	flex-shrink: 0;
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #333; /* 설명과 사진 사이 구분선 */
+}
+
+	.modal-text-section h3 {
+		font-size: 1.3rem;
 		color: #e5b35c;
+		margin-bottom: 6px;
 	}
 
+	.modal-text-section p {
+		font-size: 0.95rem;
+		color: #ccc;
+		line-height: 1.5;
+		white-space: pre-line; /* 줄바꿈 반영 */
+	}
+
+/* 🖼️ 2. 하단 사진 스크롤 영역 (사진만 독립 스크롤) */
+.modal-images-section {
+	flex: 1;
+	overflow-y: auto;
+	padding-right: 4px;
+}
+
+	.modal-images-section img {
+		width: 100%;
+		max-height: 380px;
+		object-fit: cover;
+		border-radius: 8px;
+		margin-bottom: 12px;
+	}
+
+		.modal-images-section img:last-child {
+			margin-bottom: 0;
+		}
 .modal-detail img {
 	width: 100%;
 	max-height: 360px;
 	object-fit: cover;
 	border-radius: 8px;
-	margin-bottom: 0px;
+	margin-bottom: 12px;
 }
 
 .modal-detail h3 {
@@ -439,6 +485,7 @@ body {
 	color: #ccc;
 	margin-top: 8px;
 	line-height: 1.5;
+	white-space: pre-line; /* 🌟 엔터(줄바꿈)가 모달창에 그대로 반영됨 */
 }
 
 /* 사이드바 하단 저작권 (Copyright) 스타일 */

@@ -138,6 +138,15 @@ window.MAP_DATA_shoreline = [
         "detailImg": "assets/previews/shoreline/test/2-1-211-1.webp"
     },
     {
+        "id": "test-2-1-3-1",
+        "category": "test",
+        "coords": [3320, 6273],
+        "previewImg": "assets/previews/shoreline/test/2-1-3-1.webp",
+        "detailTitle": "test-2-1-3-1",
+        "detailDesc": "서관 3층",
+        "detailImg": "assets/previews/shoreline/test/2-1-3-1.webp"
+    },
+    {
         "id": "test-2-3-2-1",
         "category": "test",
         "coords": [4221, 3615],

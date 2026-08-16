@@ -307,6 +307,15 @@ window.MAP_DATA_lab = [
         "detailDesc": "북쪽 오피스",
         "detailImg": "assets/previews/lab/user/2-14.webp"
     },
+    {
+        "id": "user-2-15",
+        "category": "user",
+        "coords": [1479, 3469],
+        "previewImg": "assets/previews/lab/user/2-15.webp",
+        "detailTitle": "user-2-15",
+        "detailDesc": "탈출구 여는 방 뒤에 책꽂이",
+        "detailImg": "assets/previews/lab/user/2-15.webp"
+    },
 
 
     {

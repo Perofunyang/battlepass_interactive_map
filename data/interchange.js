@@ -133,8 +133,20 @@ window.MAP_DATA_interchange = [
         "coords": [3053, 7424],
         "previewImg": "assets/previews/interchange/financial/1-2-4.webp",
         "detailTitle": "financial-1-2-4",
-        "detailDesc": "TTS 매장 안 (좌표 불확실)",
-        "detailImg": "assets/previews/interchange/financial/1-2-4.webp"
+        "detailDesc": "TTS 매장 안 (좌표 약간 다를 수 있음)",
+        "detailImg": ["assets/previews/interchange/financial/1-2-4.webp",
+            "assets/previews/interchange/financial/1-2-4-a.webp",
+        ]
+    },
+    {
+        "id": "financial-1-2-5",
+        "category": "financial",
+        "coords": [2090, 7872],
+        "previewImg": "assets/previews/interchange/financial/1-2-5.webp",
+        "detailTitle": "financial-1-2-5",
+        "detailDesc": "고샨 남쪽 사무실 안 (좌표 약간 다를 수 있음)",
+        "detailImg": ["assets/previews/interchange/financial/1-2-5.webp"
+        ]
     },
     {
         "id": "financial-2-1",

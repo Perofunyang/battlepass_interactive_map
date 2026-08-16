@@ -94,6 +94,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailImg": "assets/previews/streets_of_tarkov/user/1-3-2-1.webp"
     },
     {
+        "id": "user-1-3-2-2",
+        "category": "user",
+        "coords": [3910, 1934],
+        "previewImg": "assets/previews/streets_of_tarkov/user/1-3-2-2.webp",
+        "detailTitle": "user-1-3-2-2",
+        "detailDesc": "카디널 아파트 2층 테라그룹 아파트 열쇠(TerraGroup corporate apartment key)\n열고 들어가서 대로변쪽 테이블 위",
+        "detailImg": "assets/previews/streets_of_tarkov/user/1-3-2-2.webp"
+    },
+    {
         "id": "user-1-4-1-1",
         "category": "user",
         "coords": [3946, 3683],

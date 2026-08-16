@@ -125,11 +125,29 @@ function setupCoordinateTracker() {
 
 function openDetailModal(data) {
     const modalBody = document.getElementById('modal-body');
+
+    // 이미지 배열 정규화
+    let imgList = [];
+    if (Array.isArray(data.detailImg)) {
+        imgList = data.detailImg;
+    } else if (data.detailImg) {
+        imgList = [data.detailImg];
+    }
+
+    const imgsHTML = imgList.map(src => `<img src="${src}" alt="detail screenshot" />`).join('');
+    const hasText = data.detailTitle || (langData.showDetailDesc && data.detailDesc);
+
     modalBody.innerHTML = `
         <div class="modal-detail">
-            ${data.detailImg ? `<img src="${data.detailImg}" alt="detail" />` : ''}
-            ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
-            ${(langData.showDetailDesc && data.detailDesc) ? `<p>${data.detailDesc}</p>` : ''}
+            ${hasText ? `
+                <div class="modal-text-section">
+                    ${data.detailTitle ? `<h3>${data.detailTitle}</h3>` : ''}
+                    ${(langData.showDetailDesc && data.detailDesc) ? `<p>${data.detailDesc}</p>` : ''}
+                </div>
+            ` : ''}
+            <div class="modal-images-section">
+                ${imgsHTML}
+            </div>
         </div>
     `;
     document.getElementById('detail-modal').style.display = 'flex';

@@ -6,7 +6,9 @@ window.MAP_DATA_customs = [
         "previewImg": "assets/previews/customs/financial/1-4-1-1.webp",
         "detailTitle": "financial-1-4-1-1",
         "detailDesc": "웨어하우스 5번(비타민 퀘 공장) 컴터 옆 선반",
-        "detailImg": "assets/previews/customs/financial/1-4-1-1.webp"
+        "detailImg": ["assets/previews/customs/financial/1-4-1-1.webp",
+                      "assets/previews/customs/financial/1-4-1-1-a.webp"
+        ]
     },
     {
         "id": "financial-1-7-1-1",
@@ -24,7 +26,9 @@ window.MAP_DATA_customs = [
         "previewImg": "assets/previews/customs/financial/2-1-1-1.webp",
         "detailTitle": "financial-2-1-1-1",
         "detailDesc": "신골조 1층 소파 팔걸이 위에",
-        "detailImg": "assets/previews/customs/financial/2-1-1-1.webp"
+        "detailImg": ["assets/previews/customs/financial/2-1-1-1.webp",
+                      "assets/previews/customs/financial/2-1-1-1-a.webp"
+        ]
     },
     {
         "id": "financial-2-3-3-1",
@@ -51,7 +55,9 @@ window.MAP_DATA_customs = [
         "previewImg": "assets/previews/customs/financial/2-2-2-2.webp",
         "detailTitle": "financial-2-2-2-2",
         "detailDesc": "인텔방 가장 안쪽 책장",
-        "detailImg": "assets/previews/customs/financial/2-2-2-2.webp"
+        "detailImg": ["assets/previews/customs/financial/2-2-2-2.webp",
+                      "assets/previews/customs/financial/2-2-2-2-a.webp"
+        ]
     },
     {
         "id": "financial-2-0-1-1",
@@ -87,7 +93,9 @@ window.MAP_DATA_customs = [
         "previewImg": "assets/previews/customs/financial/3-1-2-1.webp",
         "detailTitle": "financial-3-1-2-1",
         "detailDesc": "빨창 컴터방",
-        "detailImg": "assets/previews/customs/financial/3-1-2-1.webp"
+        "detailImg": ["assets/previews/customs/financial/3-1-2-1.webp",
+            "assets/previews/customs/financial/3-1-2-1-a.webp"
+        ]
     },
     {
         "id": "financial-3-0-1-1",
@@ -132,7 +140,9 @@ window.MAP_DATA_customs = [
         "previewImg": "assets/previews/customs/financial/5-2-2-1.webp",
         "detailTitle": "financial-5-2-2-1",
         "detailDesc": "나동 212호 침대 밑",
-        "detailImg": "assets/previews/customs/financial/5-2-2-1.webp"
+        "detailImg": ["assets/previews/customs/financial/5-2-2-1.webp",
+                      "assets/previews/customs/financial/5-2-2-1-a.webp"
+        ]
     },
 
 
@@ -158,10 +168,12 @@ window.MAP_DATA_customs = [
         "id": "project-2-1-1-1",
         "category": "project",
         "coords": [1840, 2369],
-        "previewImg": "assets/previews/customs/project/2-1-1-1.webp",
+        "previewImg": "assets/previews/customs/project/2-1-1-1-a.webp",
         "detailTitle": "project-2-1-1-1",
         "detailDesc": "",
-        "detailImg": "assets/previews/customs/project/2-1-1-1.webp"
+        "detailImg": ["assets/previews/customs/project/2-1-1-1.webp",
+                      "assets/previews/customs/project/2-1-1-1-a.webp",
+        ]
     },
     {
         "id": "project-2-2-2-1",
@@ -170,7 +182,9 @@ window.MAP_DATA_customs = [
         "previewImg": "assets/previews/customs/project/2-2-2-1.webp",
         "detailTitle": "project-2-2-2-1",
         "detailDesc": "인텔방 들어가자마자",
-        "detailImg": "assets/previews/customs/project/2-2-2-1.webp"
+        "detailImg": ["assets/previews/customs/project/2-2-2-1.webp",
+                      "assets/previews/customs/project/2-2-2-1-a.webp"
+        ]
     },
     {
         "id": "project-2-2-2-2",
@@ -179,7 +193,9 @@ window.MAP_DATA_customs = [
         "previewImg": "assets/previews/customs/project/2-2-2-2.webp",
         "detailTitle": "project-2-2-2-2",
         "detailDesc": "인텔방 2층 2번째 책장 위",
-        "detailImg": "assets/previews/customs/project/2-2-2-2.webp"
+        "detailImg": ["assets/previews/customs/project/2-2-2-2.webp",
+                      "assets/previews/customs/project/2-2-2-2-a.webp"
+        ]
     },
     {
         "id": "project-2-5-1-1",
@@ -242,7 +258,9 @@ window.MAP_DATA_customs = [
         "previewImg": "assets/previews/customs/project/3-0-1-1.webp",
         "detailTitle": "project-3-0-1-1",
         "detailDesc": "빨창 앞 북쪽 건물 ",
-        "detailImg": "assets/previews/customs/project/3-0-1-1.webp"
+        "detailImg": ["assets/previews/customs/project/3-0-1-1.webp",
+                      "assets/previews/customs/project/3-0-1-1-a.webp"
+        ]
     },
     {
         "id": "project-5-1-2-1",
@@ -251,7 +269,9 @@ window.MAP_DATA_customs = [
         "previewImg": "assets/previews/customs/project/5-1-2-1.webp",
         "detailTitle": "project-5-1-2-1",
         "detailDesc": "가동 212호 책상 밑",
-        "detailImg": "assets/previews/customs/project/5-1-2-1.webp"
+        "detailImg": ["assets/previews/customs/project/5-1-2-1.webp",
+                      "assets/previews/customs/project/5-1-2-1-a.webp"
+        ]
     },
     {
         "id": "project-5-2-2-1",

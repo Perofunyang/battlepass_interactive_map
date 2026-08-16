@@ -204,7 +204,7 @@ window.MAP_DATA_reserve = [
     {
         "id": "project-5-3-2-1",
         "category": "project",
-        "coords": [192, 4338],
+        "coords": [314, 4338],
         "previewImg": "assets/previews/reserve/project/5-3-2-1.webp",
         "detailTitle": "project-5-3-2-1",
         "detailDesc": "꼬리동 2층",
@@ -218,6 +218,15 @@ window.MAP_DATA_reserve = [
         "detailTitle": "project-6-1-2-1",
         "detailDesc": "RB-KORL 방 안 오른쪽 책장 (노란원은 PMC)",
         "detailImg": "assets/previews/reserve/project/6-1-2-1.webp"
+    },
+    {
+        "id": "project-6-1-2-2",
+        "category": "project",
+        "coords": [639, 3305],
+        "previewImg": "assets/previews/reserve/project/6-1-2-2.webp",
+        "detailTitle": "project-6-1-2-2",
+        "detailDesc": "RB-RLSA 방 안",
+        "detailImg": "assets/previews/reserve/project/6-1-2-2.webp"
     },
     {
         "id": "project-6-0-1-1",

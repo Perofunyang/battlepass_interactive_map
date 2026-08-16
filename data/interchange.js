@@ -225,7 +225,7 @@ window.MAP_DATA_interchange = [
         "coords": [2090, 7872],
         "previewImg": "assets/previews/interchange/financial/1-2-5.webp",
         "detailTitle": "financial-1-2-5",
-        "detailDesc": "고샨 남쪽 사무실 안 (좌표 약간 다를 수 있음)",
+        "detailDesc": "고샨 남쪽 사무실 안",
         "detailImg": ["assets/previews/interchange/financial/1-2-5.webp"
         ]
     },

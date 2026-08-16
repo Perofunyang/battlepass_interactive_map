@@ -15,7 +15,10 @@ window.MAP_DATA_interchange = [
         "previewImg": "assets/previews/interchange/blueprints/1-1-2.webp",
         "detailTitle": "blueprints-1-1-2",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/blueprints/1-1-2.webp"
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-1-2.webp",
+            "assets/previews/interchange/blueprints/1-1-2-a.webp"
+        ]
     },
     {
         "id": "blueprint-1-2-1",
@@ -24,7 +27,10 @@ window.MAP_DATA_interchange = [
         "previewImg": "assets/previews/interchange/blueprints/1-2-1.webp",
         "detailTitle": "blueprints-1-2-1",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/blueprints/1-2-1.webp"
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-2-1.webp",
+            "assets/previews/interchange/blueprints/1-2-1-a.webp"
+        ]
     },
     {
         "id": "blueprint-1-2-2",
@@ -33,7 +39,10 @@ window.MAP_DATA_interchange = [
         "previewImg": "assets/previews/interchange/blueprints/1-2-2.webp",
         "detailTitle": "blueprints-1-2-2",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/blueprints/1-2-2.webp"
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-2-2.webp",
+            "assets/previews/interchange/blueprints/1-2-2-a.webp"
+        ]
     },
     {
         "id": "blueprint-1-2-3",
@@ -42,7 +51,10 @@ window.MAP_DATA_interchange = [
         "previewImg": "assets/previews/interchange/blueprints/1-2-3.webp",
         "detailTitle": "blueprints-1-2-3",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/blueprints/1-2-3.webp"
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-2-3.webp",
+            "assets/previews/interchange/blueprints/1-2-3-a.webp"
+        ]
     },
     {
         "id": "blueprint-1-2-4",
@@ -52,6 +64,39 @@ window.MAP_DATA_interchange = [
         "detailTitle": "blueprints-1-2-4",
         "detailDesc": "",
         "detailImg": "assets/previews/interchange/blueprints/1-2-4.webp"
+    },
+    {
+        "id": "blueprint-1-2-5",
+        "category": "blueprints",
+        "coords": [2510, 7211],
+        "previewImg": "assets/previews/interchange/blueprints/1-2-5.webp",
+        "detailTitle": "blueprints-1-2-5",
+        "detailDesc": "National 상점 안",
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-2-5.webp"
+        ]
+    },
+    {
+        "id": "blueprint-1-2-6",
+        "category": "blueprints",
+        "coords": [2896, 7858],
+        "previewImg": "assets/previews/interchange/blueprints/1-2-6.webp",
+        "detailTitle": "blueprints-1-2-6",
+        "detailDesc": "Bizarro 상점 안",
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-2-6.webp"
+        ]
+    },
+    {
+        "id": "blueprint-1-2-7",
+        "category": "blueprints",
+        "coords": [2809, 7039],
+        "previewImg": "assets/previews/interchange/blueprints/1-2-7.webp",
+        "detailTitle": "blueprints-1-2-7",
+        "detailDesc": "SPIEL 상점 안",
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-2-7.webp"
+        ]
     },
     {
         "id": "blueprint-1-4-1",
@@ -78,7 +123,10 @@ window.MAP_DATA_interchange = [
         "previewImg": "assets/previews/interchange/blueprints/1-4-3.webp",
         "detailTitle": "blueprints-1-4-3",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/blueprints/1-4-3.webp"
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-4-3.webp",
+            "assets/previews/interchange/blueprints/1-4-3-a.webp",
+        ]
     },
     {
         "id": "blueprint-1-4-4",
@@ -87,7 +135,21 @@ window.MAP_DATA_interchange = [
         "previewImg": "assets/previews/interchange/blueprints/1-4-4.webp",
         "detailTitle": "blueprints-1-4-4",
         "detailDesc": "",
-        "detailImg": "assets/previews/interchange/blueprints/1-4-4.webp"
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-4-4.webp",
+            "assets/previews/interchange/blueprints/1-4-4-a.webp"
+        ]
+    },
+    {
+        "id": "blueprint-1-4-5",
+        "category": "blueprints",
+        "coords": [1856, 7099],
+        "previewImg": "assets/previews/interchange/blueprints/1-4-5.webp",
+        "detailTitle": "blueprints-1-4-5",
+        "detailDesc": "OLI administration office key 방 안",
+        "detailImg": [
+            "assets/previews/interchange/blueprints/1-4-5.webp"
+        ]
     },
     
 
@@ -99,6 +161,24 @@ window.MAP_DATA_interchange = [
         "detailTitle": "financial-1-1-1",
         "detailDesc": "",
         "detailImg": "assets/previews/interchange/financial/1-1-1.webp"
+    },
+    {
+        "id": "financial-1-1-2",
+        "category": "financial",
+        "coords": [3417, 7337],
+        "previewImg": "assets/previews/interchange/financial/1-1-2.webp",
+        "detailTitle": "financial-1-1-2",
+        "detailDesc": "이데아 놀이터 벤치",
+        "detailImg": "assets/previews/interchange/financial/1-1-2.webp"
+    },
+    {
+        "id": "financial-1-1-3",
+        "category": "financial",
+        "coords": [3440, 7119],
+        "previewImg": "assets/previews/interchange/financial/1-1-3.webp",
+        "detailTitle": "financial-1-1-3",
+        "detailDesc": "이데아 화장실 세면대 위 (위치 부정확)",
+        "detailImg": "assets/previews/interchange/financial/1-1-3.webp"
     },
     {
         "id": "financial-1-2-1",
@@ -134,7 +214,8 @@ window.MAP_DATA_interchange = [
         "previewImg": "assets/previews/interchange/financial/1-2-4.webp",
         "detailTitle": "financial-1-2-4",
         "detailDesc": "TTS 매장 안 (좌표 약간 다를 수 있음)",
-        "detailImg": ["assets/previews/interchange/financial/1-2-4.webp",
+        "detailImg": [
+            "assets/previews/interchange/financial/1-2-4.webp",
             "assets/previews/interchange/financial/1-2-4-a.webp",
         ]
     },
@@ -149,13 +230,49 @@ window.MAP_DATA_interchange = [
         ]
     },
     {
+        "id": "financial-1-2-6",
+        "category": "financial",
+        "coords": [2617, 7850],
+        "previewImg": "assets/previews/interchange/financial/1-2-6.webp",
+        "detailTitle": "financial-1-2-6",
+        "detailDesc": "고샨 앞에 텐트 통로 (좌표 부정확)",
+        "detailImg": [
+            "assets/previews/interchange/financial/1-2-6.webp"
+        ]
+    },
+    {
+        "id": "financial-1-4-1",
+        "category": "financial",
+        "coords": [1829, 7099],
+        "previewImg": "assets/previews/interchange/financial/1-4-1.webp",
+        "detailTitle": "financial-1-4-1",
+        "detailDesc": "OLI administration office key 방 안",
+        "detailImg": [
+            "assets/previews/interchange/financial/1-4-1.webp"
+        ]
+    },
+    {
         "id": "financial-2-1",
         "category": "financial",
         "coords": [3066, 9044],
         "previewImg": "assets/previews/interchange/financial/2-1.webp",
         "detailTitle": "financial-2-1",
         "detailDesc": "MK 매장 안 선반위",
-        "detailImg": "assets/previews/interchange/financial/2-1.webp"
+        "detailImg": [
+            "assets/previews/interchange/financial/2-1.webp",
+            "assets/previews/interchange/financial/2-1-a.webp"
+        ]
+    },
+    {
+        "id": "financial-2-2",
+        "category": "financial",
+        "coords": [2885, 9220],
+        "previewImg": "assets/previews/interchange/financial/2-2.webp",
+        "detailTitle": "financial-2-2",
+        "detailDesc": "2층 햄버거 가게 안",
+        "detailImg": [
+            "assets/previews/interchange/financial/2-2.webp"
+        ]
     },
     {
         "id": "financial-4-1-1",
@@ -165,6 +282,24 @@ window.MAP_DATA_interchange = [
         "detailTitle": "financial-4-1-1",
         "detailDesc": "",
         "detailImg": "assets/previews/interchange/financial/4-1-1.webp"
+    },
+    {
+        "id": "financial-4-1-2",
+        "category": "financial",
+        "coords": [1679, 8992],
+        "previewImg": "assets/previews/interchange/financial/4-1-2.webp",
+        "detailTitle": "financial-4-1-2",
+        "detailDesc": "발전소 컴터방 선반",
+        "detailImg": "assets/previews/interchange/financial/4-1-2.webp"
+    },
+    {
+        "id": "financial-4-2-1",
+        "category": "financial",
+        "coords": [910, 2310],
+        "previewImg": "assets/previews/interchange/financial/4-2-1.webp",
+        "detailTitle": "financial-4-2-1",
+        "detailDesc": "21WS 키카드 컨테이너 안",
+        "detailImg": "assets/previews/interchange/financial/4-2-1.webp"
     },
     {
         "id": "financial-4-0-1",

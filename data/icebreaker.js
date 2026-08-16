@@ -55,6 +55,15 @@ window.MAP_DATA_icebreaker = [
         "detailImg": "assets/previews/icebreaker/pmc/2-1.webp"
     },
     {
+        "id": "pmc-2-2",
+        "category": "pmc",
+        "coords": [3264, 4664],
+        "previewImg": "assets/previews/icebreaker/pmc/2-2.webp",
+        "detailTitle": "pmc-2-2",
+        "detailDesc": "헬리패드 전",
+        "detailImg": "assets/previews/icebreaker/pmc/2-2.webp"
+    },
+    {
         "id": "pmc-3-1",
         "category": "pmc",
         "coords": [2196, 3953],

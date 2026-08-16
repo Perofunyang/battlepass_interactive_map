@@ -260,7 +260,10 @@ window.MAP_DATA_lab = [
         "previewImg": "assets/previews/lab/user/2-9.webp",
         "detailTitle": "user-2-9",
         "detailDesc": "남쪽 사무실",
-        "detailImg": "assets/previews/lab/user/2-9.webp"
+        "detailImg": [
+            "assets/previews/lab/user/2-9.webp",
+            "assets/previews/lab/user/2-9-a.webp"
+        ]
     },
     {
         "id": "user-2-10",
@@ -278,7 +281,10 @@ window.MAP_DATA_lab = [
         "previewImg": "assets/previews/lab/user/2-11.webp",
         "detailTitle": "user-2-11",
         "detailDesc": "블블방 앞에",
-        "detailImg": "assets/previews/lab/user/2-11.webp"
+        "detailImg": [
+            "assets/previews/lab/user/2-11.webp",
+            "assets/previews/lab/user/2-11-a.webp"
+        ]
     },
     {
         "id": "user-2-12",
@@ -296,7 +302,10 @@ window.MAP_DATA_lab = [
         "previewImg": "assets/previews/lab/user/2-13.webp",
         "detailTitle": "user-2-13",
         "detailDesc": "옐로우 안",
-        "detailImg": "assets/previews/lab/user/2-13.webp"
+        "detailImg": [
+            "assets/previews/lab/user/2-13.webp",
+            "assets/previews/lab/user/2-13-a.webp"
+        ]
     },
     {
         "id": "user-2-14",

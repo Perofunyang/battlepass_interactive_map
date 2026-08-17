@@ -61,7 +61,10 @@ window.MAP_DATA_streets_of_tarkov = [
         "previewImg": "assets/previews/streets_of_tarkov/financial/4-2-2-1.webp",
         "detailTitle": "financial-4-2-2-1",
         "detailDesc": "테라 그룹 오피스 2층",
-        "detailImg": "assets/previews/streets_of_tarkov/financial/4-2-2-1.webp"
+        "detailImg": [
+            "assets/previews/streets_of_tarkov/financial/4-2-2-1.webp",
+            "assets/previews/streets_of_tarkov/financial/4-2-2-1-a.webp"
+        ]
     },
     {
         "id": "financial-5-1-2-1",
@@ -99,8 +102,14 @@ window.MAP_DATA_streets_of_tarkov = [
         "coords": [3910, 1934],
         "previewImg": "assets/previews/streets_of_tarkov/user/1-3-2-2.webp",
         "detailTitle": "user-1-3-2-2",
-        "detailDesc": "카디널 아파트 2층 테라그룹 아파트 열쇠(TerraGroup corporate apartment key)\n열고 들어가서 대로변쪽 테이블 위",
-        "detailImg": "assets/previews/streets_of_tarkov/user/1-3-2-2.webp"
+        "detailDesc":
+            `카디널 아파트 2층 테라그룹 아파트 열쇠
+            (TerraGroup corporate apartment key)
+            열고 들어가서 대로변쪽 테이블 위`,
+        "detailImg": [
+            "assets/previews/streets_of_tarkov/user/1-3-2-2.webp",
+            "assets/previews/streets_of_tarkov/user/1-3-2-2-a.webp"
+        ]
     },
     {
         "id": "user-1-4-1-1",
@@ -154,7 +163,10 @@ window.MAP_DATA_streets_of_tarkov = [
         "previewImg": "assets/previews/streets_of_tarkov/user/4-2-2-1.webp",
         "detailTitle": "user-4-2-2-1",
         "detailDesc": "테라 그룹 오피스 2층",
-        "detailImg": "assets/previews/streets_of_tarkov/user/4-2-2-1.webp"
+        "detailImg": [
+            "assets/previews/streets_of_tarkov/user/4-2-2-1.webp",
+            "assets/previews/streets_of_tarkov/user/4-2-2-1-a.webp"
+        ]
     },
     {
         "id": "user-5-1-2-1",
@@ -168,10 +180,10 @@ window.MAP_DATA_streets_of_tarkov = [
     {
         "id": "user-7-7-1-1",
         "category": "user",
-        "coords": [1667, 3283],
+        "coords": [1674, 3268],
         "previewImg": "assets/previews/streets_of_tarkov/user/7-7-1-1.webp",
         "detailTitle": "user-7-7-1-1",
-        "detailDesc": "콘코디아 따로있는건물(스파르자 바로 아래) 사무실구역 구석 (좌표 부정확)",
+        "detailDesc": "콘코디아 따로있는건물(스파르자 바로 아래) 사무실구역 구석",
         "detailImg": "assets/previews/streets_of_tarkov/user/7-7-1-1.webp"
     },
     {

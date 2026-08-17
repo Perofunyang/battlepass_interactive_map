@@ -5,8 +5,12 @@ window.MAP_DATA_reserve = [
         "coords": [2321, 688],
         "previewImg": "assets/previews/reserve/pmc/1-1-1-1.webp",
         "detailTitle": "pmc-1-1-1-1",
-        "detailDesc": "왼쪽 끝방 입구 들어가자마자 오른쪽 책?장 아래",
-        "detailImg": "assets/previews/reserve/pmc/1-1-1-1.webp"
+        "detailDesc": "왼쪽 끝방 입구 들어가자마자 오른쪽 책장 아래",
+        "detailImg": [
+            "assets/previews/reserve/pmc/1-1-1-1.webp",
+            "assets/previews/reserve/pmc/1-1-1-1-a.webp",
+            "assets/previews/reserve/pmc/1-1-1-1-b.webp"
+        ]
     },
     {
         "id": "pmc-3-1-1-1",
@@ -29,7 +33,7 @@ window.MAP_DATA_reserve = [
     {
         "id": "pmc-4-1-3-1",
         "category": "pmc",
-        "coords": [435, 460],
+        "coords": [433, 483],
         "previewImg": "assets/previews/reserve/pmc/4-1-3-1.webp",
         "detailTitle": "pmc-4-1-3-1",
         "detailDesc": "백마 3층",
@@ -38,7 +42,7 @@ window.MAP_DATA_reserve = [
     {
         "id": "pmc-4-3-3-1",
         "category": "pmc",
-        "coords": [270, 393],
+        "coords": [270, 397],
         "previewImg": "assets/previews/reserve/pmc/4-3-3-1.webp",
         "detailTitle": "pmc-4-3-3-1",
         "detailDesc": "흑마 3층 (좌표 불확실)",
@@ -75,10 +79,13 @@ window.MAP_DATA_reserve = [
         "id": "pmc-5-2-3-2",
         "category": "pmc",
         "coords": [808, 4289],
-        "previewImg": "assets/previews/reserve/pmc/5-2-3-2.webp",
+        "previewImg": "assets/previews/reserve/pmc/5-2-3-2-a.webp",
         "detailTitle": "pmc-5-2-3-2",
-        "detailDesc": "허리동 3층 (좌표 불확실)",
-        "detailImg": "assets/previews/reserve/pmc/5-2-3-2.webp"
+        "detailDesc": "허리동 3층",
+        "detailImg": [
+            "assets/previews/reserve/pmc/5-2-3-2-a.webp",
+            "assets/previews/reserve/pmc/5-2-3-2.webp"
+        ]
     },
     {
         "id": "pmc-5-3-4-1",
@@ -128,7 +135,7 @@ window.MAP_DATA_reserve = [
     {
         "id": "pmc-6-0-1-2",
         "category": "pmc",
-        "coords": [770, 1588],
+        "coords": [760, 1578],
         "previewImg": "assets/previews/reserve/pmc/6-0-1-2.webp",
         "detailTitle": "pmc-6-0-1-2",
         "detailDesc": "체크포인트 스캐브 탈출구 옆 건물 책상 서랍",
@@ -150,7 +157,7 @@ window.MAP_DATA_reserve = [
     {
         "id": "project-4-1-3-1",
         "category": "project",
-        "coords": [452, 493],
+        "coords": [458, 488],
         "previewImg": "assets/previews/reserve/project/4-1-3-1.webp",
         "detailTitle": "project-4-1-3-1",
         "detailDesc": "백마 3층",
@@ -159,11 +166,14 @@ window.MAP_DATA_reserve = [
     {
         "id": "project-4-3-3-1",
         "category": "project",
-        "coords": [270, 402],
+        "coords": [262, 405],
         "previewImg": "assets/previews/reserve/project/4-3-3-1.webp",
         "detailTitle": "project-4-3-3-1",
         "detailDesc": "",
-        "detailImg": "assets/previews/reserve/project/4-3-3-1.webp"
+        "detailImg": [
+            "assets/previews/reserve/project/4-3-3-1.webp",
+            "assets/previews/reserve/project/4-3-3-1-a.webp"
+        ]
     },
     {
         "id": "project-4-7-3-1",
@@ -187,19 +197,25 @@ window.MAP_DATA_reserve = [
         "id": "project-5-2-2-1",
         "category": "project",
         "coords": [768, 4140],
-        "previewImg": "assets/previews/reserve/project/5-2-2-1.webp",
+        "previewImg": "assets/previews/reserve/project/5-2-2-1-a.webp",
         "detailTitle": "project-5-2-2-1",
         "detailDesc": "허리동 2층",
-        "detailImg": "assets/previews/reserve/project/5-2-2-1.webp"
+        "detailImg": [
+            "assets/previews/reserve/project/5-2-2-1-a.webp",
+            "assets/previews/reserve/project/5-2-2-1.webp"
+        ]
     },
     {
         "id": "project-5-2-4-1",
         "category": "project",
         "coords": [989, 4365],
-        "previewImg": "assets/previews/reserve/project/5-2-4-1.webp",
+        "previewImg": "assets/previews/reserve/project/5-2-4-1-a.webp",
         "detailTitle": "project-5-2-4-1",
         "detailDesc": "허리동 4층",
-        "detailImg": "assets/previews/reserve/project/5-2-4-1.webp"
+        "detailImg": [
+            "assets/previews/reserve/project/5-2-4-1.webp",
+            "assets/previews/reserve/project/5-2-4-1-a.webp"
+        ]
     },
     {
         "id": "project-5-3-2-1",
@@ -231,10 +247,10 @@ window.MAP_DATA_reserve = [
     {
         "id": "project-6-0-1-1",
         "category": "project",
-        "coords": [777, 1581],
+        "coords": [785, 1578],
         "previewImg": "assets/previews/reserve/project/6-0-1-1.webp",
         "detailTitle": "project-6-0-1-1",
-        "detailDesc": "체크포인트 펜스 스캐브 탈출구 옆 건물 안쪽",
+        "detailDesc": "체크포인트 펜스 스캐브 탈출구 옆 건물 안쪽 방",
         "detailImg": "assets/previews/reserve/project/6-0-1-1.webp"
     },
     {

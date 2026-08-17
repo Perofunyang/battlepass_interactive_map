@@ -166,6 +166,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailImg": "assets/previews/streets_of_tarkov/user/5-1-2-1.webp"
     },
     {
+        "id": "user-7-7-1-1",
+        "category": "user",
+        "coords": [1667, 3283],
+        "previewImg": "assets/previews/streets_of_tarkov/user/7-7-1-1.webp",
+        "detailTitle": "user-7-7-1-1",
+        "detailDesc": "콘코디아 따로있는건물(스파르자 바로 아래) 사무실구역 구석 (좌표 부정확)",
+        "detailImg": "assets/previews/streets_of_tarkov/user/7-7-1-1.webp"
+    },
+    {
         "id": "user-8-1-2-1",
         "category": "user",
         "coords": [1891, 6130],

@@ -2,7 +2,7 @@ window.MAP_DATA_lab = [
     {
         "id": "medical-1-1",
         "category": "medical",
-        "coords": [464, 1482],
+        "coords": [475, 1502],
         "previewImg": "assets/previews/lab/medical/1-1.webp",
         "detailTitle": "medical-1-1",
         "detailDesc": "블루 옆방 정면 젤 안쪽 책상",
@@ -74,7 +74,7 @@ window.MAP_DATA_lab = [
     {
         "id": "medical-1-9",
         "category": "medical",
-        "coords": [473, 1359],
+        "coords": [440, 1357],
         "previewImg": "assets/previews/lab/medical/1-9.webp",
         "detailTitle": "medical-1-9",
         "detailDesc": "블루방 바깥",

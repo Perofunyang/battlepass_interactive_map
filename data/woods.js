@@ -47,11 +47,14 @@ window.MAP_DATA_woods = [
     {
         "id": "technical-1-6",
         "category": "technical",
-        "coords": [5633, 3890],
+        "coords": [5602, 3884],
         "previewImg": "assets/previews/woods/technical/1-6.webp",
         "detailTitle": "technical-1-6",
         "detailDesc": "건물 들어와서 좌측에 매트",
-        "detailImg": "assets/previews/woods/technical/1-6.webp"
+        "detailImg": [
+            "assets/previews/woods/technical/1-6.webp",
+            "assets/previews/woods/technical/1-6-a.webp"
+        ]
     },
     {
         "id": "technical-2-1",

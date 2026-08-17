@@ -69,16 +69,22 @@ window.MAP_DATA_factory = [
         "previewImg": "assets/previews/factory/blueprints/1-4.webp",
         "detailTitle": "blueprint-1-4",
         "detailDesc": "",
-        "detailImg": "assets/previews/factory/blueprints/1-4.webp"
+        "detailImg": [
+            "assets/previews/factory/blueprints/1-4.webp",
+            "assets/previews/factory/blueprints/1-4-a.webp"
+        ]
     },
     {
         "id": "blueprint-1-5",
         "category": "blueprints",
         "coords": [610, 607],
-        "previewImg": "assets/previews/factory/blueprints/1-5.webp",
+        "previewImg": "assets/previews/factory/blueprints/1-5-a.webp",
         "detailTitle": "blueprint-1-5",
         "detailDesc": "",
-        "detailImg": "assets/previews/factory/blueprints/1-5.webp"
+        "detailImg": [
+            "assets/previews/factory/blueprints/1-5.webp",
+            "assets/previews/factory/blueprints/1-5-a.webp"
+        ]
     },
     {
         "id": "blueprint-1-6",
@@ -129,10 +135,13 @@ window.MAP_DATA_factory = [
         "id": "blueprint-0-2",
         "category": "blueprints",
         "coords": [517, 526],
-        "previewImg": "assets/previews/factory/blueprints/0-2.webp",
+        "previewImg": "assets/previews/factory/blueprints/0-2-a.webp",
         "detailTitle": "blueprint-0-2",
         "detailDesc": "지하 시체",
-        "detailImg": "assets/previews/factory/blueprints/0-2.webp"
+        "detailImg": [
+            "assets/previews/factory/blueprints/0-2.webp",
+            "assets/previews/factory/blueprints/0-2-a.webp"
+        ]
     },
 
 
@@ -149,10 +158,13 @@ window.MAP_DATA_factory = [
         "id": "project-3-2",
         "category": "project",
         "coords": [550, 76],
-        "previewImg": "assets/previews/factory/project/3-2.webp",
+        "previewImg": "assets/previews/factory/project/3-2-a.webp",
         "detailTitle": "project-3-2",
         "detailDesc": "3층 브리칭 방 왼쪽 앞에 있는 의자 옆",
-        "detailImg": "assets/previews/factory/project/3-2.webp"
+        "detailImg": [
+            "assets/previews/factory/project/3-2.webp",
+            "assets/previews/factory/project/3-2-a.webp"
+        ]
     },
     {
         "id": "project-3-3",
@@ -178,8 +190,11 @@ window.MAP_DATA_factory = [
         "coords": [570, 154],
         "previewImg": "assets/previews/factory/project/1-1.webp",
         "detailTitle": "project-1-1",
-        "detailDesc": "1-1",
-        "detailImg": "assets/previews/factory/project/1-1.webp"
+        "detailDesc": "오피스 1층 창문 넘어가는방",
+        "detailImg": [
+            "assets/previews/factory/project/1-1.webp",
+            "assets/previews/factory/project/1-1-a.webp"
+        ]
     },
     {
         "id": "project-1-2",
@@ -187,8 +202,11 @@ window.MAP_DATA_factory = [
         "coords": [488, 150],
         "previewImg": "assets/previews/factory/project/1-2.webp",
         "detailTitle": "project-1-2",
-        "detailDesc": "1-2 책 사이에 파묻혀 있음",
-        "detailImg": "assets/previews/factory/project/1-2.webp"
+        "detailDesc": "책 사이에 파묻혀 있음",
+        "detailImg": [
+            "assets/previews/factory/project/1-2.webp",
+            "assets/previews/factory/project/1-2-a.webp"
+        ]
     },
     {
         "id": "project-1-3",
@@ -248,10 +266,13 @@ window.MAP_DATA_factory = [
         "id": "project-2-2",
         "category": "project",
         "coords": [566, 681],
-        "previewImg": "assets/previews/factory/project/2-2.webp",
+        "previewImg": "assets/previews/factory/project/2-2-a.webp",
         "detailTitle": "project-2-2",
         "detailDesc": "2-2",
-        "detailImg": "assets/previews/factory/project/2-2.webp"
+        "detailImg": [
+            "assets/previews/factory/project/2-2.webp",
+            "assets/previews/factory/project/2-2-a.webp"
+        ]
     },
     {
         "id": "project-0-1",

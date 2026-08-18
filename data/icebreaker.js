@@ -84,10 +84,10 @@ window.MAP_DATA_icebreaker = [
     {
         "id": "pmc-4-2",
         "category": "pmc",
-        "coords": [2176, 3509],
+        "coords": [2167, 3538],
         "previewImg": "assets/previews/icebreaker/pmc/4-2.webp",
         "detailTitle": "pmc-4-2",
-        "detailDesc": "오른쪽 문 기준 오른쪽 테이블 아래 서류더미 (좌표 부정확)",
+        "detailDesc": "오른쪽 문 기준 오른쪽 테이블 아래 서류더미",
         "detailImg": "assets/previews/icebreaker/pmc/4-2.webp"
     },
     {
@@ -130,6 +130,15 @@ window.MAP_DATA_icebreaker = [
         "detailImg": "assets/previews/icebreaker/test/1-2.webp"
     },
     {
+        "id": "test-1-3",
+        "category": "test",
+        "coords": [2203, 5046],
+        "previewImg": "assets/previews/icebreaker/test/1-3.webp",
+        "detailTitle": "test-1-3",
+        "detailDesc": "1층 C-3",
+        "detailImg": "assets/previews/icebreaker/test/1-3.webp"
+    },
+    {
         "id": "test-2-1",
         "category": "test",
         "coords": [3264, 4659],
@@ -150,10 +159,10 @@ window.MAP_DATA_icebreaker = [
     {
         "id": "test-4-1",
         "category": "test",
-        "coords": [2174, 3542],
+        "coords": [2267, 3601],
         "previewImg": "assets/previews/icebreaker/test/4-1.webp",
         "detailTitle": "test-4-1",
-        "detailDesc": "웨지 잡고 난 이후 위에층 비번 치고 들어가는 방 내부 책장 앞 (좌표는 부정확)",
+        "detailDesc": "웨지 잡고 난 이후 위에층 비번 치고 들어가는 방 내부 책장 앞",
         "detailImg": "assets/previews/icebreaker/test/4-1.webp"
     },
     {

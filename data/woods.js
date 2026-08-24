@@ -133,11 +133,15 @@ window.MAP_DATA_woods = [
     {
         "id": "technical-6-1",
         "category": "technical",
-        "coords": [1686, 6558],
-        "previewImg": "assets/previews/woods/technical/6-1.webp",
+        "coords": [1671, 6492],
+        "previewImg": "assets/previews/woods/technical/6-1a.webp",
         "detailTitle": "technical-6-1",
-        "detailDesc": "기차에 무기상자 있는 컨테이너칸 (좌표 부정확)",
-        "detailImg": "assets/previews/woods/technical/6-1.webp"
+        "detailDesc": "기차에 무기상자 있는 컨테이너칸",
+        "detailImg": [
+            "assets/previews/woods/technical/6-1a.webp",
+            "assets/previews/woods/technical/6-1b.webp",
+            "assets/previews/woods/technical/6-1.webp"
+        ]
     },
 
 

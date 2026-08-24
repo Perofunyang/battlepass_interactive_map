@@ -84,6 +84,18 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailDesc": "Audit 퀘스트 건물(WEST OFFICE) 1층 동쪽 방 \n (Financial institution small office key 키 필요)",
         "detailImg": "assets/previews/streets_of_tarkov/financial/8-1-1-1.webp"
     },
+    {
+        "id": "financial-8-1-2-1",
+        "category": "financial",
+        "coords": [1846, 6077],
+        "previewImg": "assets/previews/streets_of_tarkov/financial/8-1-2-1.webp",
+        "detailTitle": "financial-8-1-2-1",
+        "detailDesc": "Audit 퀘스트 건물 2층\n (Financial institution office key 키 필요)",
+        "detailImg": [
+            "assets/previews/streets_of_tarkov/financial/8-1-2-1.webp",
+            "assets/previews/streets_of_tarkov/financial/8-1-2-1a.webp"
+        ]
+    },
 
     //
 

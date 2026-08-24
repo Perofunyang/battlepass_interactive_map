@@ -151,6 +151,18 @@ window.MAP_DATA_interchange = [
             "assets/previews/interchange/blueprints/1-4-5.webp"
         ]
     },
+    {
+        "id": "blueprint-4-1-1",
+        "category": "blueprints",
+        "coords": [1931, 562],
+        "previewImg": "assets/previews/interchange/blueprints/4-1-1a.webp",
+        "detailTitle": "blueprints-4-1-1",
+        "detailDesc": "플레어 탈출구 옆에 있는 컨테이너",
+        "detailImg": [
+            "assets/previews/interchange/blueprints/4-1-1.webp",
+            "assets/previews/interchange/blueprints/4-1-1a.webp"
+        ]
+    },
     
 
     {

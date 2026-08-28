@@ -283,7 +283,7 @@ window.MAP_DATA_labyrinth = [
     {
         "id": "medical-14",
         "category": "medical",
-        "coords": [1234, 3100],
+        "coords": [2598, 2913],
         "previewImg": "assets/previews/labyrinth/medical/14.webp",
         "detailTitle": "medical-14",
         "detailDesc": "5번방 출구 앞",

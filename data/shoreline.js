@@ -1,5 +1,14 @@
 window.MAP_DATA_shoreline = [
     {
+        "id": "technical-2-1-206-1",
+        "category": "technical",
+        "coords": [2687, 6199],
+        "previewImg": "assets/previews/shoreline/technical/2-1-206-1.webp",
+        "detailTitle": "technical-2-1-206-1",
+        "detailDesc": "서관 206호",
+        "detailImg": "assets/previews/shoreline/technical/2-1-206-1.webp"
+    },
+    {
         "id": "technical-2-1-316-1",
         "category": "technical",
         "coords": [2953, 5560],
@@ -264,15 +273,6 @@ window.MAP_DATA_shoreline = [
         "detailTitle": "temporary-0",
         "detailDesc": "주유소 진입 방법",
         "detailImg": "assets/previews/shoreline/temporary-0.webp"
-    },
-    {
-        "id": "temporary-1",
-        "category": "temporary",
-        "coords": [2710, 6177],
-        "previewImg": "assets/previews/shoreline/temporary/temporary-1.webp",
-        "detailTitle": "temporary-1",
-        "detailDesc": "서관 206호",
-        "detailImg": "assets/previews/shoreline/temporary/temporary-1.webp"
     },
 
 

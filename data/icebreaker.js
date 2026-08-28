@@ -148,6 +148,24 @@ window.MAP_DATA_icebreaker = [
         "detailImg": "assets/previews/icebreaker/test/2-1s.webp"
     },
     {
+        "id": "test-2-2",
+        "category": "test",
+        "coords": [3240, 4742],
+        "previewImg": "assets/previews/icebreaker/test/2-2.webp",
+        "detailTitle": "test-2-2",
+        "detailDesc": "헬리패드 직전 방",
+        "detailImg": "assets/previews/icebreaker/test/2-2.webp"
+    },
+    {
+        "id": "test-2-3",
+        "category": "test",
+        "coords": [3355, 4575],
+        "previewImg": "assets/previews/icebreaker/test/2-3.webp",
+        "detailTitle": "test-2-3",
+        "detailDesc": "헬리패드 직전 방",
+        "detailImg": "assets/previews/icebreaker/test/2-3.webp"
+    },
+    {
         "id": "test-3-1",
         "category": "test",
         "coords": [2198, 4275],

@@ -76,6 +76,17 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailImg": "assets/previews/streets_of_tarkov/financial/5-1-2-1.webp"
     },
     {
+        "id": "financial-7-7-1-1",
+        "category": "financial",
+        "coords": [1612, 3338],
+        "previewImg": "assets/previews/streets_of_tarkov/financial/7-7-1-1.webp",
+        "detailTitle": "financial-7-7-1-1",
+        "detailDesc": "콘코디아 따로있는건물",
+        "detailImg": [
+            "assets/previews/streets_of_tarkov/financial/7-7-1-1.webp"
+        ]
+    },
+    {
         "id": "financial-8-1-1-1",
         "category": "financial",
         "coords": [2437, 5316],

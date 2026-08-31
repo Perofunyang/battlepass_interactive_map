@@ -180,6 +180,18 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailImg": "assets/previews/streets_of_tarkov/user/3-2-1-1.webp"
     },
     {
+        "id": "user-4-1-2-1",
+        "category": "user",
+        "coords": [4739, 4949],
+        "previewImg": "assets/previews/streets_of_tarkov/user/4-1-2-1.webp",
+        "detailTitle": "user-4-1-2-1",
+        "detailDesc": "벨루가 2층 창문쪽 소파",
+        "detailImg": [
+            "assets/previews/streets_of_tarkov/user/4-1-2-1.webp",
+            "assets/previews/streets_of_tarkov/user/4-1-2-1a.webp"
+        ]
+    },
+    {
         "id": "user-4-2-2-1",
         "category": "user",
         "coords": [4478, 4438],

@@ -110,7 +110,7 @@ window.MAP_DATA_interchange = [
     {
         "id": "blueprint-1-4-2",
         "category": "blueprints",
-        "coords": [1719, 8012],
+        "coords": [1795, 8011],
         "previewImg": "assets/previews/interchange/blueprints/1-4-2.webp",
         "detailTitle": "blueprints-1-4-2",
         "detailDesc": "",
@@ -119,7 +119,7 @@ window.MAP_DATA_interchange = [
     {
         "id": "blueprint-1-4-3",
         "category": "blueprints",
-        "coords": [1795, 8000],
+        "coords": [1783, 7979],
         "previewImg": "assets/previews/interchange/blueprints/1-4-3.webp",
         "detailTitle": "blueprints-1-4-3",
         "detailDesc": "",

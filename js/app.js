@@ -22,7 +22,7 @@ let map = null;
 let currentMapId = 'factory';
 let currentImageOverlay = null;
 const layerGroups = {};
-const activeFilters = new Set();
+const activeFilters = new Set(Object.keys(CATEGORIES));
 let categoryCounts = {};
 
 function getMapFromUrl() {
@@ -85,6 +85,7 @@ function initMap() {
 
     setupCoordinateTracker();
     setupModalEvents();
+    setupTemporaryMarkerEvents(); // 🌟 우클릭 임시 마커 이벤트 바인딩
     loadMap(currentMapId);
 }
 
@@ -123,10 +124,82 @@ function setupCoordinateTracker() {
     });
 }
 
+// 🌟 [추가] 지도 우클릭 시 임시 마커 생성 핸들러
+function setupTemporaryMarkerEvents() {
+    map.on('contextmenu', function (e) {
+        if (e.originalEvent) {
+            e.originalEvent.preventDefault(); // 브라우저 우클릭 기본 메뉴 방지
+        }
+        addTemporaryMarker([e.latlng.lat, e.latlng.lng]);
+    });
+}
+
+// 🌟 [추가] 임시 마커 생성 및 개별 삭제 함수
+function addTemporaryMarker(coords) {
+    const catInfo = CATEGORIES['temporary'];
+    const iconSrc = catInfo ? catInfo.icon : './assets/icons/temporary.png';
+
+    const customIcon = L.divIcon({
+        html: `<img src="${iconSrc}" class="map-marker-img" onError="this.onerror=null; this.src='https://via.placeholder.com/20?text=📍';" />`,
+        className: 'custom-map-icon',
+        iconSize: [20, 20],
+        iconAnchor: [10, 10]
+    });
+
+    const marker = L.marker(coords, { icon: customIcon });
+
+    // 삭제 가이드 툴팁 바인딩
+    const tooltipText = langData.tempMarkerTooltip || 'Temporary Marker (Click to remove)';
+    marker.bindTooltip(tooltipText, {
+        className: 'transit-tooltip',
+        direction: 'top',
+        offset: [0, -15]
+    });
+
+    // 임시 마커 클릭 또는 우클릭 시 해당 마커 삭제
+    const removeHandler = function (evt) {
+        if (evt.originalEvent) {
+            evt.originalEvent.stopPropagation();
+            if (evt.type === 'contextmenu') {
+                evt.originalEvent.preventDefault();
+            }
+        }
+
+        if (layerGroups['temporary']) {
+            layerGroups['temporary'].removeLayer(marker);
+        }
+
+        if (categoryCounts['temporary'] > 0) {
+            categoryCounts['temporary']--;
+            renderFilterUI();
+        }
+    };
+
+    marker.on('click contextmenu', removeHandler);
+
+    // 레이어 그룹에 추가 및 수치 반영
+    if (!layerGroups['temporary']) {
+        layerGroups['temporary'] = L.layerGroup().addTo(map);
+    }
+    layerGroups['temporary'].addLayer(marker);
+
+    if (!map.hasLayer(layerGroups['temporary'])) {
+        map.addLayer(layerGroups['temporary']);
+    }
+
+    categoryCounts['temporary'] = (categoryCounts['temporary'] || 0) + 1;
+    renderFilterUI();
+
+    if (typeof gtag === 'function') {
+        gtag('event', 'add_temporary_marker', {
+            'map_id': currentMapId
+        });
+    }
+}
+
 function openDetailModal(data) {
     const modalBody = document.getElementById('modal-body');
 
-    // 이미지 배열 정규화
     let imgList = [];
     if (Array.isArray(data.detailImg)) {
         imgList = data.detailImg;
@@ -179,22 +252,6 @@ function setupModalEvents() {
     });
 }
 
-// 🌟 [신규] 맵 변경 시 해당 맵에서 스폰하는 카테고리를 필터 기본값(Checked)으로 리셋
-function resetFiltersForMap(mapId) {
-    const mapConfig = MAPS[mapId];
-    const spawns = mapConfig ? mapConfig.spawns : {};
-
-    activeFilters.clear();
-    Object.keys(CATEGORIES).forEach(key => {
-        const isAlwaysActiveCategory = (key === 'transit' || key === 'temporary');
-        const isSpawningInCurrentMap = spawns.hasOwnProperty(key);
-
-        if (isAlwaysActiveCategory || isSpawningInCurrentMap) {
-            activeFilters.add(key);
-        }
-    });
-}
-
 function loadMap(mapId) {
     currentMapId = mapId;
     updateLangSwitchUrl();
@@ -203,9 +260,7 @@ function loadMap(mapId) {
     map.setMaxBounds(null);
     if (currentImageOverlay) map.removeLayer(currentImageOverlay);
 
-    // 🌟 맵 전환 시 이전 마커 완전히 지우기 & 해당 맵 필터 상태 전원 활성화 리셋
     clearAllMarkers();
-    resetFiltersForMap(mapId);
 
     const bounds = [[0, 0], [mapConfig.height, mapConfig.width]];
     currentImageOverlay = L.imageOverlay(mapConfig.imageUrl, bounds).addTo(map);
@@ -274,8 +329,10 @@ function updateMapSpawnInfo() {
 
 function renderMarkers(markersData) {
     const mapConfig = MAPS[currentMapId];
+    const spawns = mapConfig ? mapConfig.spawns : {};
 
-    // 1. 카테고리별 마커 수 카운팅
+    clearAllMarkers();
+
     categoryCounts = {};
     Object.keys(CATEGORIES).forEach(catKey => {
         categoryCounts[catKey] = 0;
@@ -286,10 +343,8 @@ function renderMarkers(markersData) {
         }
     });
 
-    // 2. UI 갱신
     renderFilterUI();
 
-    // 3. 새로운 마커 생성 및 레이어 그룹에 추가
     markersData.forEach(data => {
         const catInfo = CATEGORIES[data.category];
         const iconSrc = catInfo ? catInfo.icon : '';
@@ -383,9 +438,12 @@ function renderMarkers(markersData) {
         }
     });
 
-    // 4. activeFilters 에 등록된 레이어만 지도에 표시
     Object.keys(CATEGORIES).forEach(catKey => {
-        if (activeFilters.has(catKey)) {
+        const isAlwaysActiveCategory = (catKey === 'transit' || catKey === 'temporary');
+        const isSpawningInCurrentMap = spawns.hasOwnProperty(catKey);
+        const shouldBeEnabled = isAlwaysActiveCategory || isSpawningInCurrentMap;
+
+        if (shouldBeEnabled && activeFilters.has(catKey)) {
             layerGroups[catKey].addTo(map);
         }
     });
@@ -394,9 +452,9 @@ function renderMarkers(markersData) {
 function clearAllMarkers() {
     Object.keys(CATEGORIES).forEach(catKey => {
         if (layerGroups[catKey]) {
-            layerGroups[catKey].clearLayers(); // 레이어 안의 마커 내용 삭제
+            layerGroups[catKey].clearLayers();
             if (map && map.hasLayer(layerGroups[catKey])) {
-                map.removeLayer(layerGroups[catKey]); // 지도에서 레이어 분리
+                map.removeLayer(layerGroups[catKey]);
             }
         } else {
             layerGroups[catKey] = L.layerGroup();

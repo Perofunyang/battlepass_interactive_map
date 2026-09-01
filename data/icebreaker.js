@@ -46,6 +46,15 @@ window.MAP_DATA_icebreaker = [
         "detailImg": "assets/previews/icebreaker/pmc/1-3.webp"
     },
     {
+        "id": "pmc-1-4",
+        "category": "pmc",
+        "coords": [2260, 5080],
+        "previewImg": "assets/previews/icebreaker/pmc/1-4.webp",
+        "detailTitle": "pmc-1-4",
+        "detailDesc": "1층 c-3방 테이프 왼쪽 서류철",
+        "detailImg": "assets/previews/icebreaker/pmc/1-4.webp"
+    },
+    {
         "id": "pmc-2-1",
         "category": "pmc",
         "coords": [3237, 4742],

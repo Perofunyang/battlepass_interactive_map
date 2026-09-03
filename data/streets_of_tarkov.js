@@ -1,6 +1,28 @@
 window.MAP_DATA_streets_of_tarkov = [
 
     {
+        "id": "financial-1-3-2-1",
+        "category": "financial",
+        "coords": [3908, 1878],
+        "previewImg": "assets/previews/streets_of_tarkov/financial/1-3-2-1.webp",
+        "detailTitle": "financial-1-3-2-1",
+        "detailDesc":
+            `카디널 아파트 2층 테라그룹 아파트 열쇠
+            (TerraGroup corporate apartment key)
+            열고 들어가서 거실 소파 옆`,
+        "detailImg": "assets/previews/streets_of_tarkov/financial/1-3-2-1.webp"
+    },
+    {
+        "id": "financial-1-3-2-2",
+        "category": "financial",
+        "coords": [4157, 1959],
+        "previewImg": "assets/previews/streets_of_tarkov/financial/1-3-2-2.webp",
+        "detailTitle": "financial-1-3-2-2",
+        "detailDesc":
+            `카디널 아파트 2층 선반`,
+        "detailImg": "assets/previews/streets_of_tarkov/financial/1-3-2-2.webp"
+    },
+    {
         "id": "financial-1-4-1-1",
         "category": "financial",
         "coords": [3933, 3753],
@@ -76,6 +98,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailImg": "assets/previews/streets_of_tarkov/financial/5-1-2-1.webp"
     },
     {
+        "id": "financial-7-6-2-1",
+        "category": "financial",
+        "coords": [255, 1365],
+        "previewImg": "assets/previews/streets_of_tarkov/financial/7-6-2-1.webp",
+        "detailTitle": "financial-7-6-2-1",
+        "detailDesc": "콘코디아 2층 (Concordia apartment 8 home cinema key 필요)",
+        "detailImg": "assets/previews/streets_of_tarkov/financial/7-6-2-1.webp"
+    },
+    {
         "id": "financial-7-7-1-1",
         "category": "financial",
         "coords": [1612, 3338],
@@ -85,6 +116,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailImg": [
             "assets/previews/streets_of_tarkov/financial/7-7-1-1.webp"
         ]
+    },
+    {
+        "id": "financial-7-7-2-1",
+        "category": "financial",
+        "coords": [726, 2288],
+        "previewImg": "assets/previews/streets_of_tarkov/financial/7-7-2-1.webp",
+        "detailTitle": "financial-7-7-2-1",
+        "detailDesc": "콘코디아 따로있는건물(스파르자 바로 아래) 2층",
+        "detailImg": "assets/previews/streets_of_tarkov/financial/7-7-2-1.webp"
     },
     {
         "id": "financial-8-1-1-1",
@@ -162,6 +202,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailImg": "assets/previews/streets_of_tarkov/user/1-6-1-2.webp"
     },
     {
+        "id": "user-1-0-1-1",
+        "category": "user",
+        "coords": [3764, 3326],
+        "previewImg": "assets/previews/streets_of_tarkov/user/1-0-1-1.webp",
+        "detailTitle": "user-1-0-1-1",
+        "detailDesc": "카디널 아파트 앞 차도 빨간 차",
+        "detailImg": "assets/previews/streets_of_tarkov/user/1-0-1-1.webp"
+    },
+    {
         "id": "user-2-8-1-1",
         "category": "user",
         "coords": [2807, 3148],
@@ -204,6 +253,15 @@ window.MAP_DATA_streets_of_tarkov = [
         ]
     },
     {
+        "id": "user-5-1-1-1",
+        "category": "user",
+        "coords": [3415, 4527],
+        "previewImg": "assets/previews/streets_of_tarkov/user/5-1-1-1.webp",
+        "detailTitle": "user-5-1-1-1",
+        "detailDesc": "파인우드호텔 1층 치과",
+        "detailImg": "assets/previews/streets_of_tarkov/user/5-1-1-1.webp"
+    },
+    {
         "id": "user-5-1-2-1",
         "category": "user",
         "coords": [3179, 6271],
@@ -220,6 +278,15 @@ window.MAP_DATA_streets_of_tarkov = [
         "detailTitle": "user-7-7-1-1",
         "detailDesc": "콘코디아 따로있는건물(스파르자 바로 아래) 사무실구역 구석",
         "detailImg": "assets/previews/streets_of_tarkov/user/7-7-1-1.webp"
+    },
+    {
+        "id": "user-7-7-2-1",
+        "category": "user",
+        "coords": [692, 2261],
+        "previewImg": "assets/previews/streets_of_tarkov/user/7-7-2-1.webp",
+        "detailTitle": "user-7-7-2-1",
+        "detailDesc": "콘코디아 따로있는건물(스파르자 바로 아래) 2층",
+        "detailImg": "assets/previews/streets_of_tarkov/user/7-7-2-1.webp"
     },
     {
         "id": "user-8-1-2-1",

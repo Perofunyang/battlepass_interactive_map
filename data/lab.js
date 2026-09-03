@@ -272,7 +272,10 @@ window.MAP_DATA_lab = [
         "previewImg": "assets/previews/lab/user/2-10.webp",
         "detailTitle": "user-2-10",
         "detailDesc": "Manager's Office 키방 옆에 회의실 테이블",
-        "detailImg": "assets/previews/lab/user/2-10.webp"
+        "detailImg": [
+            "assets/previews/lab/user/2-10.webp",
+            "assets/previews/lab/user/2-10a.webp"
+        ]
     },
     {
         "id": "user-2-11",
@@ -324,6 +327,15 @@ window.MAP_DATA_lab = [
         "detailTitle": "user-2-15",
         "detailDesc": "탈출구 여는 방 뒤에 책꽂이",
         "detailImg": "assets/previews/lab/user/2-15.webp"
+    },
+    {
+        "id": "user-2-16",
+        "category": "user",
+        "coords": [1266, 3477],
+        "previewImg": "assets/previews/lab/user/2-16.webp",
+        "detailTitle": "user-2-16",
+        "detailDesc": "서버룸 2층 매점 카운터",
+        "detailImg": "assets/previews/lab/user/2-16.webp"
     },
 
 

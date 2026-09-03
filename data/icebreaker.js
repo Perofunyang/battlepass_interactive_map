@@ -25,7 +25,10 @@ window.MAP_DATA_icebreaker = [
         "previewImg": "assets/previews/icebreaker/pmc/1-1.webp",
         "detailTitle": "pmc-1-1",
         "detailDesc": "1층 의료실",
-        "detailImg": "assets/previews/icebreaker/pmc/1-1.webp"
+        "detailImg": [
+            "assets/previews/icebreaker/pmc/1-1.webp",
+            "assets/previews/icebreaker/pmc/1-1s.webp"
+        ]
     },
     {
         "id": "pmc-1-2",
@@ -52,7 +55,21 @@ window.MAP_DATA_icebreaker = [
         "previewImg": "assets/previews/icebreaker/pmc/1-4.webp",
         "detailTitle": "pmc-1-4",
         "detailDesc": "1층 c-3방 테이프 왼쪽 서류철",
-        "detailImg": "assets/previews/icebreaker/pmc/1-4.webp"
+        "detailImg": [
+            "assets/previews/icebreaker/pmc/1-4.webp",
+            "assets/previews/icebreaker/pmc/1-4a.webp"
+        ]
+    },
+    {
+        "id": "pmc-1-5",
+        "category": "pmc",
+        "coords": [2254, 5026],
+        "previewImg": "assets/previews/icebreaker/pmc/1-5.webp",
+        "detailTitle": "pmc-1-5",
+        "detailDesc": "1층 c-3방 탈의실",
+        "detailImg": [
+            "assets/previews/icebreaker/pmc/1-5.webp"
+        ]
     },
     {
         "id": "pmc-2-1",
@@ -82,6 +99,15 @@ window.MAP_DATA_icebreaker = [
         "detailImg": "assets/previews/icebreaker/pmc/3-1.webp"
     },
     {
+        "id": "pmc-3-2",
+        "category": "pmc",
+        "coords": [2368, 4262],
+        "previewImg": "assets/previews/icebreaker/pmc/3-2.webp",
+        "detailTitle": "pmc-3-2",
+        "detailDesc": "선원 카드키 12번 방 선반",
+        "detailImg": "assets/previews/icebreaker/pmc/3-2.webp"
+    },
+    {
         "id": "pmc-4-1",
         "category": "pmc",
         "coords": [3414, 3549],
@@ -97,7 +123,21 @@ window.MAP_DATA_icebreaker = [
         "previewImg": "assets/previews/icebreaker/pmc/4-2.webp",
         "detailTitle": "pmc-4-2",
         "detailDesc": "오른쪽 문 기준 오른쪽 테이블 아래 서류더미",
-        "detailImg": "assets/previews/icebreaker/pmc/4-2.webp"
+        "detailImg": [
+            "assets/previews/icebreaker/pmc/4-2.webp",
+            "assets/previews/icebreaker/pmc/4-2a.webp"
+        ]
+    },
+    {
+        "id": "pmc-4-3",
+        "category": "pmc",
+        "coords": [2253, 3721],
+        "previewImg": "assets/previews/icebreaker/pmc/4-3.webp",
+        "detailTitle": "pmc-4-3",
+        "detailDesc": "4층 선원실 카드키 19번 방",
+        "detailImg": [
+            "assets/previews/icebreaker/pmc/4-3.webp"
+        ]
     },
     {
         "id": "pmc-5-1",
@@ -106,7 +146,21 @@ window.MAP_DATA_icebreaker = [
         "previewImg": "assets/previews/icebreaker/pmc/5-1.webp",
         "detailTitle": "pmc-5-1",
         "detailDesc": "웨지 잡고 윗윗층에 있는 비밀번호방 탁상 위에 1개",
-        "detailImg": "assets/previews/icebreaker/pmc/5-1.webp"
+        "detailImg": [
+            "assets/previews/icebreaker/pmc/5-1.webp",
+            "assets/previews/icebreaker/pmc/5-1a.webp"
+        ]
+    },
+    {
+        "id": "pmc-7-1",
+        "category": "pmc",
+        "coords": [2475, 1946],
+        "previewImg": "assets/previews/icebreaker/pmc/7-1.webp",
+        "detailTitle": "pmc-7-1",
+        "detailDesc": "C-1방 책상 위",
+        "detailImg": [
+            "assets/previews/icebreaker/pmc/7-1.webp"
+        ]
     },
     {
         "id": "pmc-9-1",
@@ -120,6 +174,24 @@ window.MAP_DATA_icebreaker = [
 
 
 
+    {
+        "id": "test-0-1",
+        "category": "test",
+        "coords": [2352, 5765],
+        "previewImg": "assets/previews/icebreaker/test/0-1.webp",
+        "detailTitle": "test-0-1",
+        "detailDesc": "지하 계단 옆",
+        "detailImg": "assets/previews/icebreaker/test/0-1.webp"
+    },
+    {
+        "id": "test-0-2",
+        "category": "test",
+        "coords": [2773, 5570],
+        "previewImg": "assets/previews/icebreaker/test/0-2.webp",
+        "detailTitle": "test-0-2",
+        "detailDesc": "On level 0 under the helipad control room on a shelf.",
+        "detailImg": "assets/previews/icebreaker/test/0-2.webp"
+    },
     {
         "id": "test-1-1",
         "category": "test",
@@ -172,7 +244,10 @@ window.MAP_DATA_icebreaker = [
         "previewImg": "assets/previews/icebreaker/test/2-3.webp",
         "detailTitle": "test-2-3",
         "detailDesc": "헬리패드 직전 방",
-        "detailImg": "assets/previews/icebreaker/test/2-3.webp"
+        "detailImg": [
+            "assets/previews/icebreaker/test/2-3.webp",
+            "assets/previews/icebreaker/test/2-3a.webp"
+        ]
     },
     {
         "id": "test-3-1",
@@ -209,6 +284,24 @@ window.MAP_DATA_icebreaker = [
         "detailTitle": "test-4-3",
         "detailDesc": "웨지 잡고 바로 위 2층 비번방 오른쪽 비번 문 열고 나오자마자 왼쪽 대각 선반안 (좌표 부정확)",
         "detailImg": "assets/previews/icebreaker/test/4-3.webp"
+    },
+    {
+        "id": "test-4-4",
+        "category": "test",
+        "coords": [2315, 3741],
+        "previewImg": "assets/previews/icebreaker/test/4-4.webp",
+        "detailTitle": "test-4-4",
+        "detailDesc": "4층 선원실 카드키 19번 방",
+        "detailImg": "assets/previews/icebreaker/test/4-4.webp"
+    },
+    {
+        "id": "test-5-1",
+        "category": "test",
+        "coords": [2375, 3058],
+        "previewImg": "assets/previews/icebreaker/test/5-1.webp",
+        "detailTitle": "test-5-1",
+        "detailDesc": "웨지 잡고 윗윗층에 있는 비밀번호방 책장",
+        "detailImg": "assets/previews/icebreaker/test/5-1.webp"
     },
     {
         "id": "test-9-1",

@@ -291,7 +291,18 @@ window.MAP_DATA_customs = [
         "detailDesc": "나동 207호",
         "detailImg": "assets/previews/customs/project/5-2-2-2.webp"
     },
-    
+
+
+    {
+        "id": "temporary-0",
+        "category": "temporary",
+        "coords": [1795, 1526],
+        "previewImg": "assets/previews/customs/temporary-0.webp",
+        "detailTitle": "temporary-0",
+        "detailDesc": "마법의 나무 스폰",
+        "detailImg": "assets/previews/customs/temporary-0.webp"
+    },
+
 
     {
         "id": "transit-reserve",

@@ -185,6 +185,24 @@ window.MAP_DATA_reserve = [
         "detailImg": "assets/previews/reserve/project/4-7-3-1.webp"
     },
     {
+        "id": "project-4-7-3-2",
+        "category": "project",
+        "coords": [176, 1042],
+        "previewImg": "assets/previews/reserve/project/4-7-3-2.webp",
+        "detailTitle": "project-4-7-3-2",
+        "detailDesc": "킹 3층",
+        "detailImg": "assets/previews/reserve/project/4-7-3-2.webp"
+    },
+    {
+        "id": "project-5-1-2-1",
+        "category": "project",
+        "coords": [359, 3904],
+        "previewImg": "assets/previews/reserve/project/5-1-2-1.webp",
+        "detailTitle": "project-5-1-2-1",
+        "detailDesc": "블랙 비숍 2층 AK방",
+        "detailImg": "assets/previews/reserve/project/5-1-2-1.webp"
+    },
+    {
         "id": "project-5-1-3-1",
         "category": "project",
         "coords": [573, 4135],
@@ -225,6 +243,15 @@ window.MAP_DATA_reserve = [
         "detailTitle": "project-5-3-2-1",
         "detailDesc": "꼬리동 2층",
         "detailImg": "assets/previews/reserve/project/5-3-2-1.webp"
+    },
+    {
+        "id": "project-5-3-2-2",
+        "category": "project",
+        "coords": [301, 4539],
+        "previewImg": "assets/previews/reserve/project/5-3-2-2.webp",
+        "detailTitle": "project-5-3-2-2",
+        "detailDesc": "꼬리동 2층",
+        "detailImg": "assets/previews/reserve/project/5-3-2-2.webp"
     },
     {
         "id": "project-6-1-2-1",

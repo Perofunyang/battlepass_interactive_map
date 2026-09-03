@@ -147,6 +147,15 @@ window.MAP_DATA_shoreline = [
         "detailImg": "assets/previews/shoreline/test/2-1-211-1.webp"
     },
     {
+        "id": "test-2-1-216-1",
+        "category": "test",
+        "coords": [2523, 5676],
+        "previewImg": "assets/previews/shoreline/test/2-1-216-1.webp",
+        "detailTitle": "test-2-1-216-1",
+        "detailDesc": "서관 216호 (열쇠 필요)",
+        "detailImg": "assets/previews/shoreline/test/2-1-216-1.webp"
+    },
+    {
         "id": "test-2-1-3-1",
         "category": "test",
         "coords": [3320, 6273],
@@ -154,6 +163,15 @@ window.MAP_DATA_shoreline = [
         "detailTitle": "test-2-1-3-1",
         "detailDesc": "서관 3층",
         "detailImg": "assets/previews/shoreline/test/2-1-3-1.webp"
+    },
+    {
+        "id": "test-2-1-314-1",
+        "category": "test",
+        "coords": [3151, 5603],
+        "previewImg": "assets/previews/shoreline/test/2-1-314-1.webp",
+        "detailTitle": "test-2-1-314-1",
+        "detailDesc": "서관 314호",
+        "detailImg": "assets/previews/shoreline/test/2-1-314-1.webp"
     },
     {
         "id": "test-2-3-2-1",
@@ -189,7 +207,10 @@ window.MAP_DATA_shoreline = [
         "previewImg": "assets/previews/shoreline/test/2-0-1-1.webp",
         "detailTitle": "test-2-0-1-1",
         "detailDesc": "리조트 앞 버스정류장 건물 뒷문",
-        "detailImg": "assets/previews/shoreline/test/2-0-1-1.webp"
+        "detailImg": [
+            "assets/previews/shoreline/test/2-0-1-1.webp",
+            "assets/previews/shoreline/test/2-0-1-1a.webp"
+        ]
     },
     {
         "id": "test-3-2-1-1",
@@ -207,7 +228,10 @@ window.MAP_DATA_shoreline = [
         "previewImg": "assets/previews/shoreline/test/3-0-2-1.webp",
         "detailTitle": "test-3-0-2-1",
         "detailDesc": "택시 탈출구 앞 2층 컨테이너 바닥",
-        "detailImg": "assets/previews/shoreline/test/3-0-2-1.webp"
+        "detailImg": [
+            "assets/previews/shoreline/test/3-0-2-1.webp",
+            "assets/previews/shoreline/test/3-0-2-1a.webp"
+        ]
     },
     {
         "id": "test-4-1-1-1",
@@ -217,6 +241,15 @@ window.MAP_DATA_shoreline = [
         "detailTitle": "test-4-1-1-1",
         "detailDesc": "빌리지 1층 입구에 흰색 승용차 있는곳 (좌표 부정확)",
         "detailImg": "assets/previews/shoreline/test/4-1-1-1.webp"
+    },
+    {
+        "id": "test-5-1-1-1",
+        "category": "test",
+        "coords": [1461, 867],
+        "previewImg": "assets/previews/shoreline/test/5-1-1-1.webp",
+        "detailTitle": "test-5-1-1-1",
+        "detailDesc": "파란색 트럭 트렁크 박스 위",
+        "detailImg": "assets/previews/shoreline/test/5-1-1-1.webp"
     },
     {
         "id": "test-6-2-1-1",
